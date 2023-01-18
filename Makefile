@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
+#    By: ryoshio- <ryoshio-@student.42sp.org.br     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/01/18 10:32:36 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/01/18 11:36:10 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,13 @@ LIBFT_PATH =	./libs/libft/
 
 LIBFT =			$(LIBFT_PATH)libft.a
 HEADERS_PATH=	./includes/
-
+MLX_MAKE =         $(LIB_MLX_PATH)libmlx.a
 LIB_MLX_PATH =	./libs/mlx_linux/
-MLXFLAGS =	-L$(LIB_MLX_PATH) -lmlx_Linux -I$(LIB_MLX_PATH) \
-			-L/usr/lib -lXext -lX11 -lm -lz
+MLXFLAGS =	-L$(LIB_MLX_PATH) -lmlx_Linux -I$(LIB_MLX_PATH) \-L/usr/lib -lXext -lX11 -lm -lz
+#-L$(LIB_MLX_PATH) -lmlx_Linux -I$(LIB_MLX_PATH) \-L/usr/lib -lXext -lX11 -lm -lz
+
+#-I $(LIB_MLX_PATH) -L $(LIB_MLX_PATH) -lmlx -Ilmlx -lXext -lX11 $(LIB_MLX_PATH)libmlx.a
+
 
 # inputs ********************************************************************* #
 NAME=cub3D
@@ -42,13 +45,13 @@ VALGRIND=valgrind\
 RM=-rm -f
 RM_DIR=rm -rf
 # rules ********************************************************************** #
-all:	$(NAME)
+all:	$(NAME) 
 
 $(OBJ_PATH)/%.o:	$(SRC_PATH)/%.c
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(FLAG) -I $(HEADERS_PATH) -c $< -o $@
 
-$(NAME): $(LIBFT) $(OBJ)
+$(NAME): $(MLX_MAKE) $(LIBFT) $(OBJ) 
 		@$(CC) $(FLAG) -I $(HEADERS_PATH) -o $@ $(OBJ) \
 		$(LIBFT) $(MLXFLAGS)
 # message in terminal ************ #
@@ -63,6 +66,10 @@ $(NAME): $(LIBFT) $(OBJ)
 
 $(LIBFT):
 	@cd $(LIBFT_PATH) && $(MAKE)
+	
+$(MLX_MAKE):
+	@cd $(LIB_MLX_PATH) && $(MAKE)
+
 
 clean:
 		@$(RM_DIR) $(OBJ_PATH)
@@ -74,7 +81,9 @@ fclean:		clean
 
 fcleanlib:
 	@cd $(LIBFT_PATH) && $(MAKE) fclean
+	@cd $(LIB_MLX_PATH) && $(MAKE) clean
 	@echo "\033[0;31m       ▥ libs clean ✓ \033[0m"
+
 
 fcleall: fcleanlib fclean
 		 @echo "\033[0;31m       ▥ libs and Cub3D clean ✓ \033[0m"
