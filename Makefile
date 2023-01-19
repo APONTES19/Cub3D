@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/01/18 11:32:14 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/01/19 10:27:57 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,11 @@ MLXFLAGS =	-L$(LIB_MLX_PATH) -lmlx_Linux -I$(LIB_MLX_PATH) \
 NAME=cub3D
 
 SRC_PATH=./src
+TESTS_PATH=./tests
 OBJ_PATH=./obj
 
-SRC_FILES=cub3d.c
+SRC_FILES=cub3d.c\
+		  ../tests/teste.c
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)

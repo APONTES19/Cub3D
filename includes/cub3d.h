@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/18 09:28:53 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/01/19 10:41:23 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,8 @@
 # include "./strutcs.h"
 
 //functions here!
+int	ft_check_extension(char *argv);
+
+//functions the test
+void	test_receiving_extension_wrong_expected_false();
 #endif
