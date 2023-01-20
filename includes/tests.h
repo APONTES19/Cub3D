@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libs.h                                             :+:      :+:    :+:   */
+/*   tests.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 11:55:28 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/20 10:04:16 by lucasmar         ###   ########.fr       */
+/*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/01/20 13:05:43 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBS_H
-# define LIBS_H
+#ifndef TEST_H
+# define TEST_H
 
-# include "../libs/libft/includes/libft.h"
-# include "../libs/mlx_linux/mlx.h"
-# include <stdio.h>
-# include <stdlib.h>
+//functions the test
+void	test_receiving_extension_wrong_expected_false();
+void	main_test();
+void	test_receiving_2arguments_expected_true();
+void	test_receiving_1arguments_expected_false();
+
+//ricardo testes
+
 #endif
