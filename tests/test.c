@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:53:12 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/20 13:11:52 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/01/23 09:41:32 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ void	main_test()
 	test_receiving_2arguments_expected_true();
 	test_receiving_1arguments_expected_false();
 	test_receiving_extension_wrong_expected_false();
+	test_receiving_extension_correct_expected_true();
+	test_receiving_extension_wrong_bcu_expected_false();
+	test_receiving_extension_wrong_wrgcub_expected_false();
 }
 
 void	test_receiving_2arguments_expected_true()
@@ -76,7 +79,73 @@ void	test_receiving_extension_wrong_expected_false()
 	argv[0] = ft_strdup("name_programe");
 	argv[1] = ft_strdup(temp);
 	result = ft_check_extension(argv);
-	printf("\n03 teste_receiving_extension_wrong_expected_false = ");
+	printf("\n 03 test_receiving_extension_wrong_expected_false = ");
+	expected = 1;
+	if (result == expected)
+		printf("\033[0;32mok ✓ \033[0m\n");
+	else
+		printf("\033[0;31m▥ fail \033[0m\n");
+	free(argv);
+	argv = NULL;
+}
+
+void	test_receiving_extension_correct_expected_true()
+{
+	int	result;
+	int	expected;
+	char	**argv;
+	char	*temp;
+
+	temp = ft_strdup("extension_correct.cub");
+	argv = (char **) malloc ( 2 * sizeof (char *));
+	argv[0] = ft_strdup("name_programe");
+	argv[1] = ft_strdup(temp);
+	result = ft_check_extension(argv);
+	printf("\n 04 test_receiving_extension_correct_expected_true = ");
+	expected = 0;
+	if (result == expected)
+		printf("\033[0;32mok ✓ \033[0m\n");
+	else
+		printf("\033[0;31m▥ fail \033[0m\n");
+	free(argv);
+	argv = NULL;
+}
+
+void	test_receiving_extension_wrong_bcu_expected_false()
+{
+	int	result;
+	int	expected;
+	char	**argv;
+	char	*temp;
+
+	temp = ft_strdup("extension_wrong.bcu");
+	argv = (char **) malloc ( 2 * sizeof (char *));
+	argv[0] = ft_strdup("name_programe");
+	argv[1] = ft_strdup(temp);
+	result = ft_check_extension(argv);
+	printf("\n 05 test_receiving_extension_wrong_bcu_expected_false = ");
+	expected = 1;
+	if (result == expected)
+		printf("\033[0;32mok ✓ \033[0m\n");
+	else
+		printf("\033[0;31m▥ fail \033[0m\n");
+	free(argv);
+	argv = NULL;
+}
+
+void	test_receiving_extension_wrong_wrgcub_expected_false()
+{
+	int	result;
+	int	expected;
+	char	**argv;
+	char	*temp;
+
+	temp = ft_strdup("wrgcub");
+	argv = (char **) malloc ( 2 * sizeof (char *));
+	argv[0] = ft_strdup("name_programe");
+	argv[1] = ft_strdup(temp);
+	result = ft_check_extension(argv);
+	printf("\n 06 test_receiving_extension_wrong_wrgcub_expected_false = ");
 	expected = 1;
 	if (result == expected)
 		printf("\033[0;32mok ✓ \033[0m\n");
