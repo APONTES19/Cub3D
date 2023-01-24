@@ -3,32 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br     +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/18 11:08:19 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/01/24 02:16:12 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
-int main()
+int	main(int argc, char **argv)
 {
-	printf("testado o Cub3D!\n");
-	printf("Testando a Libft função ft_isanum(8) = resposta %d\n",
-		ft_isalnum(8));
-	printf("Testando a Libft função ft_isanum(c) = resposta %d\n",
-		ft_isalnum('c'));
-	printf("Abrindo uma tela de base :@ ! \n");
+	if(argc > 2)
+		ft_check_number_arguments(argv);
 
-	void	*mlx_ptr;
-	void	*win_ptr;
-
-	mlx_ptr = mlx_init();
-	win_ptr = mlx_new_window(mlx_ptr, 500, 800, "My firt Window Cub3D");
-	mlx_loop(mlx_ptr);
-	(void) win_ptr;
-	return 0;
+	printf("oi");
+	return(0);
 }
-
 

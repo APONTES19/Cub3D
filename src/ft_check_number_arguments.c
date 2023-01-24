@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   ft_check_number_arguments.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/21 20:00:00 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/01/20 10:46:25 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/01/21 19:51:35 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+# include "../includes/cub3d.h"
 
-# include "./define.h"
-# include "./libs.h"
-# include "./strutcs.h"
+static int ft_error_number_arguments(void);
 
+int	ft_check_number_arguments(char **argv)
+{
+	int	i;
 
-//functions here!
-int	ft_check_extension(char **argv);
-int	ft_check_number_arguments(char **argv);
+	i = 0;
+	while(argv[i])
+		i++;
+	if(i == 2)
+		return(0);
+	else
+		return(ft_error_number_arguments( ));
+}
 
-#endif
+int ft_error_number_arguments(void)
+{
+	printf("The amount of argument is wrong!\n");
+	return(1);
+}

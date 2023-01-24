@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   main_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/21 20:00:00 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/01/24 03:02:52 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D_H
-# define CUB3D_H
+# include  "../includes/tests.h"
 
-# include "./define.h"
-# include "./libs.h"
-# include "./strutcs.h"
+int	main(void)
+{
+	test_receiving_2arguments_expected_true();
+	test_receiving_1arguments_expected_false();
 
+	
+	test_receiving_extension_wrong_expected_false();
 
-//functions here!
-int	ft_check_extension(char **argv);
-int	ft_check_number_arguments(char **argv);
-
-#endif
+	return (0);
+}

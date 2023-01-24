@@ -5,36 +5,42 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/01/24 02:50:53 by ryoshio-         ###   ########.fr        #
+#    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
+#    Updated: 2023/01/24 03:09:44 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # libs *********************************************************************** #
-LIBFT_PATH =	./libs/libft/
-LIB_MLX_PATH =	./libs/mlx_linux/
+LIBFT_PATH =	../libs/libft/
+LIB_MLX_PATH =	../libs/mlx_linux/
 
 MLX_MAKE = 		$(LIB_MLX_PATH)libmlx.a
 LIBFT =			$(LIBFT_PATH)libft.a
-HEADERS_PATH=	./includes/ 
+HEADERS_PATH=	../includes/ 
 
 MLXFLAGS =	-L$(LIB_MLX_PATH) -lmlx_Linux -I$(LIB_MLX_PATH) \
 			-L/usr/lib -lXext -lX11 -lm -lz
 
 # inputs ********************************************************************* #
-NAME=cub3D
+NAME=teste
 
-SRC_PATH=./src/
+SRC_PATH=../src/
+TESTS_PATH=./src/
 OBJ_PATH=./obj
 
-SRC_FILES=cub3d.c\
-		  ft_check_extension.c\
-		  ft_check_number_arguments.c
+vpath %.c ./src ../src
+
+# Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
+SRC_FILES= ft_check_extension.c\
+		  ft_check_number_arguments.c\
+
+#Aqui coloca o arquivo teste
+SRC_FILES+=  main_test.c \
+		  test.c
 
 
-SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES)) 
-OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o) 
 
+OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 # compilation **************************************************************** #
 CC=cc
 FLAG= -Wall -Werror -Wextra
@@ -48,7 +54,7 @@ RM_DIR=rm -rf
 # rules ********************************************************************** #
 all:	$(NAME)
 
-$(OBJ_PATH)/%.o:	$(SRC_PATH)/%.c
+$(OBJ_PATH)/%.o: %.c 
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(FLAG) -I $(HEADERS_PATH) -c $< -o $@
 
@@ -57,12 +63,10 @@ $(NAME): $(LIBFT) $(OBJ) $(MLX_MAKE)
 		$(LIBFT) $(MLXFLAGS)
 # message in terminal ************ #
 		@echo "\033[1;32m"
-		@echo "	Cub3D created ✓"
+		@echo "	Test created ✓"
 		@echo "\033[0m"
-		@echo "\033[0;33m	Welcome to Cub3D by lucasmar and ryoshio-'s 42sp \033[0m"
+		@echo "\033[0;33m	Welcome to Test c by lucasmar and ryoshio-'s 42sp \033[0m"
 		@echo "\033[0;39m"
-		@echo "	run ./cub3D + map.cub in the terminal !"
-		@echo "	ex: ./cub3D ./maps/map_01.cub "
 		@echo "\033[0m"
 
 $(LIBFT):
@@ -73,11 +77,11 @@ $(MLX_MAKE):
 
 clean:
 		@$(RM_DIR) $(OBJ_PATH)
-		@echo "\033[0;31m       ▥ Cub3D objects clean ✓ \033[0m"
+		@echo "\033[0;31m       ▥ Test  objects clean ✓ \033[0m"
 
 fclean:		clean
 		@$(RM) $(NAME)
-		@echo "\033[0;31m       ▥ Cub3D clean ✓ \033[0m"
+		@echo "\033[0;31m       ▥ Test  clean ✓ \033[0m"
 
 fcleanlib:
 	@cd $(LIBFT_PATH) && $(MAKE) fclean
