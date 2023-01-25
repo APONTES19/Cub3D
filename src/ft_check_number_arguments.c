@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:46:25 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/21 19:51:35 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/01/24 03:51:05 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	ft_check_number_arguments(char **argv)
 
 int ft_error_number_arguments(void)
 {
-	printf("The amount of argument is wrong!\n");
+	perror("The amount of argument is wrong!\n");
+//	printf("The amount of argument is wrong!\n");
+	
 	return(1);
 }
