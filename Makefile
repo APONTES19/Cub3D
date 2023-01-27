@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/01/24 02:50:53 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/01/27 01:34:36 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ SRC_PATH=./src/
 OBJ_PATH=./obj
 
 SRC_FILES=cub3d.c\
-		  ft_check_extension.c\
-		  ft_check_number_arguments.c
+		  ft_check_arguments.c\
+		  ft_error_message.c
 
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES)) 

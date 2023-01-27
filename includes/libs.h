@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:55:28 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/24 03:54:31 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/01/27 01:42:34 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 #include <errno.h>
+
+#include <unistd.h>
+#include <fcntl.h>
 #endif
+
+
+
+

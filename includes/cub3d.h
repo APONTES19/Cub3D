@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/21 20:00:00 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/01/27 01:32:39 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 
 //functions here!
-int	ft_check_extension(char **argv);
-int	ft_check_number_arguments(char **argv);
+void ft_check_arguments(int argc, char **argv);
+int ft_error_message(int code, const char *str);
 
 #endif
