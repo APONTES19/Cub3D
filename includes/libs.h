@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:55:28 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/27 01:42:34 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/01/27 03:48:06 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,7 @@
 # include "../libs/mlx_linux/mlx.h"
 # include <stdio.h>
 # include <stdlib.h>
-#include <errno.h>
-
-#include <unistd.h>
-#include <fcntl.h>
+# include <errno.h>
+# include <unistd.h>
+# include <fcntl.h>
 #endif
-
-
-
-
