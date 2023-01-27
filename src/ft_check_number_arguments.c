@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:46:25 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/20 12:56:03 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/01/25 17:25:52 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ int	ft_check_number_arguments(char **argv)
 
 	i = 0;
 	while(argv[i])
+	{
 		i++;
+	}
 	if(i == 2)
 		return(0);
 	else
