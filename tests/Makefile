@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/01/24 03:09:44 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/01/27 03:02:54 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,12 +31,20 @@ OBJ_PATH=./obj
 vpath %.c ./src ../src
 
 # Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
-SRC_FILES= ft_check_extension.c\
-		  ft_check_number_arguments.c\
+SRC_FILES= 	ft_check_arguments.c\
+		  ft_error_message.c\
+
 
 #Aqui coloca o arquivo teste
-SRC_FILES+=  main_test.c \
-		  test.c
+
+#teste especial 
+SRC_FILES+=main_check_arguments.c
+
+#SRC_FILES+=  main_test.c \
+		  
+
+
+
 
 
 
@@ -74,6 +82,9 @@ $(LIBFT):
 
 $(MLX_MAKE):
 	@cd $(LIB_MLX_PATH) && $(MAKE)
+
+
+
 
 clean:
 		@$(RM_DIR) $(OBJ_PATH)
