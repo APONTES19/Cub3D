@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/01/27 03:02:54 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/01/27 17:56:29 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,18 +30,24 @@ OBJ_PATH=./obj
 
 vpath %.c ./src ../src
 
-# Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
-SRC_FILES= 	ft_check_arguments.c\
-		  ft_error_message.c\
-
 
 #Aqui coloca o arquivo teste
 
 #teste especial 
-SRC_FILES+=main_check_arguments.c
+SRC_FILES=main_test.c\
+	test_check_arguments.c\
 
-#SRC_FILES+=  main_test.c \
+#SRC_FILES=  main_test.c \
 		  
+
+# Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
+SRC_FILES+=ft_check_arguments.c\
+		  ft_check_extension.c\
+		  ft_check_file_exists.c\
+		  ft_error_message.c
+
+
+
 
 
 
