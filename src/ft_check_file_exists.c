@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_check_file_exists.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/01/27 15:54:33 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/01/27 15:28:18 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/01/27 15:51:59 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include  "../includes/tests.h"
+#include "../includes/cub3d.h"
 
-int	main(void)
+int	ft_check_file_exists(const char *argv)
 {
-	test_receiving_2arguments_expected_true();
-	test_receiving_1arguments_expected_false();
-	test_receiving_extension_wrong_expected_false();
+	int	fd;
 
-	return (0);
+	fd = open (argv, O_RDWR);
+	if (fd < 1)
+	{
+		close (fd);
+		return (FAILURE);
+	}
+	close (fd);
+	return (SUCCESS);
 }

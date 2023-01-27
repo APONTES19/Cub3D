@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_check_extension.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/01/27 15:54:33 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/01/27 14:45:25 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/01/27 15:50:53 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include  "../includes/tests.h"
+#include "../includes/cub3d.h"
 
-int	main(void)
+int	ft_check_extension(const char	*str, const char *extension)
 {
-	test_receiving_2arguments_expected_true();
-	test_receiving_1arguments_expected_false();
-	test_receiving_extension_wrong_expected_false();
-
-	return (0);
+	if (ft_strlen(str) <= ft_strlen(extension))
+		return (FAILURE);
+	if (ft_strncmp(extension, str + ft_strlen(str) - ft_strlen(extension),
+			ft_strlen(extension) + 1) != 0)
+		return (FAILURE);
+	return (SUCCESS);
 }
