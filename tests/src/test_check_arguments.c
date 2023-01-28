@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_check_arguments.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:52:58 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/27 19:26:54 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/01/27 20:41:49 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	test_receiving_extension_wrong_expected_false()
 	int	result;
 	int  i;
 	char file[][10] = { "Joao.cu", "Maria.b", ".cub" , "a.cuba"};
-	
+
 	printf("\n \t |teste_receiving_extension_wrong_expected_false| \n  ");
 	i = 0;
 	while(file[i][0])
@@ -33,13 +33,12 @@ void	test_receiving_extension_wrong_expected_false()
 	}
 }
 
-
 void	test_receiving_extension_correct_expected_true()
 {
 	int	result;
 	int  i;
 	char file[][10] = { "Joao.cub", "Maria.cub", "a.cub" , "file.cub"};
-	
+
 	printf("\n \t |test_receiving_extension_correct_expected_true| \n  ");
 	i = 0;
 	while(file[i][0])
@@ -53,7 +52,6 @@ void	test_receiving_extension_correct_expected_true()
 		i++;
 	}
 }
-
 
 void test_file_exists_wrong_expected_false()
 {
@@ -74,8 +72,6 @@ void test_file_exists_wrong_expected_false()
 		i++;
 	}
 }
-
-
 
 void test_file_exists_correct_expected_true()
 {

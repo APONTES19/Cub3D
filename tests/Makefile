@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/01/27 17:56:29 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/01/27 20:48:45 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ LIB_MLX_PATH =	../libs/mlx_linux/
 
 MLX_MAKE = 		$(LIB_MLX_PATH)libmlx.a
 LIBFT =			$(LIBFT_PATH)libft.a
-HEADERS_PATH=	../includes/ 
+HEADERS_PATH=	../includes/
 
 MLXFLAGS =	-L$(LIB_MLX_PATH) -lmlx_Linux -I$(LIB_MLX_PATH) \
 			-L/usr/lib -lXext -lX11 -lm -lz
@@ -33,12 +33,13 @@ vpath %.c ./src ../src
 
 #Aqui coloca o arquivo teste
 
-#teste especial 
+#teste especial
 SRC_FILES=main_test.c\
 	test_check_arguments.c\
+	test_check_map_wall.c\
 
 #SRC_FILES=  main_test.c \
-		  
+
 
 # Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
 SRC_FILES+=ft_check_arguments.c\
@@ -68,7 +69,7 @@ RM_DIR=rm -rf
 # rules ********************************************************************** #
 all:	$(NAME)
 
-$(OBJ_PATH)/%.o: %.c 
+$(OBJ_PATH)/%.o: %.c
 	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(FLAG) -I $(HEADERS_PATH) -c $< -o $@
 
