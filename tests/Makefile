@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/01/27 20:48:45 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/01/27 23:10:38 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,9 @@ SRC_FILES=main_test.c\
 SRC_FILES+=ft_check_arguments.c\
 		  ft_check_extension.c\
 		  ft_check_file_exists.c\
-		  ft_error_message.c
+		  ft_error_message.c\
+		  ft_free_one_point.c\
+		  ft_free_two_point.c
 
 
 

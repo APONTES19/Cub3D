@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/27 15:36:14 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/01/27 23:03:12 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,8 @@ int		ft_check_extension(const char	*str, const char *extension);
 int		ft_check_file_exists(const char *argv);
 
 int		ft_error_message(int code, const char *str);
+
+void	ft_free_one_point(char *point);
+void	ft_free_two_point(char **point);
+
 #endif

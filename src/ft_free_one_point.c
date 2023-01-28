@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_test.c                                        :+:      :+:    :+:   */
+/*   ft_free_one_point.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/01/27 23:25:12 by lucasmar         ###   ########.fr       */
+/*   Created: 2023/01/25 17:08:07 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/01/27 23:01:38 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include  "../includes/tests.h"
+# include "../includes/cub3d.h"
 
-int	main(void)
+
+void	ft_free_one_point(char *point)
 {
-	test_receiving_extension_wrong_expected_false();
-	test_receiving_extension_correct_expected_true();
-	test_file_exists_wrong_expected_false();
-	test_file_exists_correct_expected_true();
-	test_receiving_map_wrong_no_false();
-	test_receiving_map_rigth_no_true();
-	test_receiving_map_rigth_path_no_true();
-	return (0);
+	free(point);
+	point = NULL;
 }
