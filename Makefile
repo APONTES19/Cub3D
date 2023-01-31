@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/01/27 01:34:36 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/01/27 23:11:10 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ LIB_MLX_PATH =	./libs/mlx_linux/
 
 MLX_MAKE = 		$(LIB_MLX_PATH)libmlx.a
 LIBFT =			$(LIBFT_PATH)libft.a
-HEADERS_PATH=	./includes/ 
+HEADERS_PATH=	./includes/
 
 MLXFLAGS =	-L$(LIB_MLX_PATH) -lmlx_Linux -I$(LIB_MLX_PATH) \
 			-L/usr/lib -lXext -lX11 -lm -lz
@@ -28,12 +28,19 @@ SRC_PATH=./src/
 OBJ_PATH=./obj
 
 SRC_FILES=cub3d.c\
-		  ft_check_arguments.c\
-		  ft_error_message.c
+
+SRC_FILES+=ft_check_arguments.c\
+		  ft_check_extension.c\
+		  ft_check_file_exists.c\
+		  ft_error_message.c\
+		  ft_free_one_point.c\
+		  ft_free_two_point.c
 
 
-SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES)) 
-OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o) 
+
+
+SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
+OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 
 # compilation **************************************************************** #
 CC=cc

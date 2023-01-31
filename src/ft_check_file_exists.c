@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libs.h                                             :+:      :+:    :+:   */
+/*   ft_check_file_exists.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 11:55:28 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/30 22:58:09 by lucasmar         ###   ########.fr       */
+/*   Created: 2023/01/27 15:28:18 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/01/27 15:51:59 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBS_H
-# define LIBS_H
+#include "../includes/cub3d.h"
 
-# include "libft.h"
-# include <stdlib.h>
-# include <unistd.h>
+int	ft_check_file_exists(const char *argv)
+{
+	int	fd;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-# include <stdlib.h>
-# include <unistd.h>
-
-#endif
+	fd = open (argv, O_RDWR);
+	if (fd < 1)
+	{
+		close (fd);
+		return (FAILURE);
+	}
+	close (fd);
+	return (SUCCESS);
+}

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libs.h                                             :+:      :+:    :+:   */
+/*   ft_free_two_point.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 11:55:28 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/30 22:58:09 by lucasmar         ###   ########.fr       */
+/*   Created: 2023/01/25 17:08:07 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/01/27 23:11:41 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBS_H
-# define LIBS_H
+# include "../includes/cub3d.h"
 
-# include "libft.h"
-# include <stdlib.h>
-# include <unistd.h>
+void	ft_free_two_point(char **point)
+{
+	int i;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-# include <stdlib.h>
-# include <unistd.h>
-
-#endif
+	i = 0;
+	while(point[i])
+	{
+		free(point[i]);
+		i++;
+	}
+	free(point);
+	point = NULL;
+}
