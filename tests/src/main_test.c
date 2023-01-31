@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/01/27 23:25:12 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/01/30 22:38:33 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ int	main(void)
 	test_receiving_map_wrong_no_false();
 	test_receiving_map_rigth_no_true();
 	test_receiving_map_rigth_path_no_true();
+	test_receiving_map_rigth_path_no_false();
+	test_receiving_map_wrong_f_false();
 	return (0);
 }
