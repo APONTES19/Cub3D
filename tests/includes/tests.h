@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/01 16:55:32 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/01 17:32:45 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 //functions the test
 void test_check_extension(void);
-
+void test_check_file_exists(void);
 /* 
 
 int		ft_check_map_flag(int fd, char *c); //excluir

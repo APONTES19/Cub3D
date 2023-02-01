@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/01 16:57:21 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/01 17:32:39 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,10 @@ Meta desse ciclo:
 []definir as figuras da paredes e do boneco
  */
 	test_check_extension( );
+	test_check_file_exists();
 	
 	/*
-	test_receiving_extension_wrong_expected_false();
-	test_receiving_extension_correct_expected_true();
+	
 	test_file_exists_wrong_expected_false();
 	test_file_exists_correct_expected_true();
 

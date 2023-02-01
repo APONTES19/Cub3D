@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/01 17:07:07 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/01 17:33:06 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ vpath %.c ./src ../src
 #teste especial
 SRC_FILES=main_test.c\
 	test_check_extension.c\
-
+	test_check_file_exists.c\
 	
 
 
