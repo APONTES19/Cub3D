@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_check_extension.c                             :+:      :+:    :+:   */
+/*   test_check_arguments.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 16:18:12 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/01 17:08:58 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/01/20 10:52:58 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/02/03 12:39:44 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/tests.h"
 
-static void	test_check_extension_wrong_failure(void);
-static void	test_check_extension_correct_success(void);
-
-void test_check_extension(void)
-{
-    printf("\t *******Check extension ******");
-    test_check_extension_wrong_failure( );
-    test_check_extension_correct_success();
-}
-
-
-static void	test_check_extension_wrong_failure(void)
+void	test_ft_check_extension_expected_false()
 {
 	int	result;
 	int  i;
 	char file[][10] = { "Joao.cu", "Maria.b", ".cub" , "a.cuba", "\0"};
 
-	printf("\n \t |test_check_extension_wrong_failure| \n  ");
+	printf("\n \t |teste_ft_check_extension_expected_false| \n  ");
 	i = 0;
 	while(file[i][0] != '\0')
 	{
@@ -43,13 +32,13 @@ static void	test_check_extension_wrong_failure(void)
 	}
 }
 
-static void	test_check_extension_correct_success(void)
+void	test_ft_check_extension_expected_true()
 {
 	int	result;
 	int  i;
 	char file[][10] = { "Joao.cub", "Maria.cub", "a.cub" , "file.cub", "\0"};
 
-	printf("\n \t |test_check_extension_correct_success| \n  ");
+	printf("\n \t |test_ft_check_extension_expected_true| \n  ");
 	i = 0;
 	while(file[i][0] != '\0')
 	{
@@ -62,3 +51,5 @@ static void	test_check_extension_correct_success(void)
 		i++;
 	}
 }
+
+

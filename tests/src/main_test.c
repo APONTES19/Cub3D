@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/01 17:32:39 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/04 17:42:02 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,22 +68,23 @@ Meta desse ciclo:
 [] pegar os valores desejado do mapa
 []definir as figuras da paredes e do boneco
  */
-	test_check_extension( );
-	test_check_file_exists();
-	
+	test_ft_check_extension();
+	test_ft_check_file_exists();
+	test_ft_check_map_flag_one();
+
 	/*
-	
+
 	test_file_exists_wrong_expected_false();
 	test_file_exists_correct_expected_true();
 
 
 	test_receiving_map_wrong_no_false();
-	
+
 	test_receiving_map_rigth_no_true();
 
-	
+
 	test_receiving_map_rigth_path_no_true();
-	
+
 	test_receiving_map_rigth_path_no_false();
 	test_receiving_map_wrong_f_false();
 */

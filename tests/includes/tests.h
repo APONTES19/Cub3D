@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tests.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/01 17:32:45 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/04 17:30:00 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@
 # include "../../includes/cub3d.h"
 
 //functions the test
-void test_check_extension(void);
-void test_check_file_exists(void);
-/* 
+void	test_ft_check_extension(void);
+void	test_ft_check_file_exists(void);
+void	test_ft_check_map_flag_one(void);
+/*
 
 int		ft_check_map_flag(int fd, char *c); //excluir
 int		ft_check_map_path_img(int fd, char *c); //excluir
