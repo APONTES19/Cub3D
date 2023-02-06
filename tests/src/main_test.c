@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/04 17:42:02 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/06 10:19:22 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ Meta desse ciclo:
 	test_ft_check_extension();
 	test_ft_check_file_exists();
 	test_ft_check_map_flag_one();
+	test_ft_check_map_path_img();
 
 	/*
 

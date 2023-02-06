@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 17:10:11 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/04 17:11:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/06 10:31:36 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 static void test_check_file_exists_correct_success();
 static void test_check_file_exists_wrong_failure();
 
+
 void test_ft_check_file_exists(void)
 {
 	printf("\n==============================================\n");
@@ -24,9 +25,6 @@ void test_ft_check_file_exists(void)
     test_check_file_exists_correct_success();
 	printf("\n==============================================\n");
 }
-
-
-
 
 static void test_check_file_exists_wrong_failure()
 {
