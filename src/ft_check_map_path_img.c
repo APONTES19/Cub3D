@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_map_path_img.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:18:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/06 11:24:48 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/06 13:35:26 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,27 @@
 
 int	ft_check_map_path_img(int fd, char *c)
 {
-	char	*line;
-	char	**list_line;
-	char	*path_file;
-	int		f;
+	t_check_path_img  data;
 
-	f = 0;
+	data.file = FAILURE;
 	while (1)
 	{
-		line = get_next_line(fd);
-		if (line == NULL)
+		data.line = get_next_line(fd);
+		if (data.line == NULL)
 			break;
-		list_line = ft_split(line,' ');
-		if (ft_strnstr(line, c, ft_strlen(line)) != 0)
+		data.list_line = ft_split(data.line,' ');
+		if (ft_strnstr(data.line, c, ft_strlen(data.line)) != 0)
 		{
-			path_file = ft_strtrim(list_line[1], "\n");
-			f = open(path_file, O_RDWR);
-			if (f != -1)
-				close(f);
-			ft_free_one_point(path_file);
+			data.path_file = ft_strtrim(data.list_line[1], " \n");
+			if (data.list_line[2] == NULL || data.list_line[2][0] == '\n' )
+				data.file = ft_check_file_exists(data.path_file);
+			printf("buc/nta");
+			ft_free_one_point(data.path_file);
 		}
-		ft_free_one_point(line);
-		ft_free_two_point(list_line);
+		ft_free_one_point(data.line);
+		ft_free_two_point(data.list_line);
 	}
-	if(f != -1)
+	if(data.file == SUCCESS)
 		return(SUCCESS);
-	else
-		return(FAILURE);
+	return(FAILURE);
 }

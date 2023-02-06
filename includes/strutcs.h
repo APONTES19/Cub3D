@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strutcs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/27 20:40:51 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/06 13:09:00 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,15 @@ typedef struct cub
 }	t_cub;
 
 
-// typedef struct map
-// {
-// 	int		fd_
-// }	t_map;
+typedef struct  check_path_img
+{
+	char	*line;
+	char	**list_line;
+	char	*path_file;
+	int		file;
+	
+} t_check_path_img;
+
+
 
 #endif
