@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/06 10:35:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:10:15 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int		ft_check_extension(const char	*str, const char *extension);
 int		ft_check_file_exists(const char *argv);
 int		ft_check_map_flag_one(int fd, char c);
 int		ft_check_map_path_img(int fd, char *c);
+int     ft_check_map_rgb(int fd, char c);
 
 int		ft_error_message(int code, const char *str);
 

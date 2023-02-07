@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_map_flag.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:14:01 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/04 17:15:10 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:57:42 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	ft_check_map_flag(int fd, char *c)
 	int	flag;
 	int	i;
 
-	i = 0;
 	flag = 0;
 	map = 0;
 	while (1)
 	{
+		i = 0;
 		line = get_next_line(fd);
 		if (line == NULL)
 			break;
@@ -34,7 +34,7 @@ int	ft_check_map_flag(int fd, char *c)
 		if(line[i] == c[0] && line[i + 1] == c[1] && line[i + 2] == ' ')
 			flag++;
 		ft_free_one_point(line);
-		i = 0;
+		
 	}
 	ft_free_one_point(line);
 	if (flag == 1 && map == 0)

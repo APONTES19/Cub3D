@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:18:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/06 13:35:26 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/06 13:50:04 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,8 @@ int	ft_check_map_path_img(int fd, char *c)
 		if (ft_strnstr(data.line, c, ft_strlen(data.line)) != 0)
 		{
 			data.path_file = ft_strtrim(data.list_line[1], " \n");
-			if (data.list_line[2] == NULL || data.list_line[2][0] == '\n' )
+			if (data.list_line[2] == NULL || data.list_line[2][0] == '\n')
 				data.file = ft_check_file_exists(data.path_file);
-			printf("buc/nta");
 			ft_free_one_point(data.path_file);
 		}
 		ft_free_one_point(data.line);

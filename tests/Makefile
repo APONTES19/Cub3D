@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
+#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/06 10:21:38 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/02/07 17:17:32 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRC_FILES=main_test.c\
 	test_ft_check_file_exists.c\
 	test_ft_check_map_flag_one.c\
 	test_ft_check_map_path_img.c\
+	test_check_map_rgb.c\
 
 
 
@@ -51,7 +52,8 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_free_one_point.c\
 		  ft_free_two_point.c\
 		  ft_check_map_flag_one.c\
-		  ft_check_map_path_img.c
+		  ft_check_map_path_img.c\
+		  ft_check_map_rgb.c
 
 
 
