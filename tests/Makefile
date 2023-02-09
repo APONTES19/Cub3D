@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
+#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/01/27 23:10:38 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/02/08 19:43:23 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,13 @@ vpath %.c ./src ../src
 
 #teste especial
 SRC_FILES=main_test.c\
-	test_check_arguments.c\
-	test_check_map_wall.c\
+	test_ft_check_extension.c\
+	test_ft_check_file_exists.c\
+	test_ft_check_map_flag_one.c\
+	test_ft_check_map_path_img.c\
+	test_check_map_rgb.c\
 
-#SRC_FILES=  main_test.c \
+
 
 
 # Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
@@ -47,7 +50,13 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_file_exists.c\
 		  ft_error_message.c\
 		  ft_free_one_point.c\
-		  ft_free_two_point.c
+		  ft_free_two_point.c\
+		  ft_check_map_flag_one.c\
+		  ft_check_map_path_img.c\
+		  ft_check_map_rgb.c\
+		  ft_check_map_flag.c\
+		  ft_check_misconfiguration.c
+
 
 
 
@@ -61,10 +70,8 @@ OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 # compilation **************************************************************** #
 CC=cc
 FLAG= -Wall -Werror -Wextra
-VALGRIND=valgrind\
-		 --leak-check=full\
-		 ---quiethow-leak-kinds=all\
-		 --track-origins=yes
+VALGRIND= valgrind -s --leak-check=full --show-leak-kinds=all
+
 # clean ********************************************************************** #
 RM=-rm -f
 RM_DIR=rm -rf
@@ -92,7 +99,8 @@ $(LIBFT):
 $(MLX_MAKE):
 	@cd $(LIB_MLX_PATH) && $(MAKE)
 
-
+run: all
+	$(VALGRIND) ./teste
 
 
 clean:
