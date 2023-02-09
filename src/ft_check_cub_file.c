@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_extension.c                               :+:      :+:    :+:   */
+/*   ft_check_cub_file.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/27 14:45:25 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/08 21:53:49 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/02/08 22:13:20 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/02/09 04:06:19 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-int	ft_check_extension(const char	*file, const char *extension)
+
+void ft_check_cub_file(char *path)
 {
-	if (ft_strlen(file) <= ft_strlen(extension))
-		return (FAILURE);
-	if (ft_strncmp(extension, file + ft_strlen(file) - ft_strlen(extension),
-			ft_strlen(extension) + 1) != 0)
-		return (FAILURE);
-	return (SUCCESS);
+    char **text;
+    
+    text = ft_read_all_file(path);
+    if(!text)
+        exit(ft_error_mensagem(ERRO_CHECK_CUB_FILE,"Could not read <file>.cub!"));
+    
 }

@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/08 19:43:23 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/09 05:16:44 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,9 @@ SRC_FILES=main_test.c\
 	test_ft_check_map_flag_one.c\
 	test_ft_check_map_path_img.c\
 	test_check_map_rgb.c\
+	test_read_all_file.c\
+	test_check_strange_line.c\
+
 
 
 
@@ -55,7 +58,9 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_map_path_img.c\
 		  ft_check_map_rgb.c\
 		  ft_check_map_flag.c\
-		  ft_check_misconfiguration.c
+		  ft_read_all_file.c\
+		  ft_check_misconfiguration.c\
+		  ft_check_strange_line.c
 
 
 
