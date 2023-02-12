@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 01:11:12 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/11 22:02:37 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 00:56:40 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static void	test_read_all_file_wrong_failure(void)
 	{
 		result = ft_read_all_file(file[i]);
 		printf("\n	%d => %s = ", i + 1, file[i]);
+		
 		if (result ==  NULL)
 			printf("\033[0;32mok ✓ \033[0m\n");
 		else

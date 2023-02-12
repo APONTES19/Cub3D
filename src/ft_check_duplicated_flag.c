@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 23:14:45 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/10 23:19:31 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 01:44:49 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,32 @@
 
 // serve para verificar se não existe flag duplicado ou faltando 
 
-static void ft_init_check_duplicated_flag(t_check_amount_flag *data);
-static int ft_check_count_flag(t_check_amount_flag *data);
-static void ft_count_flag(t_check_amount_flag *data);
+static void ft_init_check_duplicated_flag(t_check_duplicated_flag  *data);
+static int ft_check_count_flag(t_check_duplicated_flag  *data);
+static void ft_count_flag(t_check_duplicated_flag *data);
 
 
 int ft_check_duplicated_flag(char **text)
 {
-	t_check_amount_flag *data;
+	t_check_duplicated_flag *data;
 	int	result;
 	
-	data = malloc(sizeof(t_check_amount));
+	data = malloc(sizeof(t_check_duplicated_flag));
 	if(!data)
 		return (FAILURE);
-	ft_init_check_amount_flag(&data);
+	 ft_init_check_duplicated_flag(data);
 	while(text[++data->i])
 	{
-		data->split = ft_split(text[data->i], ' ');
-		ft_count_flag(&data);
-		ft_free_two_point(data->split);
+		data->status = ft_line_code(text[data->i]);
+		ft_count_flag(data);
 	}
-	result =ft_check_count_flag(&data)
+	result =ft_check_count_flag(data);
 	free(data);
 	return(result);
 }
 
 
-static void ft_init_check_duplicated_flag(t_check_amount_flag *data)
+static void ft_init_check_duplicated_flag(t_check_duplicated_flag  *data)
 {
 
 	data->no = 0;
@@ -52,23 +51,23 @@ static void ft_init_check_duplicated_flag(t_check_amount_flag *data)
 	data->i = -1;
 }
 
-static void ft_count_flag(t_check_amount_flag *data)
+static void ft_count_flag(t_check_duplicated_flag *data)
 {
-	if(ft_strncmp(data->split[0],"NO", 2) == 0)
+	if(data->status == NO)
 		data->no++;
-	if(ft_strncmp(data->split[0],"SO", 2) == 0)
+	if(data->status == SO)
 		data->so++;
-	if(ft_strncmp(data->split[0],"WE", 2) == 0)
+	if(data->status == WE)
 		data->we++;
-	if(ft_strncmp(data->split[0],"EA", 2) == 0)
+	if(data->status == EA)
 		data->ea++;
-	if(ft_strncmp(data->split[0],"F", 1) == 0)
+	if(data->status == F)
 		data->f++;
-	if(ft_strncmp(data->split[0],"C", 1) == 0)
+	if(data->status == C)
 		data->c++;
 }
 
-static int ft_check_count_flag(t_check_amount_flag *data)
+static int ft_check_count_flag(t_check_duplicated_flag  *data)
 {
 	if(data->no != 1 )
 		return (ft_error_message(ERROR_COUNT_FLAG, "NO"));

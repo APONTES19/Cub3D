@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/11 23:54:01 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/12 01:41:40 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC_FILES=main_test.c\
 	test_read_all_file.c\
 	test_line_code.c\
 	test_check_first_word_each_line.c\
+	test_check_duplicated_flag.c\
 
 
 #	test_ft_check_map_flag_one.c\
@@ -59,7 +60,7 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_flag_code.c\
 		  ft_line_code.c\
 		  ft_check_first_word_each_line.c\
-		
+		  ft_check_duplicated_flag.c
 		
 		
 
