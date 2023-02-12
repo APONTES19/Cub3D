@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 02:55:59 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/11 02:56:50 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 05:15:28 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,19 @@ int	ft_check_value_flag(char  **text)
 	i = -1;
 	while (text[++i])
 	{
-		status = ft_isflag(text[i]);
-		if(status == 1)
+		status = ft_line_code(text[i]);
+	
+		if(status == F || status == C )
 		{
 			if(ft_check_rgb(text[i]) != SUCCESS)
-				return(FAILURE);	
+				return(ft_error_message(ERROR_RGB, text[i]));	
 		}
-		if(status == 2)
+		if(status == NO || status == SO || status == WE || status == EA)
 		{
 			if(ft_check_texure(text[i]) != SUCCESS)
 				return(FAILURE);	
 		}
-		if (status == 3)
+		if (status == WALL)
 			break;
 	}
 	return(SUCCESS);

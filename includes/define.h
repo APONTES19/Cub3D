@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/11 22:53:17 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 04:26:34 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # define ERROR_READ 104
 # define ERROR_COUNT_FLAG 105
 # define ERROR_LINE_WRONG_POSITION 106
+# define ERROR_RGB 107
 
 # define SUCCESS 0
 # define FAILURE 1

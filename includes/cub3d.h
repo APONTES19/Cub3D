@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/12 03:18:33 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 04:30:44 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,11 @@ int ft_line_code(char *line);
 int ft_check_first_word_each_line(char **text);
 int ft_check_duplicated_flag(char **text);
 int ft_check_line_position(char **text);
+int	ft_check_rgb(char *line);
+int	ft_check_texure(char  *line);
 void ft_check_cub_file(char **text);
+int	ft_check_value_flag(char  **text);
+
 
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);

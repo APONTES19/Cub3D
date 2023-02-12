@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/12 03:32:51 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 04:48:00 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void    test_line_code(void);
 void    test_check_first_word_each_line (void);
 void    test_check_duplicated_flag (void);
 void    test_check_line_position(void);
+void    test_check_value_flag(void);
 #endif

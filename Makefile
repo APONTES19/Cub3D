@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/12 03:16:09 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/12 04:31:08 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,10 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_duplicated_flag.c\
 		  ft_exit_two_point.c\
 		  ft_check_line_position.c\
-		  ft_check_cub_file.c
+		  ft_check_rgb.c\
+		  ft_check_cub_file.c\
+		  ft_check_texure.c\
+		  ft_check_value_flag.c
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
