@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/10 23:17:34 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/12 03:16:09 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,14 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_error_message.c\
 		  ft_free_one_point.c\
 		  ft_free_two_point.c\
-	
+		  ft_read_all_file.c\
+		  ft_flag_code.c\
+		  ft_line_code.c\
+		  ft_check_first_word_each_line.c\
+		  ft_check_duplicated_flag.c\
+		  ft_exit_two_point.c\
+		  ft_check_line_position.c\
+		  ft_check_cub_file.c
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)

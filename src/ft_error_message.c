@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:28:16 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/11 21:43:24 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 03:39:18 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	ft_error_message(int code, const char *str)
 		printf("\t%d: The map line contains some error!\n%s\n", code, str);
 	if (code == ERROR_COUNT_FLAG)
 		printf("\t%d: The %s is duplicated or missing!\n", code, str);
-		
+	if(code == ERROR_LINE_WRONG_POSITION)
+		printf("\t%d: This line is in wrong position or should not exist!\n%s\n", code, str);
 	return (FAILURE);
 }
