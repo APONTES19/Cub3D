@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/11 21:15:40 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/11 22:49:41 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 	test_ft_check_extension();
 	test_ft_check_file_exists();
 	test_read_all_file();
-	
+	test_line_code();
 	
 	//test_ft_check_map_flag_one();
 	//test_ft_check_map_path_img();

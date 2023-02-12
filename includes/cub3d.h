@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/11 21:43:53 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/11 22:38:05 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 int		ft_check_arguments(int argc, char **argv);
 int		ft_check_extension(const char	*file, const char *extension);
 int		ft_check_file_exists(const char *path);
-
+char    **ft_read_all_file(const char *path);
 
 // em teste
-char **ft_read_all_file(const char *path);
+
 int ft_flag_code(char *flag);
 int ft_line_code(char *line);
 

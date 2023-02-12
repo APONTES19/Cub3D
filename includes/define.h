@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/11 04:15:18 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/11 22:53:17 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@
 
 # define SUCCESS 0
 # define FAILURE 1
-
 # define NO 2
 # define SO 3
 # define WE 4
