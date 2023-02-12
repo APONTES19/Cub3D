@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_one_point.c                                :+:      :+:    :+:   */
+/*   ft_line_code.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 17:08:07 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/11 21:29:18 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/02/11 03:14:44 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/02/11 20:50:03 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/cub3d.h"
+#include "../includes/cub3d.h"
 
-
-void	ft_free_one_point(char *point)
+int ft_line_code(char *line)
 {
-	free(point);
-	point = NULL;
+    char **split;
+    int status;
 
+    split = ft_split(line, ' ');
+	status =  ft_flag_code(split[0]);
+	ft_free_two_point(split);
+	return (status);    
 }

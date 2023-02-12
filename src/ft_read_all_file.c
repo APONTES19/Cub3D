@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:26:21 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/09 03:52:17 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/11 22:23:57 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,18 @@ char	**ft_read_all_file(const char *path)
 
 	size = ft_file_line_count(path);
 	fd = open (path, O_RDWR);
-	if (fd < 0)
+	if (fd < 1)
 		return (NULL);
 	text = ft_calloc(sizeof(char *), size + 1);
 	if (!text)
 		return (NULL);
-	i = -1;
-	while (++i < size)
+	i = 0;
+	while (1)
 	{
 		line = get_next_line (fd);
-		text[i] = ft_strdup(line);
+		if (line == NULL)
+			break ;
+		text[i++] = ft_strdup(line);
 		ft_free_one_point(line);
 	}
 	close(fd);
@@ -53,7 +55,7 @@ static int	ft_file_line_count(const char *path)
 	while (++i > -1)
 	{
 		line = get_next_line (fd);
-		if (!line)
+		if (line == NULL)
 			break ;
 		ft_free_one_point(line);
 	}

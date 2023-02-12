@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/09 05:16:44 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/11 21:47:31 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,15 +36,15 @@ vpath %.c ./src ../src
 #teste especial
 SRC_FILES=main_test.c\
 	test_ft_check_extension.c\
-	test_ft_check_file_exists.c\
-	test_ft_check_map_flag_one.c\
+	test_check_file_exists.c\
+	test_read_all_file.c\
+	
+
+
+#	test_ft_check_map_flag_one.c\
 	test_ft_check_map_path_img.c\
 	test_check_map_rgb.c\
-	test_read_all_file.c\
-	test_check_strange_line.c\
-
-
-
+	test_check_first_word_line.c\
 
 
 # Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
@@ -54,13 +54,10 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_error_message.c\
 		  ft_free_one_point.c\
 		  ft_free_two_point.c\
-		  ft_check_map_flag_one.c\
-		  ft_check_map_path_img.c\
-		  ft_check_map_rgb.c\
-		  ft_check_map_flag.c\
 		  ft_read_all_file.c\
-		  ft_check_misconfiguration.c\
-		  ft_check_strange_line.c
+		
+		
+		
 
 
 

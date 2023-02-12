@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 01:11:12 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/09 03:38:26 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/11 22:02:37 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,20 @@ static void	test_read_all_file_correct_success(void)
 {
 	int     i;
     int     j;
-	char file[][100] = {"./test_maps/read_all_file/vazio.cub","./test_maps/read_all_file/vazio1.cub", "\0"};
+	char path []= {"./maps/read_all_file/"};
+	char file[][100] = {"vazio.cub","vazio1.cub", "cheio1.cub", "\0"};
     char **result;
+	
+	char *temp;
     
 	printf("    \033[0;33mTestando extenções correta!\033[0m\n\n");
 	i = 0;
 	while(file[i][0] != '\0')
 	{
-		result = ft_read_all_file(file[i]);
-		printf("\n	%d => %s = ", i + 1, file[i]);
+		temp = ft_strjoin(path, file[i]);
+		result = ft_read_all_file(temp);
+		printf("\n	%d => %s = ", i + 1, temp);
+		free(temp);
 		if (result !=  NULL)
 			printf("\033[0;32mok ✓ \033[0m\n");
 		else

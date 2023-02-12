@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_one_point.c                                :+:      :+:    :+:   */
+/*   ft_check_value_flag.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 17:08:07 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/11 21:29:18 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/02/11 02:55:59 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/02/11 02:56:50 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/cub3d.h"
+#include "../includes/cub3d.h"
 
-
-void	ft_free_one_point(char *point)
+int	ft_check_value_flag(char  **text)
 {
-	free(point);
-	point = NULL;
+	int i;
+	int status;
 
+	i = -1;
+	while (text[++i])
+	{
+		status = ft_isflag(text[i]);
+		if(status == 1)
+		{
+			if(ft_check_rgb(text[i]) != SUCCESS)
+				return(FAILURE);	
+		}
+		if(status == 2)
+		{
+			if(ft_check_texure(text[i]) != SUCCESS)
+				return(FAILURE);	
+		}
+		if (status == 3)
+			break;
+	}
+	return(SUCCESS);
 }

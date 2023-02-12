@@ -6,34 +6,54 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 17:18:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/06 13:50:04 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/11 02:38:26 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-int	ft_check_map_path_img(int fd, char *c)
+int	ft_check_value_flag(char  **text)
 {
-	t_check_path_img  data;
+	int i;
+	int status;
 
-	data.file = FAILURE;
-	while (1)
+	i = -1;
+	while (text[++i])
 	{
-		data.line = get_next_line(fd);
-		if (data.line == NULL)
-			break;
-		data.list_line = ft_split(data.line,' ');
-		if (ft_strnstr(data.line, c, ft_strlen(data.line)) != 0)
+		status = ft_isflag(text[i]);
+		if(status == 1)
 		{
-			data.path_file = ft_strtrim(data.list_line[1], " \n");
-			if (data.list_line[2] == NULL || data.list_line[2][0] == '\n')
-				data.file = ft_check_file_exists(data.path_file);
-			ft_free_one_point(data.path_file);
+			if(ft_check_rgb(text[i]) != SUCCESS)
+				return(FAILURE);	
 		}
-		ft_free_one_point(data.line);
-		ft_free_two_point(data.list_line);
+		if(status == 2)
+		{
+			if(ft_check_texure(text[i]) != SUCCESS)
+				return(FAILURE);	
+		}
+		if (status == 3)
+			break;
 	}
-	if(data.file == SUCCESS)
-		return(SUCCESS);
-	return(FAILURE);
+	return(SUCCESS);
+}
+
+
+int ft_flag_code(char *s)
+{
+	char *trim;
+	int status;
+	
+	status = 0;
+	trim = ft_strtrim(s, " ");
+	
+	if (trim[0] == 'F' ||  trim[0] == 'C')
+		status = 1;
+	if (trim[0] == 'N' ||  trim[0] == 'S')
+		status = 2
+	if (trim[0] == 'W' ||  trim[0] == 'E')
+		status = 2
+	if(trim[0] == '1')
+		status = 3;
+	free(trim);
+	return (status);
 }

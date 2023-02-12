@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_one_point.c                                :+:      :+:    :+:   */
+/*   ft_check_first_word_each_line.c                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 17:08:07 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/11 21:29:18 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/02/09 04:06:07 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/02/11 20:59:52 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/cub3d.h"
 
 
-void	ft_free_one_point(char *point)
+#include "../includes/cub3d.h"
+
+int ft_check_first_word_each_line(char **text)
 {
-	free(point);
-	point = NULL;
-
+    int i;
+    
+    i = 0;
+    while(text[i])
+    {
+		if( ft_line_code(text[0]) == FAILURE);
+        {
+            ft_error_message(ERROR_LINE, text[i]);
+            return (FAILURE);   
+        }
+        i++;
+    }
+	return (SUCCESS);
 }
+

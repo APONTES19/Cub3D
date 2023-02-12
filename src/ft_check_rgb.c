@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_map_rgb.c                                 :+:      :+:    :+:   */
+/*   ft_check_rgb.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:53:45 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/07 17:58:02 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/11 02:53:02 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,16 @@ static int ft_rgb_range(const char *str);
 static int ft_str_is_nbr(const char *str);
 
 
-int	ft_check_map_rgb(int fd, char c)
+int	ft_check_rgb(char *line)
 {
 	char *trim;
 	int status;
-	char *line;
 	
 	status = FAILURE;
-	while (1)
-	{
-		line = get_next_line(fd);
-		if (line == NULL)
-			break;
-		trim = ft_strtrim(line, "\n ");
-		if(trim[0] == c)
-			status = ft_check_rgb_value(trim+1);
-		ft_free_one_point(trim);
-		ft_free_one_point(line);
-	}
+	
+	trim = ft_strtrim(line, "\n ");
+	status = ft_check_rgb_value(trim+1);
+	ft_free_one_point(trim);
 	return(status);
 }
 
