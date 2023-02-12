@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 03:01:35 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/11 23:19:34 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/12 00:10:52 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_flag_code(char *flag)
 {
-	
 	if(flag[0] == '1')
 		return(WALL);
 	if(flag[0] == '\0')
@@ -37,6 +36,7 @@ int	ft_flag_code(char *flag)
 		return (WE);
 	if (ft_strncmp(flag, "EA", ft_strlen(flag)) == 0)
 		return (EA);
+	
 	
 	return (FAILURE);
 }

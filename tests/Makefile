@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/11 22:45:51 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/11 23:54:01 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ SRC_FILES=main_test.c\
 	test_check_extension.c\
 	test_check_file_exists.c\
 	test_read_all_file.c\
-	test_line_code.c
+	test_line_code.c\
+	test_check_first_word_each_line.c\
 
 
 #	test_ft_check_map_flag_one.c\
@@ -56,7 +57,8 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_free_two_point.c\
 		  ft_read_all_file.c\
 		  ft_flag_code.c\
-		  ft_line_code.c 
+		  ft_line_code.c\
+		  ft_check_first_word_each_line.c\
 		
 		
 		

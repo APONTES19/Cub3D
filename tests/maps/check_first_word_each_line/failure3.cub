@@ -2,7 +2,7 @@ SO ./path_to_the_south_texture
 WE ./path_to_the_west_texture
 EA ./path_to_the_east_texture
              NO ./imgs/img_1.jpg 953
-
+ç
 
 F 220, -1, 900
 C 225,30,0
