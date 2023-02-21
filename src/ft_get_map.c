@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 16:45:20 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 00:19:02 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 05:11:51 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char  **ft_get_map(char **text)
 		if(ft_line_code(text[i]) == WALL)
 		{
 			map[j] = ft_calloc(ft_map_max_column(text) + 1, sizeof(char *));
-			ft_strlcpy(map[j], text[i], ft_strlen(text[i]));
+			ft_strlcpy(map[j], text[i], ft_strlen(text[i]) + 1);
 			j ++;
 		}
 	}

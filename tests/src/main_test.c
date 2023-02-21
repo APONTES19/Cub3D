@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 00:00:34 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 04:46:51 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 	test_check_duplicated_flag ();
 	test_check_line_position();
 	test_check_value_flag();
-	 test_get_map ();
+	test_get_map ();
+	test_check_map();
 	return (0);
 }

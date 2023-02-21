@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:28:16 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/12 04:26:06 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 00:44:52 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ int	ft_error_message(int code, const char *str)
 		printf("\t%d: This line is in wrong position or should not exist!\n%s\n", code, str);
 	if(code == ERROR_RGB)
 		printf("\t%d: This value for RGB is wrong! \n%s\n", code, str);
+	if(code == ERROR_MALLOC)
+		printf("\t%d: The variable showed malloc error! \n%s\n", code, str);
 	return (FAILURE);
 }
