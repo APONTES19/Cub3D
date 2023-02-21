@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 01:42:59 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 05:13:25 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 05:32:36 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,7 @@ int	ft_check_wall(char **map)
 			if(ft_strchr("NSEW0",map[i][j]) != NULL) 
 			{
 				if(ft_check_map_horizontal(map, i, j) == FAILURE)
-				{
-					printf("%s\n", map[i]);
-					printf("i=%d j=%d\n", i,j);
-					
 					return (FAILURE);
-				}
-					
 				if(ft_check_map_vertical(map, i, j) == FAILURE)
 					return (FAILURE);
 			}

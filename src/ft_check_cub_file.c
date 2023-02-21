@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:13:20 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 00:29:28 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 05:25:18 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void ft_check_cub_file(char **text)
 		ft_exit_two_point(text);
 	if (ft_check_value_flag(text)== FAILURE)
 		ft_exit_two_point(text);
-
+	if(ft_check_map(text) == FAILURE)
+		ft_exit_two_point(text);
 }
 
 

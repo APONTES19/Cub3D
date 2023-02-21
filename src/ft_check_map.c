@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 00:38:50 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 05:10:36 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 05:38:30 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int ft_check_map(char **text)
 		ft_free_two_point(map);
 		return (ft_error_message(ERROR_MSG, "The map must be closed/surrounded by walls"));
 	}
+	ft_free_two_point(map);
     return(SUCCESS);
 }
 
