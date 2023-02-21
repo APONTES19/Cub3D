@@ -6,7 +6,11 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2023/02/21 12:46:44 by lucasmar         ###   ########.fr        #
+=======
+#    Updated: 2023/02/21 04:48:14 by ryoshio-         ###   ########.fr        #
+>>>>>>> 3e5df311ac384e10c337203ff0b13c5b4da2b988
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,12 +47,14 @@ SRC_FILES=main_test.c\
 	test_check_duplicated_flag.c\
 	test_check_line_position.c\
 	test_check_value_flag.c\
+<<<<<<< HEAD
 	test_get_map_in_file.c\
+=======
+	test_get_map.c\
+	test_check_map.c\
+>>>>>>> 3e5df311ac384e10c337203ff0b13c5b4da2b988
 
-#	test_ft_check_map_flag_one.c\
-	test_ft_check_map_path_img.c\
-	test_check_map_rgb.c\
-	test_check_first_word_line.c\
+#
 
 
 # Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
@@ -69,8 +75,15 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_rgb.c\
 		  ft_check_texure.c\
 		  ft_check_value_flag.c\
+<<<<<<< HEAD
 		  ft_get_map_in_file.c
 
+=======
+		  ft_get_map.c\
+		  ft_check_map.c\
+		  ft_check_wall.c 
+		
+>>>>>>> 3e5df311ac384e10c337203ff0b13c5b4da2b988
 
 
 
