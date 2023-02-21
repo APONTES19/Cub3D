@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/12 04:30:44 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 12:25:34 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 
 
-// Consolidado 
+// Consolidado
 int		ft_check_arguments(int argc, char **argv);
 int		ft_check_extension(const char	*file, const char *extension);
 int		ft_check_file_exists(const char *path);
@@ -38,6 +38,8 @@ int	ft_check_rgb(char *line);
 int	ft_check_texure(char  *line);
 void ft_check_cub_file(char **text);
 int	ft_check_value_flag(char  **text);
+
+char	**ft_get_map_in_file(char **text);
 
 
 // simples demais para ter teste

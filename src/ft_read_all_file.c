@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_all_file.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 22:26:21 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/12 00:30:56 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/15 12:18:16 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	**ft_read_all_file(const char *path)
 	i = 0;
 	while (1)
 	{
-		line = get_next_line (fd);
+		line = get_next_line(fd);
 		if (line == NULL)
 			break ;
 		text[i++] = ft_strdup(line);

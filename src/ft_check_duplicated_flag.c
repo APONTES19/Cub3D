@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_duplicated_flag.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 23:14:45 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/12 01:44:49 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 11:57:26 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-// serve para verificar se não existe flag duplicado ou faltando 
+// serve para verificar se não existe flag duplicado ou faltando
 
 static void ft_init_check_duplicated_flag(t_check_duplicated_flag  *data);
 static int ft_check_count_flag(t_check_duplicated_flag  *data);
@@ -23,11 +23,11 @@ int ft_check_duplicated_flag(char **text)
 {
 	t_check_duplicated_flag *data;
 	int	result;
-	
+
 	data = malloc(sizeof(t_check_duplicated_flag));
 	if(!data)
 		return (FAILURE);
-	 ft_init_check_duplicated_flag(data);
+	ft_init_check_duplicated_flag(data);
 	while(text[++data->i])
 	{
 		data->status = ft_line_code(text[data->i]);

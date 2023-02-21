@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_check_duplicated_flag.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 01:06:05 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/12 03:22:57 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 12:27:37 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void test_check_duplicated_flag_wrong_failure(void)
     char **text;
 
 	char path[] = {"./maps/check_duplicated_flag/" };
-	char	file[][800] = { "failure1.cub", "failure2.cub", "failure3.cub",  "failure4.cub", 
+	char	file[][800] = { "failure1.cub", "failure2.cub", "failure3.cub",  "failure4.cub",
 	"failure5.cub", "failure6.cub","\0"};
 	i = 0;
 	printf("    \033[0;33mTestando com erro 'F'!\033[0m\n\n");
@@ -48,8 +48,8 @@ static void test_check_duplicated_flag_wrong_failure(void)
 			printf("\033[0;32mok ✓ \033[0m\n");
 		else
 			printf("\033[0;31m▥ fail \033[0m\n");
-	
-        i++;			
+
+        i++;
         ft_free_two_point(text);
 	}
 }
@@ -58,19 +58,19 @@ static void test_check_duplicated_flag_wrong_failure(void)
 
 static void test_check_duplicated_flag_correct_success(void)
 {
-	
+
 	int	result = 0;
 	int	i;
 	char *temp;
     char **text;
 
 	char path[] = {"./maps/check_duplicated_flag/" };
-	char	file[][800] = { "success1.cub", "success2.cub", "success3.cub", "success4.cub", "\0"};
+	char	file[][800] = {"success1.cub", "success2.cub", "success3.cub", "success4.cub", "\0"};
 	i = 0;
 	printf("    \033[0;33mTestando com acerrto!\033[0m\n\n");
 
 
-	
+
 	while(file[i][0] != '\0')
 	{
 		temp = ft_strjoin(path, file[i]);
@@ -83,9 +83,9 @@ static void test_check_duplicated_flag_correct_success(void)
 			printf("\033[0;32mok ✓ \033[0m\n");
 		else
 			printf("\033[0;31m▥ fail \033[0m\n");
-	
+
         i++;
-		if(text != NULL)			
+		if(text != NULL)
     	    ft_free_two_point(text);
 	}
 }

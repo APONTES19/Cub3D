@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/12 04:49:44 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 12:56:41 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,20 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 
 
  */
-	test_ft_check_extension();
-	test_ft_check_file_exists();
-	test_read_all_file();
-	test_line_code();
-	test_check_first_word_each_line ( );
-	test_check_duplicated_flag ();
-	test_check_line_position();
-	test_check_value_flag();
-	
+	// test_ft_check_extension();
+	// test_ft_check_file_exists();
+	// test_read_all_file();
+	// test_line_code();
+	// test_check_first_word_each_line ( );
+	// test_check_duplicated_flag ();
+	// test_check_line_position();
+	// test_check_value_flag();
+	test_ft_get_map_in_file();
+
 	//test_ft_check_map_flag_one();
 	//test_ft_check_map_path_img();
 	//test_check_map_rgb ();
-	
+
 	//test_check_strange_line ();
 	/*
 

@@ -1,0 +1,7 @@
+SO ./maps/check_value_flag/failure2.cub
+WE ./maps/check_value_flag/failure2.cub
+EA ./maps/check_value_flag/failure2.cub
+             NO ./maps/check_value_flag/failure2.cub
+
+F 220,100, -200
+C 225,30,0

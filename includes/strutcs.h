@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strutcs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/12 00:59:21 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 13:10:30 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 typedef struct cub
 {
-	int		i;
+	int	i;
 }	t_cub;
+
 
 
 typedef struct  check_path_img
@@ -25,11 +26,11 @@ typedef struct  check_path_img
 	char	**list_line;
 	char	*path_file;
 	int		file;
-	
+
 } t_check_path_img;
 
 
-typedef struct  check_duplicated_flag 
+typedef struct  check_duplicated_flag
 {
 	int		status;
 	int		i;
@@ -39,7 +40,7 @@ typedef struct  check_duplicated_flag
 	int		ea;
 	int		f;
 	int		c;
-	
+
 } t_check_duplicated_flag;
 
 
