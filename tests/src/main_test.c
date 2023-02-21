@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/12 04:49:44 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 00:00:34 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,27 +42,6 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 	test_check_duplicated_flag ();
 	test_check_line_position();
 	test_check_value_flag();
-	
-	//test_ft_check_map_flag_one();
-	//test_ft_check_map_path_img();
-	//test_check_map_rgb ();
-	
-	//test_check_strange_line ();
-	/*
-
-	test_file_exists_wrong_expected_false();
-	test_file_exists_correct_expected_true();
-
-
-	test_receiving_map_wrong_no_false();
-
-	test_receiving_map_rigth_no_true();
-
-
-	test_receiving_map_rigth_path_no_true();
-
-	test_receiving_map_rigth_path_no_false();
-	test_receiving_map_wrong_f_false();
-*/
+	 test_get_map ();
 	return (0);
 }

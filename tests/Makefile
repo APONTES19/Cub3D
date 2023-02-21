@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/12 04:48:28 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/20 23:59:14 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,9 @@ SRC_FILES=main_test.c\
 	test_check_duplicated_flag.c\
 	test_check_line_position.c\
 	test_check_value_flag.c\
+	test_get_map.c
 
-#	test_ft_check_map_flag_one.c\
-	test_ft_check_map_path_img.c\
-	test_check_map_rgb.c\
-	test_check_first_word_line.c\
+#
 
 
 # Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
@@ -67,7 +65,8 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_cub_file.c\
 		  ft_check_rgb.c\
 		  ft_check_texure.c\
-		  ft_check_value_flag.c
+		  ft_check_value_flag.c\
+		  ft_get_map.c
 		
 
 

@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/12 04:30:44 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/20 23:54:44 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_check_rgb(char *line);
 int	ft_check_texure(char  *line);
 void ft_check_cub_file(char **text);
 int	ft_check_value_flag(char  **text);
-
+char  **ft_get_map(char **text);
 
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);
