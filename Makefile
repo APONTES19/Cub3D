@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/21 05:26:35 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/21 18:24:39 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_get_map.c\
 		  ft_check_map.c\
 		  ft_check_wall.c 
+		
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)

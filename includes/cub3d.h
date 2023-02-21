@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 17:16:32 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/21 18:23:00 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ int		ft_check_texure(char  *line);
 // em teste
 void ft_check_cub_file(char **text);
 int	ft_check_value_flag(char  **text);
-
+char  **ft_get_map(char **text);
+int ft_check_map(char **text);
+int	ft_check_wall(char **map);
 
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);
