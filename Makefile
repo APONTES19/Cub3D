@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/21 18:24:39 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/21 22:12:08 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,9 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_value_flag.c\
 		  ft_get_map.c\
 		  ft_check_map.c\
-		  ft_check_wall.c 
+		  ft_check_wall.c\
+		  ft_get_value.c\
+		  ft_free_cub.c
 		
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
@@ -57,10 +59,7 @@ OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 # compilation **************************************************************** #
 CC=cc
 FLAG= -Wall -Werror -Wextra
-VALGRIND=valgrind\
-		 --leak-check=full\
-		 ---quiethow-leak-kinds=all\
-		 --track-origins=yes
+VALGRIND=valgrind --leak-check=full ---quiethow-leak-kinds=all  --track-origins=yes
 # clean ********************************************************************** #
 RM=-rm -f
 RM_DIR=rm -rf

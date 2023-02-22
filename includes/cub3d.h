@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 18:23:00 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 21:12:56 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,12 @@ int	ft_check_value_flag(char  **text);
 char  **ft_get_map(char **text);
 int ft_check_map(char **text);
 int	ft_check_wall(char **map);
+void ft_get_value (char **text, t_cub *data);
 
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);
 void	ft_free_one_point(char *point);
 void	ft_free_two_point(char **point);
 void    ft_exit_two_point(char **point);
+void    ft_free_cub(t_cub *data);
 #endif
