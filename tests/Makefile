@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/07 17:17:32 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/21 18:49:03 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,13 +35,18 @@ vpath %.c ./src ../src
 
 #teste especial
 SRC_FILES=main_test.c\
-	test_ft_check_extension.c\
-	test_ft_check_file_exists.c\
-	test_ft_check_map_flag_one.c\
-	test_ft_check_map_path_img.c\
-	test_check_map_rgb.c\
+	test_check_extension.c\
+	test_check_file_exists.c\
+	test_read_all_file.c\
+	test_line_code.c\
+	test_check_first_word_each_line.c\
+	test_check_duplicated_flag.c\
+	test_check_line_position.c\
+	test_check_value_flag.c\
+	test_get_map.c\
+	test_check_map.c\
 
-
+#
 
 
 # Aqui colocar o arquivo do cub ("menos o arquivo que contem a main")
@@ -51,9 +56,23 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_error_message.c\
 		  ft_free_one_point.c\
 		  ft_free_two_point.c\
-		  ft_check_map_flag_one.c\
-		  ft_check_map_path_img.c\
-		  ft_check_map_rgb.c
+		  ft_read_all_file.c\
+		  ft_flag_code.c\
+		  ft_line_code.c\
+		  ft_check_first_word_each_line.c\
+		  ft_check_line_position.c\
+		  ft_check_duplicated_flag.c\
+		  ft_exit_two_point.c\
+		  ft_check_cub_file.c\
+		  ft_check_rgb.c\
+		  ft_check_texure.c\
+		  ft_check_value_flag.c\
+		  ft_get_map.c\
+		  ft_check_map.c\
+		  ft_check_wall.c\
+		  ft_creat_window.c
+
+
 
 
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
+#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/06 10:21:09 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/02/21 22:12:08 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,23 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_error_message.c\
 		  ft_free_one_point.c\
 		  ft_free_two_point.c\
-		  ft_check_map_flag_one.c\
-		  ft_check_map_path_img.c
+		  ft_read_all_file.c\
+		  ft_flag_code.c\
+		  ft_line_code.c\
+		  ft_check_first_word_each_line.c\
+		  ft_check_line_position.c\
+		  ft_check_duplicated_flag.c\
+		  ft_exit_two_point.c\
+		  ft_check_cub_file.c\
+		  ft_check_rgb.c\
+		  ft_check_texure.c\
+		  ft_check_value_flag.c\
+		  ft_get_map.c\
+		  ft_check_map.c\
+		  ft_check_wall.c\
+		  ft_get_value.c\
+		  ft_free_cub.c
+		
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
@@ -44,10 +59,7 @@ OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 # compilation **************************************************************** #
 CC=cc
 FLAG= -Wall -Werror -Wextra
-VALGRIND=valgrind\
-		 --leak-check=full\
-		 ---quiethow-leak-kinds=all\
-		 --track-origins=yes
+VALGRIND=valgrind --leak-check=full ---quiethow-leak-kinds=all  --track-origins=yes
 # clean ********************************************************************** #
 RM=-rm -f
 RM_DIR=rm -rf
