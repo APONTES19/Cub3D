@@ -6,7 +6,11 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/02/21 23:50:55 by lucasmar         ###   ########.fr       */
+=======
+/*   Updated: 2023/02/21 21:12:56 by ryoshio-         ###   ########.fr       */
+>>>>>>> f25560f173b06a070674008192ffccd3dd096a2f
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +45,14 @@ int	ft_check_value_flag(char  **text);
 char  **ft_get_map(char **text);
 int ft_check_map(char **text);
 int	ft_check_wall(char **map);
+void ft_get_value (char **text, t_cub *data);
 
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);
 void	ft_free_one_point(char *point);
 void	ft_free_two_point(char **point);
 void    ft_exit_two_point(char **point);
+<<<<<<< HEAD
 
 
 
@@ -72,4 +78,7 @@ void    ft_exit_two_point(char **point);
 //lucas alterações
 void	ft_creat_window(int x, int y, char *title);
 
+=======
+void    ft_free_cub(t_cub *data);
+>>>>>>> f25560f173b06a070674008192ffccd3dd096a2f
 #endif
