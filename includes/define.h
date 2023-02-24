@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 00:45:20 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/21 21:20:43 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # define ERROR_RGB 107
 # define ERROR_MALLOC 108
 
+
 # define SUCCESS 0
 # define FAILURE 1
 # define NO 2
@@ -36,6 +37,24 @@
 # define NEW_LINE 10
 # define END 11
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# define ERROR_WIN 12
 
 #endif
 

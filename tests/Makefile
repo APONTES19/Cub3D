@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/21 18:17:13 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/21 18:49:03 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,8 +69,9 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_value_flag.c\
 		  ft_get_map.c\
 		  ft_check_map.c\
-		  ft_check_wall.c 
-		
+		  ft_check_wall.c\
+		  ft_creat_window.c
+
 
 
 
