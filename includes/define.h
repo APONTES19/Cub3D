@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 21:20:43 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/23 22:17:53 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@
 # define END 11
 
 
+
+# define K_A 97
+# define K_D 100
+# define K_W 119
+# define K_S 115
+# define K_LEFT 65361
+# define K_RIGTH 65363
+# define K_UP 65362
+# define K_DOWN 65364
+# define K_ESC 65307
 
 
 

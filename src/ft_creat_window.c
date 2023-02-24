@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 23:59:58 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/23 22:22:57 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct win
 
 static int	ft_close_window(t_win *win);
 static int ft_render(t_win *win);
+static int ft_key(int key, t_win *win);
 
 
 void	ft_creat_window(int x, int y, char *title)
@@ -36,7 +37,8 @@ void	ft_creat_window(int x, int y, char *title)
 	{
 		ft_error_message(ERROR_WIN, " ");
 	}
-	ft_render(&win);
+	//ft_render(&win);
+	mlx_key_hook(win.scr, &ft_key, &win);
 	mlx_hook(win.scr, 33, 1L << 17, &ft_close_window, &win);
 	mlx_expose_hook(win.scr, &ft_render, &win);
 	mlx_loop(win.ptr);
@@ -45,22 +47,50 @@ void	ft_creat_window(int x, int y, char *title)
 static int	ft_close_window(t_win *win)
 {
 	printf("fechando a tela\n");
-	// mlx_clear_window(win->ptr, win->scr);
-	// mlx_loop_end(win->ptr);
+	mlx_clear_window(win->ptr, win->scr);
+	mlx_loop_end(win->ptr);
+	//mlx_destroy_display(win->ptr);
 	mlx_destroy_window(win->ptr, win->scr);
-	mlx_destroy_display(win->ptr);
-	// ft_free_one_point(win->ptr);
-	// free(win);
 	return (0);
 }
 
+
 static int ft_render(t_win *win)
 {
-	int *img;
+	void *img;
 	int	x;
 	int y;
-	img = mlx_xpm_file_to_image(win->ptr, "./img/bricks.xpm", &x, &y);
 
-	mlx_put_image_to_window(win->ptr, win->scr, img, 0, 0);
+	img = mlx_xpm_file_to_image(win->ptr, "../img/bricks.xpm", &x, &y);
+
+	int g;
+	g = 0;
+	while(g <= 735)
+	{
+		mlx_put_image_to_window(win->ptr, win->scr, img, g, 0);
+		g += 65;
+	}
+	return(0);
+}
+
+static int ft_key(int key, t_win *win)
+{
+	(void) win;
+	if (key == K_ESC)
+		printf("key = Esc %d\n\n", key);
+	else if (key == K_A || key == K_LEFT)
+		printf("key = A %d\n\n", key);
+	else if (key == K_D || key == K_RIGTH)
+		printf("key = D %d\n\n", key);
+	else if (key == K_W || key == K_UP)
+		printf("key = W %d\n\n", key);
+	else if (key == K_S || key == K_DOWN)
+		printf("key = S %d\n\n", key);
+	else
+		printf("\n	Use the keys to move\n\n"
+			"                 w     \n"
+			"                 ▲     \n"
+			"             a ◀ ▼ ▶ d \n"
+			"                 s    \n");
 	return(0);
 }
