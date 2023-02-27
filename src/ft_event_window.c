@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/27 12:36:55 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:50:04 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //arquivo criado para guardar coisas referentes a teclas e seus eventos.
 
-static int ft_key(int key, t_win *win)
+int ft_key(int key, t_win *win)
 {
 	(void) win;
 	if (key == K_ESC)

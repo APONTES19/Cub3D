@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/27 11:57:25 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:53:49 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 
 
  */
-	// test_ft_check_extension();
-	// test_ft_check_file_exists();
-	// test_read_all_file();
-	// test_line_code();
-	// test_check_first_word_each_line ( );
-	// test_check_duplicated_flag ();
-	// test_check_line_position();
-	// test_check_value_flag();
-	// test_get_map ();
-	// test_check_map();
+	test_ft_check_extension();
+	test_ft_check_file_exists();
+	test_read_all_file();
+	test_line_code();
+	test_check_first_word_each_line ( );
+	test_check_duplicated_flag ();
+	test_check_line_position();
+	test_check_value_flag();
+	test_get_map ();
+	test_check_map();
 	win.size_x = 800;
 	win.size_y = 800;
 	ft_init_window(&win);

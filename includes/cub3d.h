@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/27 12:42:04 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:53:21 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int		ft_check_first_word_each_line(char **text);
 int		ft_check_duplicated_flag(char **text);
 int		ft_check_line_position(char **text);
 int		ft_check_rgb(char *line);
-int		ft_check_texure(char  *line);
+int		ft_check_texture(char  *line);
 
 
 // em teste
@@ -73,6 +73,7 @@ void    ft_exit_two_point(char **point);
 //lucas alterações
 void	ft_init_window(t_win *win);
 int		ft_close_window(t_win *win);
+int		ft_key(int key, t_win *win);
 
 void    ft_free_cub(t_cub *data);
 #endif

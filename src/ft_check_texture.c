@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_texure.c                                  :+:      :+:    :+:   */
+/*   ft_check_texture.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "../includes/cub3d.h"
 
-int	ft_check_texure(char  *line)
+int	ft_check_texture(char  *line)
 {
 	char	*trim;
 	char	**split;
@@ -30,7 +30,7 @@ int	ft_check_texure(char  *line)
 		ft_error_message(ERROR_FOUND, split[1]);
 		ft_free_one_point(trim);
 		ft_free_two_point(split);
-		return (FAILURE); 
+		return (FAILURE);
 	}
 	ft_free_one_point(trim);
 	ft_free_two_point(split);

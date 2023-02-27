@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/27 14:23:35 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:49:14 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,10 @@ typedef struct  check_duplicated_flag
 
 } t_check_duplicated_flag;
 
+typedef struct window
 {
 	void	*scr;
-	t_xvar	*mlx;
+	void	*mlx;
 	int		size_x;
 	int		size_y;
 	char	*title;
