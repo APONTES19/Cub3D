@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/23 21:40:52 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/02/27 12:28:17 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,8 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_get_map.c\
 		  ft_check_map.c\
 		  ft_check_wall.c\
-		  ft_creat_window.c
+		  ft_init_window.c\
+		  ft_close_window.c\
 
 
 

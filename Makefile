@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/21 22:12:08 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/02/27 12:24:07 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,8 +50,10 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_check_map.c\
 		  ft_check_wall.c\
 		  ft_get_value.c\
-		  ft_free_cub.c
-		
+		  ft_free_cub.c\
+		  ft_init_windown.c\
+		  ft_close_window.c
+
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)

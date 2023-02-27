@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 22:28:47 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:57:25 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
+	t_win win;
 /*
 Vamos padronizar!
 
@@ -44,7 +45,11 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 	// test_check_value_flag();
 	// test_get_map ();
 	// test_check_map();
-	ft_creat_window(800,800, "My firt windown in C");
+	win.size_x = 800;
+	win.size_y = 800;
+	ft_init_window(&win);
+	mlx_loop(win.mlx);
+
 	return (0);
 }
 

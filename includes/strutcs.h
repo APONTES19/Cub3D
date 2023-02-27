@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strutcs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 20:28:37 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/27 14:23:35 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,13 @@ typedef struct  check_duplicated_flag
 
 } t_check_duplicated_flag;
 
+{
+	void	*scr;
+	t_xvar	*mlx;
+	int		size_x;
+	int		size_y;
+	char	*title;
+}	t_win;
 
 
 #endif
