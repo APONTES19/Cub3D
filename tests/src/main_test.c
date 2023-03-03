@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 18:25:25 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:53:49 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
+	t_win win;
 /*
 Vamos padronizar!
 
@@ -44,5 +45,11 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 	test_check_value_flag();
 	test_get_map ();
 	test_check_map();
+	win.size_x = 800;
+	win.size_y = 800;
+	ft_init_window(&win);
+	mlx_loop(win.mlx);
+
 	return (0);
 }
+

@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 20:28:37 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/02 23:49:02 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,16 @@ typedef struct cub
 	int		cb;
 }	t_cub;
 
+
+
+typedef struct s_texture
+{
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}	t_texture;
 
 typedef struct  check_path_img
 {
@@ -52,6 +62,19 @@ typedef struct  check_duplicated_flag
 
 } t_check_duplicated_flag;
 
+typedef struct window
+{
+	void	*scr;
+	void	*mlx;
+	int		size_x;
+	int		size_y;
+	char	*title;
+	t_texture	*no;
+	t_texture	*so;
+	t_texture	*we;
+	t_texture	*ea;
+	
+}	t_win;
 
 
 #endif

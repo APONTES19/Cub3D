@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/21 22:12:08 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/02 23:42:00 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,21 +44,27 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_exit_two_point.c\
 		  ft_check_cub_file.c\
 		  ft_check_rgb.c\
-		  ft_check_texure.c\
+		  ft_check_texture.c\
 		  ft_check_value_flag.c\
 		  ft_get_map.c\
 		  ft_check_map.c\
 		  ft_check_wall.c\
 		  ft_get_value.c\
-		  ft_free_cub.c
-		
+		  ft_free_cub.c\
+		  ft_init_window.c\
+		  ft_close_window.c\
+		  ft_event_window.c\
+		  ft_game.c\
+		  ft_game_init.c\
+		  ft_texture.c  
+
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
 OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 
 # compilation **************************************************************** #
 CC=cc
-FLAG= -Wall -Werror -Wextra
+FLAG= -Wall -Werror -Wextra -fsanitize=address
 VALGRIND=valgrind --leak-check=full ---quiethow-leak-kinds=all  --track-origins=yes
 # clean ********************************************************************** #
 RM=-rm -f
