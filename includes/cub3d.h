@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 21:22:47 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:58:17 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_check_value_flag(char  **text);
 char  **ft_get_map(char **text);
 int ft_check_map(char **text);
 int	ft_check_wall(char **map);
-void ft_get_value (char **text, t_cub *data);
+void ft_get_value (char **text, t_cub *cub);
 
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);

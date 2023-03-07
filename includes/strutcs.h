@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 21:18:46 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/06 22:47:11 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ typedef struct window
 	char	*title;
 }	t_win;
 
-typedef struct cub
+typedef struct data
 {
 	char	**map;
 	char	*no_path;
@@ -58,6 +58,27 @@ typedef struct cub
 	int		cr;
 	int		cg;
 	int		cb;
+}	t_data;
+
+typedef struct player
+{
+	int	x;
+	int	y;
+	float	ang;
+	// int	move_up;
+	// int	move_down;
+	// int	move_left;
+	// int	move_right;
+	// int	turn_left;
+	// int	turn_right;
+	// int	ray_num;
+} t_play;
+
+
+typedef struct cub
+{
+	t_play	play;
+	t_data	data;
 	t_win	win;
 }	t_cub;
 
