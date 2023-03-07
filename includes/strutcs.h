@@ -6,28 +6,12 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/27 18:49:14 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:18:46 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUTCS_H
 # define STRUTCS_H
-
-typedef struct cub
-{
-	char	**map;
-	char	*no_path;
-	char	*so_path;
-	char	*we_path;
-	char	*ea_path;
-	int		fr;
-	int		fg;
-	int		fb;
-	int		cr;
-	int		cg;
-	int		cb;
-}	t_cub;
-
 
 typedef struct  check_path_img
 {
@@ -61,5 +45,20 @@ typedef struct window
 	char	*title;
 }	t_win;
 
+typedef struct cub
+{
+	char	**map;
+	char	*no_path;
+	char	*so_path;
+	char	*we_path;
+	char	*ea_path;
+	int		fr;
+	int		fg;
+	int		fb;
+	int		cr;
+	int		cg;
+	int		cb;
+	t_win	win;
+}	t_cub;
 
 #endif
