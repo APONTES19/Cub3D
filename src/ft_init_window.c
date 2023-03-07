@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 21:31:15 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/06 23:43:35 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 static void	ft_creat_window(t_cub *cub);
 static void	ft_hook_window(t_cub *cub);
 
+
 void	ft_init_window(t_cub *cub)
 {
-	if (cub->win.size_x < 300 || cub->win.size_y < 300)
-		ft_error_message(ERROR_WIN, "\t- Over size screen or title null!");
 	cub->win.mlx = mlx_init();
 	if (cub->win.mlx == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro init mlx failed");
@@ -28,8 +27,8 @@ void	ft_init_window(t_cub *cub)
 
 void	ft_creat_window(t_cub *cub)
 {
-	cub->win.scr = mlx_new_window(cub->win.mlx, cub->win.size_x,
-		cub->win.size_y, "Cub 3D");
+	cub->win.scr = mlx_new_window(cub->win.mlx, WIN_SIZE_X,
+		WIN_SIZE_Y, "Cub 3D");
 	if (cub->win.scr == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro creat window");
 }
@@ -43,3 +42,4 @@ void	ft_hook_window(t_cub *cub)
 	//imagens a ser carregadas
 	mlx_expose_hook(cub->win.scr, &ft_render, cub);
 }
+

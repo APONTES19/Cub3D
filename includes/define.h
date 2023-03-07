@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 22:43:10 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/07 00:19:07 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,20 @@
 #define PI 3.14
 
 
+# define WIN_SIZE_X 1280
+# define WIN_SIZE_Y 720
 
+
+/*
+	Calcule speed (PI / 90)
+*/
+# define SPEED_ROTATION 0.035
+# define SPEED_MOVIMENT 4
+/*
+	#wall_dist
+	calcular essa valor depois.
+*/
+# define WALL_DIST
 
 
 

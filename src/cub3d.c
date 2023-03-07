@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 22:08:00 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/06 23:52:45 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	main(int argc, char **argv)
 {
-	char	**text;
 	t_cub	cub;
+
+	char	**text;
+	ft_memset(&cub, 0, sizeof(t_cub));
 	ft_check_arguments(argc, argv);
 	text = ft_read_all_file(argv[1]);
 	if(!text)

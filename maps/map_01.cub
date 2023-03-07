@@ -1,15 +1,14 @@
 SO ./img/north_texture.xpm
 WE ./img/north_texture.xpm
 EA ./img/north_texture.xpm
-NO ./img/north_texture.xpm
+NO ../img/north_texture.xpm
 
 
 F 220,100,0
 C 225,30,0
 
 
- 11111111     1
-11111111111111W1
- 11111111111111
- 11111111111111
- 111111111111111111
+111111111
+1111W1111
+111111111
+

@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:21:42 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/06 22:47:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/06 23:19:55 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void ft_get_value (char **text, t_cub *cub)
 	printf("Posição x => %d\n", cub->play.x);
 	printf("Posição y => %d\n", cub->play.y);
 	printf("Posição ang => %f\n", cub->play.ang);
+	printf("path %s", cub->data.no_path);
 }
 
 static char *ft_get_path(char *line)
@@ -86,13 +87,14 @@ static void ft_get_play(t_cub *cub)
 		j = 0;
 		while(cub->data.map[i][j])
 		{
-			// printf("%c",cub->data.map[i][j]);
 			if (ft_strchr("NSEW", cub->data.map[i][j]))
 			{
 				cub->play.x = j;
 				cub->play.y = i;
 				ft_get_play_ang(cub->data.map[i][j], cub);
+				cub->data.map[i][j] = '0';
 			}
+			// printf("%c",cub->data.map[i][j]);
 			j++;
 		}
 		i++;
