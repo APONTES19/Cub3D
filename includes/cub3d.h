@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/27 18:53:21 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:39:26 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void    ft_exit_two_point(char **point);
 void	ft_init_window(t_win *win);
 int		ft_close_window(t_win *win);
 int		ft_key(int key, t_win *win);
+int		ft_render(t_win *win);
 
 void    ft_free_cub(t_cub *data);
 #endif

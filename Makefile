@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/02/27 18:53:21 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/02 20:38:47 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_init_windown.c\
 		  ft_close_window.c\
 		  ft_event_window.c\
+		  ft_render_window.c\
 
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
