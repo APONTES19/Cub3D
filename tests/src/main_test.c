@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 20:27:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/06 23:41:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/07 22:00:44 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ Cria file test_util para criar função auxiliar que pode ser usado em outros te
 	test_check_value_flag();
 	test_get_map ();
 	test_check_map();
+
 	ft_init_window(&cub);
 	mlx_loop(cub.win.mlx);
 

@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 22:52:29 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/07 22:26:28 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ typedef struct data
 	char	*so_path;
 	char	*we_path;
 	char	*ea_path;
-	
+
 	int		fr;
 	int		fg;
 	int		fb;
@@ -75,12 +75,20 @@ typedef struct player
 	// int	ray_num;
 } t_play;
 
+typedef struct    line {
+    void    *img;
+    char    *addr;
+    int        bits_per_pixel;
+    int        line_length;
+    int        endian;
+}                t_line;
 
 typedef struct cub
 {
 	t_play	play;
 	t_data	data;
 	t_win	win;
+	t_line	line;
 }	t_cub;
 
 #endif

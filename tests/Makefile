@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/03/02 20:38:39 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/07 22:31:48 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,7 @@ OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 # compilation **************************************************************** #
 CC=cc
 FLAG= -Wall -Werror -Wextra
-VALGRIND= valgrind -s --leak-check=full --show-leak-kinds=all
+#VALGRIND= valgrind -s --leak-check=full --show-leak-kinds=all
 
 # clean ********************************************************************** #
 RM=-rm -f
