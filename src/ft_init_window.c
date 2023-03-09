@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/07 22:20:55 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/08 21:34:09 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_hook_window(t_cub *cub)
 	mlx_key_hook(cub->win.scr, &ft_key, &cub);
 	//imagens a ser carregadas
 	//mlx_expose_hook(cub->win.scr, &ft_render, cub);
-	ft_render(cub);
+	ft_background(cub);
 }
 
 
