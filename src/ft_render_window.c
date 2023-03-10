@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:36:01 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/08 21:35:48 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/08 22:21:18 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ static void	ft_mlx_pixel_put(t_cub *cub, int x, int y, int color);
 
 int ft_render(t_cub *cub)
 {
-	// void *img;
-	// int	u;
-	// int v;
+	void *img;
+	int	u;
+	int v;
 
-	// img = mlx_xpm_file_to_image(cub->win.mlx, "../img/north_texture.xpm", &u, &v);
-	// if (!img)
-	// 	ft_error_message(800, "erro na imagem");
-	// mlx_put_image_to_window(cub->win.mlx, cub->win.scr, img, u, v) ;
-	(void)cub;
+	img = mlx_xpm_file_to_image(cub->win.mlx, "./img/north_texture.xpm", &u, &v);
+
+	if (!img)
+		ft_error_message(800, "erro na imagem");
+	mlx_put_image_to_window(cub->win.mlx, cub->win.scr, img, (WIN_SIZE_X/2), (WIN_SIZE_Y/2 - 15)) ;
 	return(0);
 }
 
