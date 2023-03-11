@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
+#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/06 22:01:06 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/10 21:02:26 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_close_window.c\
 		  ft_event_window.c\
 		  ft_render_window.c\
+		  ft_distance.c\
 
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/08 21:35:08 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/10 21:01:04 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		ft_check_duplicated_flag(char **text);
 int		ft_check_line_position(char **text);
 int		ft_check_rgb(char *line);
 int		ft_check_texture(char  *line);
-
+float	ft_distance(float x1, float y1, float x2, float y2);
 
 // em teste
 void ft_check_cub_file(char **text);
