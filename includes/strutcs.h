@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/12 17:12:42 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/13 03:42:16 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,9 @@ typedef struct player
 	float	dy;
 	float	xo;
 	float	yo;
+	float   ray_ang;
+	float	dist;
+	int		status;
 	// int	move_up;
 	// int	move_down;
 	// int	move_left;
