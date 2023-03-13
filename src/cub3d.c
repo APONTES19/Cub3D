@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/10 21:02:03 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/12 18:43:57 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@ int	main(int argc, char **argv)
 		return(ft_error_message(ERROR_READ,argv[1]));
 	ft_check_cub_file(text);
 	ft_get_value (text, &cub);
+
+   printf("path %s", cub.data.map[0]);
+	printf("\n calculo da distancia %f\n" , ft_distance_wall(&cub));
 	ft_free_two_point (text);
 
-	ft_init_window(&cub);
-	mlx_loop(cub.win.mlx);
+	//ft_init_window(&cub);
+	//mlx_loop(cub.win.mlx);
 	return (0);
 }

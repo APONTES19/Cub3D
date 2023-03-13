@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/10 21:02:26 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/12 17:55:28 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,8 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_event_window.c\
 		  ft_render_window.c\
 		  ft_distance.c\
+		  ft_distance_wall.c
+
 
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))

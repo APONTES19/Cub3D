@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_value.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:21:42 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/08 21:42:18 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/12 18:43:16 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ void ft_get_value (char **text, t_cub *cub)
 	ft_rgb_to_hex(cub);
 	cub->data.map = ft_get_map(text);
 	ft_get_play(cub);
-	printf("Posição x => %d\n", cub->play.x);
-	printf("Posição y => %d\n", cub->play.y);
+	printf("Posição x => %f\n", cub->play.x);
+	printf("Posição y => %f\n", cub->play.y);
 	printf("Posição ang => %f\n", cub->play.ang);
-	printf("path %s", cub->data.no_path);
+	
 }
 
 static char *ft_get_path(char *line)
@@ -91,8 +91,8 @@ static void ft_get_play(t_cub *cub)
 		{
 			if (ft_strchr("NSEW", cub->data.map[i][j]))
 			{
-				cub->play.x = j;
-				cub->play.y = i;
+				cub->play.x = (j + 0.5 )* TEXTURE_SIZE;
+				cub->play.y =  (i + 0.5)* TEXTURE_SIZE;
 				ft_get_play_ang(cub->data.map[i][j], cub);
 				cub->data.map[i][j] = '0';
 			}
@@ -106,11 +106,11 @@ static void ft_get_play(t_cub *cub)
 static void ft_get_play_ang(char c, t_cub *cub)
 {
 		if (c == 'N')
-			cub->play.ang = 0;
+			cub->play.ang = PI /2;
 		else if (c == 'S')
-			cub->play.ang = PI / 2;
-		else if (c == 'E')
 			cub->play.ang = (PI * 3) / 2;
+		else if (c == 'E')
+			cub->play.ang = 0;
 		else if (c == 'W')
 			cub->play.ang = PI;
 }

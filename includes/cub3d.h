@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/10 21:01:04 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/12 17:54:51 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,21 @@ int		ft_check_duplicated_flag(char **text);
 int		ft_check_line_position(char **text);
 int		ft_check_rgb(char *line);
 int		ft_check_texture(char  *line);
-float	ft_distance(float x1, float y1, float x2, float y2);
 
-// em teste
+
+
 void ft_check_cub_file(char **text);
 int	ft_check_value_flag(char  **text);
 char  **ft_get_map(char **text);
 int ft_check_map(char **text);
 int	ft_check_wall(char **map);
 void ft_get_value (char **text, t_cub *cub);
+
+
+// em teste
+float	ft_distance(float x1, float y1, float x2, float y2);
+float ft_distance_wall(t_cub *data);
+
 
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strutcs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/08 21:32:13 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/12 17:12:42 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,15 @@ typedef struct data
 
 typedef struct player
 {
-	int	x;
-	int	y;
+	float	x;
+	float	y;
 	float	ang;
+	float 	wall_x;
+	float	wall_y;
+	float	dx;
+	float	dy;
+	float	xo;
+	float	yo;
 	// int	move_up;
 	// int	move_down;
 	// int	move_left;

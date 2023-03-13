@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/07 00:19:07 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/12 18:12:54 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@
 # define K_X 120
 
 
-#define PI 3.14
+#define PI 3.14159265358979323846
 
 
 # define WIN_SIZE_X 1280
 # define WIN_SIZE_Y 720
-
+# define  TEXTURE_SIZE 64
 
 /*
 	Calcule speed (PI / 90)
