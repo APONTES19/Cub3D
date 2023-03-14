@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/13 21:33:42 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/14 08:21:06 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,8 @@ OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 
 # compilation **************************************************************** #
 CC=cc
-FLAG= -Wall -Werror -Wextra
+FLAG= -Wall -Werror -Wextra 
+#-fsanitize=address
 VALGRIND=valgrind --leak-check=full ---quiethow-leak-kinds=all  --track-origins=yes
 # clean ********************************************************************** #
 RM=-rm -f

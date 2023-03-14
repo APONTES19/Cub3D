@@ -6,18 +6,43 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 04:39:00 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/14 04:00:21 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/14 09:48:41 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 void ft_drawn_wall(t_cub *cub);
+#include <stdlib.h> // jogar fora
 
 void ft_ray_casting(t_cub *cub)
 {
+float size = 33;
+ cub->play.ray = 0;
+
+
+  cub->play.ray_ang=  0;
+  while(cub->play.ray < 365)
+    { 
+		
+	ft_distance_wall(cub);
+	if( sin(cub->play.ray_ang) > 0 )
+		printf("\n %d(valo , correto, angulo) = (%f, %f, %f) = %f",cub->play.ray, 
+		cub->play.dist, size/ sin(cub->play.ray_ang),cub->play.ray_ang, size/ sin(cub->play.ray_ang) - cub->play.dist);	
+	else	
+		printf("\n %d(valo , correto, angulo) = (%f, %f, %f) = %f",cub->play.ray, 
+		cub->play.dist, size/ sin(cub->play.ray_ang),cub->play.ray_ang, size/ sin(cub->play.ray_ang) + cub->play.dist);	
+ 			
+	cub->play.ray_ang += PI/180;
+  	cub->play.ray ++;
+
+	}
+
+
+
+
+
 /*
-aqui fazer varredura do angulo e imprimir a risca na tela
-*/
+
 
 
    cub->win.mlx= mlx_init();
@@ -30,14 +55,20 @@ aqui fazer varredura do angulo e imprimir a risca na tela
 	&cub->img.endian);
 
 
+cub->play.ang= PI /2;   //tirar depois
   
  cub->play.ray = 0;
+
   cub->play.ray_ang=  cub->play.ang + PI/6;
-  while(cub->play.ray < WIN_SIZE_X /3)
+  while(cub->play.ray < WIN_SIZE_X)
     { 
-       ft_distance_wall(cub);
-       
-      ft_drawn_wall(cub);
+
+    	if ( cub->play.ray_ang >= 2 * PI)
+			cub->play.ray_ang -= 2 * PI;
+		if ( cub->play.ray_ang < 0)
+			cub->play.ray_ang += 2 * PI;
+    	ft_distance_wall(cub);
+        ft_drawn_wall(cub);
         cub->play.ray_ang -= (PI / 6)/  WIN_SIZE_X;
         cub->play.ray ++;
     }
@@ -47,6 +78,8 @@ aqui fazer varredura do angulo e imprimir a risca na tela
     
     mlx_destroy_image(cub->win.mlx, cub->img.img);
    mlx_loop(cub->win.mlx);
+]]
+*/
 
    
 }
@@ -60,7 +93,7 @@ void ft_drawn_wall(t_cub *cub)
   
     size = ft_size_wall(cub);
     j = floor( WIN_SIZE_Y/2  - size/2);
-    printf("j =%d", j);
+    
     
   
     i = 0;
@@ -73,3 +106,4 @@ void ft_drawn_wall(t_cub *cub)
     }
  
 }
+
