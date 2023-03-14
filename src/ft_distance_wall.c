@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/14 09:24:33 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/14 09:57:07 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void ft_distance_wall(t_cub *data)
 	else if(sin(data->play.ray_ang) < -0.01) // olhando para baixo
 	{
 		data->play.dy = TEXTURE_SIZE;
-		data->play.yo = floor(data->play.y/TEXTURE_SIZE)*TEXTURE_SIZE  + TEXTURE_SIZE;
+		data->play.yo = ceil(data->play.y/TEXTURE_SIZE)*TEXTURE_SIZE  + 1;
 		data->play.xo = (data->play.y -data->play.yo)/tan (data->play.ray_ang) +  data->play.x;
         data->play.dx = TEXTURE_SIZE /tan(data->play.ray_ang);
 	}
