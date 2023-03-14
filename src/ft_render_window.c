@@ -3,17 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_render_window.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:36:01 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/08 22:21:18 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/13 22:50:24 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
-//arquivo para colocarmos tudo relacionado a imagens
-static void	ft_mlx_pixel_put(t_cub *cub, int x, int y, int color);
 
 
 int ft_render(t_cub *cub)
@@ -32,20 +30,20 @@ int ft_render(t_cub *cub)
 
 void ft_background(t_cub *cub)
 {
-	cub->line.img = mlx_new_image(
+	cub->img.img = mlx_new_image(
 								  cub->win.mlx,
 								  WIN_SIZE_X,
 								  WIN_SIZE_Y
 					);
-	if(!cub->line.img)
+	if(!cub->img.img)
 		printf("BO\n");
-	cub->line.addr = mlx_get_data_addr(
-									   cub->line.img,
-									   &cub->line.bits_per_pixel,
-									   &cub->line.line_length,
-									   &cub->line.endian
+	cub->img.addr = mlx_get_data_addr(
+									   cub->img.img,
+									   &cub->img.bits_per_pixel,
+									   &cub->img.line_length,
+									   &cub->img.endian
 					 );
-	if(!cub->line.addr)
+	if(!cub->img.addr)
 		printf("BO2\n");
 
 	int i;
@@ -60,14 +58,14 @@ void ft_background(t_cub *cub)
 		{
 			if(i < WIN_SIZE_Y/2)
 				ft_mlx_pixel_put(
-								 cub,
+								 &cub->img,
 								 j,
 								 i,
 								 cub->data.c_ceiling
 				);
 			else
 				ft_mlx_pixel_put(
-				 cub,
+				 &cub->img,
 				 j,
 				 i,
 				 cub->data.c_floor
@@ -80,20 +78,12 @@ void ft_background(t_cub *cub)
 	mlx_put_image_to_window(
 							cub->win.mlx,
 							cub->win.scr,
-							cub->line.img,
+							cub->img.img,
 							0,
 							0
 	);
-	if(!cub->line.addr)
+	if(!cub->img.addr)
 		printf("BO4\n");
 }
 
 
-
-static void	ft_mlx_pixel_put(t_cub *cub, int x, int y, int color)
-{
-	char    *dst;
-
-    dst = cub->line.addr + ((y * cub->line.line_length) + (x * cub->line.bits_per_pixel / 8));
-	*(unsigned int*)dst = color;
-}

@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/13 03:42:16 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/13 18:03:21 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ typedef struct player
 	float	xo;
 	float	yo;
 	float   ray_ang;
+	
 	float	dist;
 	int		status;
 	// int	move_up;
@@ -83,23 +84,26 @@ typedef struct player
 	// int	move_right;
 	// int	turn_left;
 	// int	turn_right;
-	// int	ray_num;
+ int	ray;
 } t_play;
 
-typedef struct    line {
+typedef struct    img {
     void    *img;
     char    *addr;
     int        bits_per_pixel;
     int        line_length;
     int        endian;
-}                t_line;
+}                t_img;
+
+
+
 
 typedef struct cub
 {
 	t_play	play;
 	t_data	data;
 	t_win	win;
-	t_line	line;
+	t_img	img;
 }	t_cub;
 
 #endif

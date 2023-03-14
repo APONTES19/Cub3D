@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/13 03:44:47 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/14 03:53:08 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@
 # define VERTICAL 1
 # define HORIZONTAL 2
 
-# define WIN_SIZE_X 1280
-# define WIN_SIZE_Y 720
+# define WIN_SIZE_X 640
+# define WIN_SIZE_Y 400
 # define  TEXTURE_SIZE 64
 
 /*
