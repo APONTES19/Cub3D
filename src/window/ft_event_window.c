@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 21:40:48 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/14 12:19:26 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ int ft_key(int key, t_cub *cub)
 	else if (key == K_A)
 		printf("key = A %d\n\n", key);
 	else if (key == K_D)
+	{
 		printf("key = D %d\n\n", key);
+		cub->play.x -= 10;
+	}
 	else if (key == K_W)
 		printf("key = W %d\n\n", key);
 	else if (key == K_S)
