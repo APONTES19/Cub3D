@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/14 09:57:07 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/14 11:13:32 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,22 @@ void ft_distance_wall(t_cub *data)
 	float dh;
 	float dv;
 	
-	dh = ft_horizontal_wall (data);
+   dh = ft_horizontal_wall (data);
 
 
 
-	//dv= ft_vertical_wall (data);
+	dv= ft_vertical_wall (data);
 
-	dv = 1000;
+	printf(" \n(H,V)= (%f, %f)=", dh, dv);
 	if( dv < dh)
 	{
 		data->play.status =  VERTICAL;
-		data->play.dist = dv;  //* cos( data->play.ray_ang - data->play.ang);
+		data->play.dist = dv; //* cos(data->play.ang-ft_angle_correction(data->play.ray_ang));
 	}
 	else
 	{
 		data->play.status =  HORIZONTAL;
-		data->play.dist = dh; // * cos( data->play.ray_ang - data->play.ang);
+		data->play.dist = dh; //* cos(data->play.ang- ft_angle_correction( data->play.ray_ang ));
 	}
 
 }
@@ -74,7 +74,7 @@ void ft_distance_wall(t_cub *data)
 float ft_vertical_wall (t_cub *data)
 {
 	
-	if(cos(data->play.ray_ang) > 0) // direito
+	if(cos(data->play.ray_ang) > 0.35) // direito
     {
 		data->play.dx = TEXTURE_SIZE;
 	data->play.dy =  1*tan (data->play.ray_ang) * TEXTURE_SIZE;
@@ -83,11 +83,11 @@ float ft_vertical_wall (t_cub *data)
 	
     	
     } 
-	else if(cos(data->play.ray_ang) < 0.002) // esquerdo
+	else if(cos(data->play.ray_ang) < -0.4) // esquerdo
 	{
 		data->play.dx = -1 * TEXTURE_SIZE;
 		data->play.dy =  tan (data->play.ray_ang) * TEXTURE_SIZE;
-		data->play.xo = floor( data->play.x/TEXTURE_SIZE) *TEXTURE_SIZE - 1 ;
+		data->play.xo = ceil( data->play.x/TEXTURE_SIZE) *TEXTURE_SIZE  + 1 ;
 		data->play.yo =  tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
 	
         

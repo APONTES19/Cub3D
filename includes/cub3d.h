@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/13 21:32:43 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/14 10:45:46 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void ft_distance_wall(t_cub *data);
 int ft_size_wall(t_cub *cub);
 void ft_ray_casting(t_cub *cub);
 void    ft_mlx_pixel_put(t_img *data, int x, int y, int color);
-
+float ft_angle_correction(float angle);
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);
 void	ft_free_one_point(char *point);

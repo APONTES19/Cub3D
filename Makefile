@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/14 08:21:06 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/14 11:29:09 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,8 +59,8 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_distance_wall.c\
 		  ft_size_wall.c\
 		  ft_ray_casting.c\
-		  ft_mlx_pixel_put.c
-
+		  ft_mlx_pixel_put.c\
+		  ft_angle_correction.c
 
 
 SRC=$(addprefix $(SRC_PATH)/, $(SRC_FILES))
@@ -68,8 +68,7 @@ OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 
 # compilation **************************************************************** #
 CC=cc
-FLAG= -Wall -Werror -Wextra 
-#-fsanitize=address
+FLAG= -Wall -Werror -Wextra  -fsanitize=address
 VALGRIND=valgrind --leak-check=full ---quiethow-leak-kinds=all  --track-origins=yes
 # clean ********************************************************************** #
 RM=-rm -f
