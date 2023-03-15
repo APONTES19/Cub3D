@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libs.h                                             :+:      :+:    :+:   */
+/*   ft_angle_correction.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/24 11:55:28 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/10 21:03:00 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/03/14 10:39:43 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/03/14 10:47:14 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBS_H
-# define LIBS_H
 
-# include "../libs/libft/includes/libft.h"
-# include "../libs/mlx_linux/mlx.h"
-# include <stdio.h>
-# include <stdlib.h>
-# include <errno.h>
-# include <unistd.h>
-# include <fcntl.h>
-# include <math.h>
-#endif
+#include "../includes/cub3d.h"
+
+float ft_angle_correction(float angle)
+{
+	if (angle >= 2 * PI)
+		angle -= 2 * PI;
+	if (angle < 0)
+		angle += 2 * PI;
+	return(angle);
+}

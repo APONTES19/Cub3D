@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 01:06:05 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 12:27:37 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/02/27 11:31:03 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,13 @@ static void test_check_duplicated_flag_wrong_failure(void)
     char **text;
 
 	char path[] = {"./maps/check_duplicated_flag/" };
-	char	file[][800] = { "failure1.cub", "failure2.cub", "failure3.cub",  "failure4.cub",
-	"failure5.cub", "failure6.cub","\0"};
+	char	file[][800] = { "failure1.cub",
+							"failure2.cub",
+							"failure3.cub",
+							"failure4.cub",
+							"failure5.cub",
+							"failure6.cub",
+							"\0"};
 	i = 0;
 	printf("    \033[0;33mTestando com erro 'F'!\033[0m\n\n");
 	while(file[i][0] != '\0')

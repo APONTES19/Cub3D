@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 21:20:43 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/14 03:53:08 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,36 @@
 
 
 
+# define K_A 97
+# define K_D 100
+# define K_W 119
+# define K_S 115
+# define K_LEFT 65361
+# define K_RIGTH 65363
+# define K_UP 65362
+# define K_DOWN 65364
+# define K_ESC 65307
+# define K_X 120
 
 
+#define PI 3.14159265358979323846
+# define VERTICAL 1
+# define HORIZONTAL 2
+
+# define WIN_SIZE_X 640
+# define WIN_SIZE_Y 400
+# define  TEXTURE_SIZE 64
+
+/*
+	Calcule speed (PI / 90)
+*/
+# define SPEED_ROTATION 0.035
+# define SPEED_MOVIMENT 4
+/*
+	#wall_dist
+	calcular essa valor depois.
+*/
+# define WALL_DIST
 
 
 

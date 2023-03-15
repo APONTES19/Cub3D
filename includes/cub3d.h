@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/02/21 23:50:55 by lucasmar         ###   ########.fr       */
-=======
-/*   Updated: 2023/02/21 21:12:56 by ryoshio-         ###   ########.fr       */
->>>>>>> f25560f173b06a070674008192ffccd3dd096a2f
+/*   Updated: 2023/03/14 10:45:46 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +32,30 @@ int		ft_check_first_word_each_line(char **text);
 int		ft_check_duplicated_flag(char **text);
 int		ft_check_line_position(char **text);
 int		ft_check_rgb(char *line);
-int		ft_check_texure(char  *line);
+int		ft_check_texture(char  *line);
 
 
-// em teste
+
 void ft_check_cub_file(char **text);
 int	ft_check_value_flag(char  **text);
 char  **ft_get_map(char **text);
 int ft_check_map(char **text);
 int	ft_check_wall(char **map);
-void ft_get_value (char **text, t_cub *data);
+void ft_get_value (char **text, t_cub *cub);
 
+
+// em teste
+float	ft_distance(float x1, float y1, float x2, float y2);
+void ft_distance_wall(t_cub *data);
+int ft_size_wall(t_cub *cub);
+void ft_ray_casting(t_cub *cub);
+void    ft_mlx_pixel_put(t_img *data, int x, int y, int color);
+float ft_angle_correction(float angle);
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);
 void	ft_free_one_point(char *point);
 void	ft_free_two_point(char **point);
 void    ft_exit_two_point(char **point);
-<<<<<<< HEAD
 
 
 
@@ -76,9 +79,11 @@ void    ft_exit_two_point(char **point);
 
 
 //lucas alterações
-void	ft_creat_window(int x, int y, char *title);
+void	ft_init_window(t_cub *cub);
+int		ft_close_window(t_cub *cub);
+int		ft_key(int key, t_cub *cub);
+int		ft_render(t_cub *cub);
+void	ft_background(t_cub *cub);
 
-=======
 void    ft_free_cub(t_cub *data);
->>>>>>> f25560f173b06a070674008192ffccd3dd096a2f
 #endif

@@ -6,28 +6,12 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/02/21 20:28:37 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/13 18:03:21 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUTCS_H
 # define STRUTCS_H
-
-typedef struct cub
-{
-	char	**map;
-	char	*no_path;
-	char	*so_path;
-	char	*we_path;
-	char	*ea_path;
-	int		fr;
-	int		fg;
-	int		fb;
-	int		cr;
-	int		cg;
-	int		cb;
-}	t_cub;
-
 
 typedef struct  check_path_img
 {
@@ -52,6 +36,74 @@ typedef struct  check_duplicated_flag
 
 } t_check_duplicated_flag;
 
+typedef struct window
+{
+	void	*scr;
+	void	*mlx;
+	int		size_x;
+	int		size_y;
+	char	*title;
+}	t_win;
 
+typedef struct data
+{
+	char	**map;
+	char	*no_path;
+	char	*so_path;
+	char	*we_path;
+	char	*ea_path;
+	int		c_floor;
+	int		c_ceiling;
+
+	int		fr;
+	int		fg;
+	int		fb;
+	int		cr;
+	int		cg;
+	int		cb;
+}	t_data;
+
+typedef struct player
+{
+	float	x;
+	float	y;
+	float	ang;
+	float 	wall_x;
+	float	wall_y;
+	float	dx;
+	float	dy;
+	float	xo;
+	float	yo;
+	float   ray_ang;
+	
+	float	dist;
+	int		status;
+	// int	move_up;
+	// int	move_down;
+	// int	move_left;
+	// int	move_right;
+	// int	turn_left;
+	// int	turn_right;
+ int	ray;
+} t_play;
+
+typedef struct    img {
+    void    *img;
+    char    *addr;
+    int        bits_per_pixel;
+    int        line_length;
+    int        endian;
+}                t_img;
+
+
+
+
+typedef struct cub
+{
+	t_play	play;
+	t_data	data;
+	t_win	win;
+	t_img	img;
+}	t_cub;
 
 #endif

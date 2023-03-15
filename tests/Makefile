@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/02/21 18:49:03 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/07 22:31:48 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,12 +65,15 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_exit_two_point.c\
 		  ft_check_cub_file.c\
 		  ft_check_rgb.c\
-		  ft_check_texure.c\
+		  ft_check_texture.c\
 		  ft_check_value_flag.c\
 		  ft_get_map.c\
 		  ft_check_map.c\
 		  ft_check_wall.c\
-		  ft_creat_window.c
+		  ft_init_window.c\
+		  ft_close_window.c\
+		  ft_event_window.c\
+		  ft_render_window.c
 
 
 
@@ -86,7 +89,7 @@ OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 # compilation **************************************************************** #
 CC=cc
 FLAG= -Wall -Werror -Wextra
-VALGRIND= valgrind -s --leak-check=full --show-leak-kinds=all
+#VALGRIND= valgrind -s --leak-check=full --show-leak-kinds=all
 
 # clean ********************************************************************** #
 RM=-rm -f
