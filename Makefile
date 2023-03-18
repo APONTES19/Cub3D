@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/17 22:35:08 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/18 11:59:03 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,7 @@ OBJS=$(addprefix $(PATH_OBJ),$(SOURCES:%.c=%.o))
 # compilation **************************************************************** #
 CC=cc
 FLAG= -Wall -Werror -Wextra  #-fsanitize=address
-VALGRIND=valgrind --leak-check=full ---quiethow-leak-kinds=all  --track-origins=yes
+VALGRIND=valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s
 # clean ********************************************************************** #
 RM=-rm -f
 RM_DIR=rm -rf
@@ -119,5 +119,8 @@ fcleall: fcleanlib fclean
 re:			fclean all
 
 reall:		fcleanlib re
+
+run: all
+	$(VALGRIND) ./cub3D ./maps/map_01.cub
 
 .PHONY: all clean fclean fcleanlib fcleanll re reall
