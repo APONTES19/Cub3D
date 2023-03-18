@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:07:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/15 21:17:58 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/17 22:28:07 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,13 @@
 
 int	ft_close_window(t_cub *cub)
 {
-	printf("Fechando a Tela\n");
-	// mlx_loop_end(cub->w.mlx);
-	// (void) cub;
-// 	if (cub->w.win)
-		mlx_destroy_window(cub->w.mlx, cub->w.win);
-// 	if (cub->w.mlx)
-// 	{
-		mlx_destroy_display(cub->w.mlx);
-		// free(cub->w.mlx);
-// 		ft_free_null((void *) &cub->w.mlx);
-// 	}
-// // 	mlx_clear_window(win->mlx, win->scr);
-// 	ft_exit_game();
+	mlx_clear_window(cub->w.mlx, cub->w.win);
+	mlx_loop_end(cub->w.mlx);
+	mlx_destroy_window(cub->w.mlx, cub->w.win);
+	mlx_destroy_display(cub->w.mlx);
+	free(cub->w.mlx);
+	//chamar função que da free na estrutura inteira
+	exit(3);
 	return (0);
 }
 

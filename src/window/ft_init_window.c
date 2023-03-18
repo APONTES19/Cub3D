@@ -6,13 +6,12 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/15 21:19:23 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/17 21:10:24 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
-static void	ft_creat_window(t_cub *cub);
 static void	ft_hook_window(t_cub *cub);
 
 void	ft_init_window(t_cub *cub)
@@ -20,16 +19,11 @@ void	ft_init_window(t_cub *cub)
 	cub->w.mlx = mlx_init();
 	if (cub->w.mlx == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro init mlx failed");
-	ft_creat_window(cub);
-	ft_hook_window(cub);
-}
-
-void	ft_creat_window(t_cub *cub)
-{
 	cub->w.win = mlx_new_window(cub->w.mlx, WIN_SIZE_X,
 		WIN_SIZE_Y, "Cub 3D");
 	if (cub->w.win == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro creat window");
+	ft_hook_window(cub);
 }
 
 void	ft_hook_window(t_cub *cub)

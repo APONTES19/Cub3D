@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/14 18:14:41 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/17 22:35:08 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ OBJ=$(SRC:$(SRC_PATH)/%.c=$(OBJ_PATH)/%.o)
 OBJS=$(addprefix $(PATH_OBJ),$(SOURCES:%.c=%.o))
 # compilation **************************************************************** #
 CC=cc
-FLAG= -Wall -Werror -Wextra  -fsanitize=address
+FLAG= -Wall -Werror -Wextra  #-fsanitize=address
 VALGRIND=valgrind --leak-check=full ---quiethow-leak-kinds=all  --track-origins=yes
 # clean ********************************************************************** #
 RM=-rm -f
@@ -94,7 +94,6 @@ $(NAME): $(LIBFT) $(OBJ) $(MLX_MAKE)
 		@echo "	run ./cub3D + map.cub in the terminal !"
 		@echo "	ex: ./cub3D ./maps/map_01.cub "
 		@echo "\033[0m"
-
 $(LIBFT):
 	@cd $(LIBFT_PATH) && $(MAKE)
 
