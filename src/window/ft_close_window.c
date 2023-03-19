@@ -6,40 +6,31 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:07:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/06 21:31:54 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/18 11:52:51 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
-static void	ft_exit_game();
-static void	ft_free_null(void **ptr);
-
 int	ft_close_window(t_cub *cub)
 {
-	printf("Fechando a Tela\n");
-	if (cub->win.scr)
-		mlx_destroy_window(cub->win.mlx, cub->win.scr);
-	if (cub->win.mlx)
-	{
-		mlx_destroy_display(cub->win.mlx);
-		ft_free_null((void *) &cub->win.mlx);
-	}
-// 	mlx_clear_window(win->mlx, win->scr);
-// 	mlx_loop_end(win->mlx);
-	ft_exit_game();
+	mlx_clear_window(cub->w.mlx, cub->w.win);
+	mlx_loop_end(cub->w.mlx);
+	mlx_destroy_window(cub->w.mlx, cub->w.win);
+	mlx_destroy_display(cub->w.mlx);
+	free(cub->w.mlx);
+	ft_free_all_st(cub);
+	//chamar função que da free na estrutura inteira
+	exit(3);
 	return (0);
 }
 
-static void	ft_free_null(void **ptr)
+void ft_free_all_st(t_cub *cub)
 {
-	if (*ptr != NULL)
-		free(*ptr);
-	*ptr = NULL;
-}
+	ft_free_one_point(cub->data.no_path);
+	ft_free_one_point(cub->data.so_path);
+	ft_free_one_point(cub->data.we_path);
+	ft_free_one_point(cub->data.ea_path);
+	ft_free_two_point(cub->data.map);
 
-
-static void ft_exit_game()
-{
-	printf("chamar aqui as funções para encerrar as memórias alocadas\n");
 }

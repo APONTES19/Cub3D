@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 04:39:00 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/14 12:15:46 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/15 21:17:58 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ void ft_ray_casting(t_cub *cub)
 
 
 
-   cub->win.mlx= mlx_init();
-    cub->win.scr = mlx_new_window( cub->win.mlx, WIN_SIZE_X, WIN_SIZE_Y, "Da um liga na diagonales");
-	mlx_key_hook(cub->win.scr, &ft_key, &cub);
+   cub->w.mlx= mlx_init();
+    cub->w.win = mlx_new_window( cub->w.mlx, WIN_SIZE_X, WIN_SIZE_Y, "Da um liga na diagonales");
+	mlx_key_hook(cub->w.win, &ft_key, &cub);
 
 
-    cub->img.img = mlx_new_image(cub->win.mlx, WIN_SIZE_X, WIN_SIZE_Y);
+    cub->img.img = mlx_new_image(cub->w.mlx, WIN_SIZE_X, WIN_SIZE_Y);
     cub->img.addr = mlx_get_data_addr(cub->img.img,
 	&cub->img.bits_per_pixel,
 	&cub->img.line_length,
@@ -57,10 +57,10 @@ cub->play.ang= PI /2;   //tirar depois
     }
 
 
-  mlx_put_image_to_window(cub->win.mlx, cub->win.scr, cub->img.img, 0, 0);
+  mlx_put_image_to_window(cub->w.mlx, cub->w.win, cub->img.img, 0, 0);
 
-    mlx_destroy_image(cub->win.mlx, cub->img.img);
-   mlx_loop(cub->win.mlx);
+    mlx_destroy_image(cub->w.mlx, cub->img.img);
+   mlx_loop(cub->w.mlx);
 
 
 
