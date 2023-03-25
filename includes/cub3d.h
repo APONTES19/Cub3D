@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/18 11:50:46 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/24 21:21:43 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,15 @@ void ft_get_value (char **text, t_cub *cub);
 
 // em teste
 float	ft_distance(float x1, float y1, float x2, float y2);
-void ft_distance_wall(t_cub *data);
-int ft_size_wall(t_cub *cub);
-void ft_ray_casting(t_cub *cub);
-void    ft_mlx_pixel_put(t_img *data, int x, int y, int color);
-float ft_angle_correction(float angle);
+void	ft_distance_wall(t_cub *data);
+int		ft_size_wall(t_cub *cub);
+void	ft_ray_casting(t_cub *cub);
+void	ft_mlx_pixel_put(t_img *data, int x, int y, int color);
+float	ft_angle_correction(float angle);
 void	ft_free_all_st(t_cub *cub);
+void	ft_get_calc(t_cub *cub);
+
+void	ft_get_texture(t_cub *cub);
 // simples demais para ter teste
 int		ft_error_message(int code, const char *str);
 void	ft_free_one_point(char *point);

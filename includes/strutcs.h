@@ -6,12 +6,14 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/15 21:07:23 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/24 23:03:14 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUTCS_H
 # define STRUTCS_H
+
+typedef struct	img t_img;
 
 typedef struct  check_path_img
 {
@@ -33,7 +35,6 @@ typedef struct  check_duplicated_flag
 	int		ea;
 	int		f;
 	int		c;
-
 } t_check_duplicated_flag;
 
 typedef struct window
@@ -54,7 +55,6 @@ typedef struct data
 	char	*ea_path;
 	int		c_floor;
 	int		c_ceiling;
-
 	int		fr;
 	int		fg;
 	int		fb;
@@ -76,6 +76,9 @@ typedef struct player
 	float	yo;
 	float   ray_ang;
 
+	// int		rot_speed;
+	// int		mov_speed;
+
 	float	dist;
 	int		status;
 	// int	move_up;
@@ -87,14 +90,23 @@ typedef struct player
  int	ray;
 } t_play;
 
-typedef struct    img {
-    void    *img;
-    char    *addr;
-    int        bits_per_pixel;
-    int        line_length;
-    int        endian;
-}                t_img;
+typedef	struct	img {
 
+	void	*no;
+	void	*so;
+	void	*we;
+	void	*ea;
+    void	*img;
+    char	*addr;
+    int	bits_per_pixel;
+    int	line_length;
+    int	endian;
+}	img;
+
+
+typedef struct	calc{
+	float	wall_dist;
+}	t_calc;
 
 
 
@@ -104,6 +116,7 @@ typedef struct cub
 	t_data	data;
 	t_win	w;
 	t_img	img;
+	t_calc	calc;
 }	t_cub;
 
 #endif

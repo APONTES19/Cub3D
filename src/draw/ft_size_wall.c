@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_size_wall.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 02:53:28 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/14 11:32:37 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/24 21:03:04 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ float tmp;
 	if(tmp > WIN_SIZE_Y)
 		return(WIN_SIZE_Y);
 	return (ceil(tmp));
-	
-
 }
 
 
@@ -40,7 +38,7 @@ printf("j =%f", cub->play.dist);
 	tmp = 64 *WIN_SIZE_Y /cub->play.dist;
 	if( tmp > WIN_SIZE_Y)
 		return(WIN_SIZE_Y);
-	else 
+	else
 		return (ceil(tmp));
 
 

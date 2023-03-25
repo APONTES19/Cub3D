@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/17 21:10:24 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/24 22:22:36 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	ft_init_window(t_cub *cub)
 		WIN_SIZE_Y, "Cub 3D");
 	if (cub->w.win == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro creat window");
+
 	ft_hook_window(cub);
 }
 
@@ -35,6 +36,6 @@ void	ft_hook_window(t_cub *cub)
 	//imagens a ser carregadas
 	//mlx_expose_hook(cub->w.win, &ft_render, cub);
 	//ft_background(cub);
-	//ft_render(cub);
+	ft_render(cub);
 	mlx_loop(cub->w.mlx);
 }

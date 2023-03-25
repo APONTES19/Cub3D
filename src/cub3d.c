@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/15 20:54:33 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/24 21:47:41 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int	main(int argc, char **argv)
 
 	printf("%f", ft_distance(4,2,0,0));
 	ft_init_window(&cub);
+	
 	return (0);
 }

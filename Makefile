@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/18 11:59:03 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/24 21:56:42 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRC_FILES+=./check/ft_check_arguments.c\
 		  ./aux/ft_exit_two_point.c\
 		  ./aux/ft_flag_code.c\
 		  ./aux/ft_line_code.c\
+		  ./get/ft_get_texture.c\
 		  ./get/ft_get_map.c\
 		  ./get/ft_get_value.c\
 		  ./draw/ft_distance.c\

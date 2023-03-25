@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   define.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/14 03:53:08 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/18 15:57:11 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,11 @@
 # define VERTICAL 1
 # define HORIZONTAL 2
 
-# define WIN_SIZE_X 640
-# define WIN_SIZE_Y 400
+# define WIN_SIZE_X 1280
+# define WIN_SIZE_Y 720
+# define ANGLE 1.0471975511965977461542144610932
+# define ROT_SPEED 0.03490658503988659153847381536977
+# define MOV_SPEED 4
 # define  TEXTURE_SIZE 64
 
 /*

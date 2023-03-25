@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_value.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:21:42 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/12 18:43:16 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/24 21:06:44 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static void ft_get_rgb(char *line,  int *r, int *g, int *b);
 static void ft_get_play(t_cub *cub);
 static void ft_get_play_ang(char c, t_cub *cub);
 static void ft_rgb_to_hex(t_cub *cub);
+
 
 void ft_get_value (char **text, t_cub *cub)
 {
@@ -44,7 +45,7 @@ void ft_get_value (char **text, t_cub *cub)
 	printf("Posição x => %f\n", cub->play.x);
 	printf("Posição y => %f\n", cub->play.y);
 	printf("Posição ang => %f\n", cub->play.ang);
-	
+
 }
 
 static char *ft_get_path(char *line)

@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:36:01 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/15 21:18:06 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/24 23:12:00 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,37 @@
 
 int ft_render(t_cub *cub)
 {
-	void *img;
-	int	u;
-	int v;
 
-	img = mlx_xpm_file_to_image(cub->w.mlx, "./img/north_texture.xpm", &u, &v);
+	// void *img;
+	// // img = cub->data.no->img;
 
-	if (!img)
-		ft_error_message(800, "erro na imagem");
-	mlx_put_image_to_window(cub->w.mlx, cub->w.win, img, (WIN_SIZE_X/2), (WIN_SIZE_Y/2 - 15)) ;
+	// // if (!img)
+	// // 	ft_error_message(800, "erro na imagem");
+	// img = mlx_xpm_file_to_image(
+	// 	cub->w.mlx,
+	// 	cub->w.win,
+	// 	"./img/bricks.xpm",
+	// 	(WIN_SIZE_X/2),
+	// 	(WIN_SIZE_Y/2 - 15)
+	// ) ;
+
+
+
+
+
+
+
+
+
+	// int	u;
+	// int v;
+	ft_get_texture(cub);
+	// img = mlx_xpm_file_to_image(cub->w.mlx, "./img/north_texture.xpm", &u, &v);
+
+	// //img = cub->data.no->img;
+	// // if (!img)
+	// // 	ft_error_message(800, "erro na imagem");
+	mlx_put_image_to_window(cub->w.mlx, cub->w.win, &cub->img.no, (WIN_SIZE_X/2), (WIN_SIZE_Y/2 - 15)) ;
 	return(0);
 }
 
@@ -85,5 +107,48 @@ void ft_background(t_cub *cub)
 	if(!cub->img.addr)
 		printf("BO4\n");
 }
+
+// void ft_background(t_cub *cub)
+// {
+// 	cub->img.img = mlx_new_image(cub->w.mlx, WIN_SIZE_X, WIN_SIZE_Y);
+// 	int i;
+// 	int j;
+
+// 	i = 0;
+// 	j = 0;
+// 	while (i <WIN_SIZE_Y)
+// 	{
+// 		j = 0;
+// 		while (j < WIN_SIZE_X )
+// 		{
+// 			if(i < WIN_SIZE_Y/2)
+// 				ft_mlx_pixel_put(
+// 								 &cub->img,
+// 								 j,
+// 								 i,
+// 								 cub->data.c_ceiling
+// 				);
+// 			else
+// 				ft_mlx_pixel_put(
+// 				 &cub->img,
+// 				 j,
+// 				 i,
+// 				 cub->data.c_floor
+// 			);
+// 			j++;
+// 		}
+// 		i++;
+// 	}
+
+// 	mlx_put_image_to_window(
+// 							cub->w.mlx,
+// 							cub->w.win,
+// 							cub->img.img,
+// 							0,
+// 							0
+// 	);
+// 	if(!cub->img.addr)
+// 		printf("BO4\n");
+// }
 
 
