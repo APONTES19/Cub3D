@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/14 03:53:08 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/24 20:42:36 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,18 @@
 # define K_X 120
 
 
+
+
 #define PI 3.14159265358979323846
 # define VERTICAL 1
 # define HORIZONTAL 2
+
+# define STOP 0
+# define UP 1
+# define DOWN 2
+# define LEFT 3 
+# define RIGHT 4
+
 
 # define WIN_SIZE_X 640
 # define WIN_SIZE_Y 400

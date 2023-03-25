@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
+#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/21 20:37:02 by ryoshio-          #+#    #+#              #
-#    Updated: 2023/03/07 22:31:48 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/25 02:31:58 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC_PATH=../src/
 TESTS_PATH=./src/
 OBJ_PATH=./obj
 
-vpath %.c ./src ../src
+vpath %.c ./src ../src ../src/aux ../src/check ../src/draw ../src/get ../src/window
 
 
 #Aqui coloca o arquivo teste
@@ -73,7 +73,8 @@ SRC_FILES+=ft_check_arguments.c\
 		  ft_init_window.c\
 		  ft_close_window.c\
 		  ft_event_window.c\
-		  ft_render_window.c
+		  ft_render_window.c\
+		  ft_mlx_pixel_put.c
 
 
 

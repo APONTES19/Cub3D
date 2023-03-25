@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_event_window.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/14 12:19:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/24 20:44:40 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,53 @@
 
 //arquivo criado para guardar coisas referentes a teclas e seus eventos.
 
-static int ft_key_seta(int key, t_cub *cub);
 
-int ft_key(int key, t_cub *cub)
+
+int ft_key_pressed(int key, t_cub *cub)
 {
-	(void) cub;
 	if (key == K_ESC || key == K_X)
 		printf("key = Esc ou X Mudar a Função aqui %d\n\n", key);
 		// mudar aqui atenção colocar uma função de sair do game.
-	else if (key == K_A)
-		printf("key = A %d\n\n", key);
-	else if (key == K_D)
-	{
-		printf("key = D %d\n\n", key);
-		cub->play.x -= 10;
-	}
-	else if (key == K_W)
-		printf("key = W %d\n\n", key);
-	else if (key == K_S)
-		printf("key = S %d\n\n", key);
-	else
-		ft_key_seta(key, cub);
-
-	return(0);
-}
-
-static int ft_key_seta(int key, t_cub *cub)
-{
-	(void) cub;
-	if ( key == K_LEFT)
-		printf("key = LEFT %d\n\n", key);
+	else if (key == K_A) // move para esquerda
+		cub->play.move = LEFT;
+	else if (key == K_D)  // move para direita
+		cub->play.move = RIGHT;
+	else if (key == K_W ||  key == K_UP)
+		cub->play.move = UP;
+	else if (key == K_S || key == K_DOWN)
+		cub->play.move = DOWN;
+	else if ( key == K_LEFT)
+		cub->play.turn = LEFT;
 	else if ( key == K_RIGTH)
-		printf("key = RIGTH %d\n\n", key);
-	else if ( key == K_UP)
-		printf("key = UP %d\n\n", key);
-	else if (key == K_DOWN)
-		printf("key = DOWN %d\n\n", key);
+		cub->play.turn = RIGHT;
 	else
 		printf("\n	Use the keys to move\n\n"
 			"                 w     \n"
 			"                 ▲     \n"
 			"             a ◀ ▼ ▶ d \n"
 			"                 s    \n");
+
+
+	return(0);
+}
+
+
+int ft_key_unpressed(int key, t_cub *cub)
+{
+	if (key == K_ESC || key == K_X)
+		printf("key = Esc ou X Mudar a Função aqui %d\n\n", key);
+		// mudar aqui atenção colocar uma função de sair do game.
+	else if (key == K_A) // move para esquerda
+		cub->play.move = STOP;
+	else if (key == K_D)  // move para direita
+		cub->play.move = STOP;
+	else if (key == K_W ||  key == K_UP)
+		cub->play.move = STOP;
+	else if (key == K_S || key == K_DOWN)
+		cub->play.move = STOP;
+	else if ( key == K_LEFT)
+		cub->play.turn = STOP;
+	else if ( key == K_RIGTH)
+		cub->play.turn = STOP;
 	return(0);
 }

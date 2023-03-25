@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strutcs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/15 21:07:23 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/20 21:41:09 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,11 @@ typedef struct player
 
 	float	dist;
 	int		status;
-	// int	move_up;
+	int		move;
 	// int	move_down;
 	// int	move_left;
 	// int	move_right;
-	// int	turn_left;
+	int	turn;
 	// int	turn_right;
  int	ray;
 } t_play;
