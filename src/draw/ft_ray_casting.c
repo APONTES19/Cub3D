@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ray_casting.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 04:39:00 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/15 21:17:58 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/25 03:31:26 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
+
+
 void ft_drawn_wall(t_cub *cub);
-#include <stdlib.h> // jogar fora
+
 
 void ft_ray_casting(t_cub *cub)
 {
@@ -24,7 +26,7 @@ void ft_ray_casting(t_cub *cub)
 
    cub->w.mlx= mlx_init();
     cub->w.win = mlx_new_window( cub->w.mlx, WIN_SIZE_X, WIN_SIZE_Y, "Da um liga na diagonales");
-	mlx_key_hook(cub->w.win, &ft_key, &cub);
+	//mlx_key_hook(cub->w.win, &ft_key, &cub);
 
 
     cub->img.img = mlx_new_image(cub->w.mlx, WIN_SIZE_X, WIN_SIZE_Y);
