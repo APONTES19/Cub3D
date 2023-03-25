@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/24 20:44:40 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/25 04:54:12 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int ft_key_pressed(int key, t_cub *cub)
 		cub->play.move = UP;
 	else if (key == K_S || key == K_DOWN)
 		cub->play.move = DOWN;
-	else if ( key == K_LEFT)
+	if ( key == K_LEFT)
 		cub->play.turn = LEFT;
 	else if ( key == K_RIGTH)
 		cub->play.turn = RIGHT;
@@ -58,7 +58,7 @@ int ft_key_unpressed(int key, t_cub *cub)
 		cub->play.move = STOP;
 	else if (key == K_S || key == K_DOWN)
 		cub->play.move = STOP;
-	else if ( key == K_LEFT)
+	if ( key == K_LEFT)
 		cub->play.turn = STOP;
 	else if ( key == K_RIGTH)
 		cub->play.turn = STOP;
