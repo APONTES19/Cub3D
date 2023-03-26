@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/24 23:03:14 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/26 12:48:29 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,21 @@ typedef struct window
 {
 	void	*win;
 	void	*mlx;
-	int		size_x;
-	int		size_y;
-	char	*title;
+	// int		size_x;
+	// int		size_y;
+	// char	*title;
 }	t_win;
+
+typedef struct texture
+{
+	void		*img;
+	int			size_line;
+	int			bpp;
+	int			x;
+	int			y;
+	char		*data;
+	uint32_t	*buffer;
+} t_txr;
 
 typedef struct data
 {
@@ -61,7 +72,9 @@ typedef struct data
 	int		cr;
 	int		cg;
 	int		cb;
+	char	**text;
 }	t_data;
+
 
 typedef struct player
 {
@@ -91,12 +104,7 @@ typedef struct player
 } t_play;
 
 typedef	struct	img {
-
-	void	*no;
-	void	*so;
-	void	*we;
-	void	*ea;
-    void	*img;
+	void	*img;
     char	*addr;
     int	bits_per_pixel;
     int	line_length;
@@ -109,7 +117,6 @@ typedef struct	calc{
 }	t_calc;
 
 
-
 typedef struct cub
 {
 	t_play	play;
@@ -117,6 +124,7 @@ typedef struct cub
 	t_win	w;
 	t_img	img;
 	t_calc	calc;
+	t_txr	list_texture[NUM_TEXTURE];
 }	t_cub;
 
 #endif

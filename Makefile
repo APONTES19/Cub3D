@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/24 21:56:42 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/25 22:08:59 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,6 @@ SRC_FILES+=./check/ft_check_arguments.c\
 		  ./window/ft_event_window.c\
 		  ./window/ft_render_window.c\
 		  ./aux/ft_error_message.c\
-		  ./aux/ft_free_cub.c\
 		  ./aux/ft_free_one_point.c\
 		  ./aux/ft_free_two_point.c\
 		  ./aux/ft_read_all_file.c\
@@ -122,6 +121,6 @@ re:			fclean all
 reall:		fcleanlib re
 
 run: all
-	$(VALGRIND) ./cub3D ./maps/map_01.cub
-
+	 ./cub3D ./maps/map_01.cub
+#$(VALGRIND)
 .PHONY: all clean fclean fcleanlib fcleanll re reall

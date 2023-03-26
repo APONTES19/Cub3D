@@ -6,149 +6,68 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:36:01 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/24 23:12:00 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/26 13:51:54 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
+static void ft_print_gamer(t_cub *cub);
 
 
 int ft_render(t_cub *cub)
 {
-
-	// void *img;
-	// // img = cub->data.no->img;
-
-	// // if (!img)
-	// // 	ft_error_message(800, "erro na imagem");
-	// img = mlx_xpm_file_to_image(
-	// 	cub->w.mlx,
-	// 	cub->w.win,
-	// 	"./img/bricks.xpm",
-	// 	(WIN_SIZE_X/2),
-	// 	(WIN_SIZE_Y/2 - 15)
-	// ) ;
-
-
-
-
-
-
-
-
-
-	// int	u;
-	// int v;
-	ft_get_texture(cub);
-	// img = mlx_xpm_file_to_image(cub->w.mlx, "./img/north_texture.xpm", &u, &v);
-
-	// //img = cub->data.no->img;
-	// // if (!img)
-	// // 	ft_error_message(800, "erro na imagem");
-	mlx_put_image_to_window(cub->w.mlx, cub->w.win, &cub->img.no, (WIN_SIZE_X/2), (WIN_SIZE_Y/2 - 15)) ;
+	//ft_background(cub);
+	ft_print_gamer(cub);
 	return(0);
 }
 
 void ft_background(t_cub *cub)
 {
-	cub->img.img = mlx_new_image(
-								  cub->w.mlx,
-								  WIN_SIZE_X,
-								  WIN_SIZE_Y
-					);
-	if(!cub->img.img)
-		printf("BO\n");
-	cub->img.addr = mlx_get_data_addr(
-									   cub->img.img,
-									   &cub->img.bits_per_pixel,
-									   &cub->img.line_length,
-									   &cub->img.endian
-					 );
-	if(!cub->img.addr)
-		printf("BO2\n");
-
 	int i;
 	int j;
+
+	cub->img.img = mlx_new_image(cub->w.mlx, WIN_SIZE_X, WIN_SIZE_Y);
+	cub->img.addr = mlx_get_data_addr(cub->img.img,&cub->img.bits_per_pixel,
+		&cub->img.line_length, &cub->img.endian);
 
 	i = 0;
 	j = 0;
 	while (i <WIN_SIZE_Y)
 	{
 		j = 0;
-		while (j < WIN_SIZE_X )
+		while (j <= WIN_SIZE_X )
 		{
-			if(i < WIN_SIZE_Y/2)
-				ft_mlx_pixel_put(
-								 &cub->img,
-								 j,
-								 i,
-								 cub->data.c_ceiling
-				);
+			if(i <= WIN_SIZE_Y)
+				ft_mlx_pixel_put(&cub->img, j, i, cub->data.c_ceiling);
 			else
-				ft_mlx_pixel_put(
-				 &cub->img,
-				 j,
-				 i,
-				 cub->data.c_floor
-			);
+				ft_mlx_pixel_put(&cub->img, j, i, cub->data.c_floor);
 			j++;
 		}
 		i++;
 	}
-
-	mlx_put_image_to_window(
-							cub->w.mlx,
-							cub->w.win,
-							cub->img.img,
-							0,
-							0
-	);
-	if(!cub->img.addr)
-		printf("BO4\n");
+	mlx_put_image_to_window(cub->w.mlx,cub->w.win,cub->img.img,0,0);
 }
 
-// void ft_background(t_cub *cub)
-// {
-// 	cub->img.img = mlx_new_image(cub->w.mlx, WIN_SIZE_X, WIN_SIZE_Y);
-// 	int i;
-// 	int j;
 
-// 	i = 0;
-// 	j = 0;
-// 	while (i <WIN_SIZE_Y)
-// 	{
-// 		j = 0;
-// 		while (j < WIN_SIZE_X )
-// 		{
-// 			if(i < WIN_SIZE_Y/2)
-// 				ft_mlx_pixel_put(
-// 								 &cub->img,
-// 								 j,
-// 								 i,
-// 								 cub->data.c_ceiling
-// 				);
-// 			else
-// 				ft_mlx_pixel_put(
-// 				 &cub->img,
-// 				 j,
-// 				 i,
-// 				 cub->data.c_floor
-// 			);
-// 			j++;
-// 		}
-// 		i++;
-// 	}
+static void ft_print_gamer(t_cub *cub)
+{
+	int yellow;
+	int ix;
+	int iy;
 
-// 	mlx_put_image_to_window(
-// 							cub->w.mlx,
-// 							cub->w.win,
-// 							cub->img.img,
-// 							0,
-// 							0
-// 	);
-// 	if(!cub->img.addr)
-// 		printf("BO4\n");
-// }
+	yellow = ft_to_hex(255, 255, 0);
 
+	iy = cub->play.y - 24;
+	while (iy <=cub->play.y)
+	{
+		ix = cub->play.x - 24;
+		while(ix<=cub->play.x)
+		{
+			mlx_pixel_put(cub->w.mlx, cub->w.win, ix, iy, yellow);
+			ix++;
+		}
+		iy++;
+	}
 
+}

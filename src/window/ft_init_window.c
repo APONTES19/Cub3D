@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/24 22:22:36 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/26 12:24:52 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,15 @@ void	ft_init_window(t_cub *cub)
 	if (cub->w.mlx == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro init mlx failed");
 	cub->w.win = mlx_new_window(cub->w.mlx, WIN_SIZE_X,
-		WIN_SIZE_Y, "Cub 3D");
+		WIN_SIZE_Y, "Cub 3D By Lucas and Ricardo");
 	if (cub->w.win == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro creat window");
-
+	ft_render(cub);
 	ft_hook_window(cub);
 }
 
 void	ft_hook_window(t_cub *cub)
 {
-	//botão de close
 	mlx_hook(cub->w.win, 17, 0, ft_close_window, cub);
-	//teclas de game monitoradas
-	//mlx_key_hook(cub->w.win, &ft_key, &cub);
-	//imagens a ser carregadas
-	//mlx_expose_hook(cub->w.win, &ft_render, cub);
-	//ft_background(cub);
-	ft_render(cub);
 	mlx_loop(cub->w.mlx);
 }

@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/18 15:57:11 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/26 12:17:53 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@
 # define VERTICAL 1
 # define HORIZONTAL 2
 
-# define WIN_SIZE_X 1280
-# define WIN_SIZE_Y 720
+# define WIN_SIZE_X 1024
+# define WIN_SIZE_Y 512
 # define ANGLE 1.0471975511965977461542144610932
 # define ROT_SPEED 0.03490658503988659153847381536977
 # define MOV_SPEED 4
@@ -83,7 +83,7 @@
 
 
 
-
+# define NUM_TEXTURE 4
 
 # define ERROR_WIN 12
 

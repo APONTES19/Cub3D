@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:21:42 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/24 21:06:44 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/26 12:51:08 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char  *ft_get_path(char *line);
 static void ft_get_rgb(char *line,  int *r, int *g, int *b);
 static void ft_get_play(t_cub *cub);
 static void ft_get_play_ang(char c, t_cub *cub);
-static void ft_rgb_to_hex(t_cub *cub);
+
 
 
 void ft_get_value (char **text, t_cub *cub)
@@ -39,7 +39,8 @@ void ft_get_value (char **text, t_cub *cub)
 		if(ft_line_code(text[i]) == C)
 			ft_get_rgb(text[i], &cub->data.cr, &cub->data.cg, &cub->data.cb);
 	}
-	ft_rgb_to_hex(cub);
+	cub->data.c_floor = ft_to_hex(cub->data.fr, cub->data.fg, cub->data.fb);
+	cub->data.c_ceiling = ft_to_hex(cub->data.cr, cub->data.cg, cub->data.cb);
 	cub->data.map = ft_get_map(text);
 	ft_get_play(cub);
 	printf("Posição x => %f\n", cub->play.x);
@@ -116,12 +117,10 @@ static void ft_get_play_ang(char c, t_cub *cub)
 			cub->play.ang = PI;
 }
 
-static void ft_rgb_to_hex(t_cub *cub)
+
+int ft_to_hex(int red, int green, int blue)
 {
-    cub->data.c_floor = (cub->data.fr << 16 | cub->data.fg << 8 | cub->data.fb);
-	cub->data.c_ceiling = (cub->data.cr << 16 | cub->data.cg << 8 | cub->data.cb);
-	printf("color floor => %d\n",  cub->data.c_floor);
-	printf("color ceiling => %d\n",  cub->data.c_ceiling);
+    return(red << 16 | green << 8 | blue);
 }
 
 

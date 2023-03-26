@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_wall.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 01:42:59 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 05:32:36 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/25 16:25:50 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/cub3d.h"
 
@@ -27,19 +26,18 @@ int	ft_check_wall(char **map)
 		j = -1;
 		while(map[i][++j])
 		{
-			if(ft_strchr("NSEW0",map[i][j]) != NULL) 
+			if(ft_strchr("NSEW0",map[i][j]) != NULL)
 			{
 				if(ft_check_map_horizontal(map, i, j) == FAILURE)
 					return (FAILURE);
 				if(ft_check_map_vertical(map, i, j) == FAILURE)
 					return (FAILURE);
 			}
-			
+
 		}
 	}
 	return(SUCCESS);
 }
-
 
 static int ft_check_map_horizontal(char **map, int i, int j)
 {
@@ -51,7 +49,6 @@ static int ft_check_map_horizontal(char **map, int i, int j)
 		return(FAILURE);
 	return (SUCCESS);
 }
-
 
 static int ft_check_map_vertical(char **map, int i, int j)
 {

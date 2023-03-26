@@ -6,18 +6,15 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 23:14:45 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/02/21 11:57:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/25 16:24:47 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-// serve para verificar se não existe flag duplicado ou faltando
-
 static void ft_init_check_duplicated_flag(t_check_duplicated_flag  *data);
 static int ft_check_count_flag(t_check_duplicated_flag  *data);
 static void ft_count_flag(t_check_duplicated_flag *data);
-
 
 int ft_check_duplicated_flag(char **text)
 {
@@ -38,10 +35,8 @@ int ft_check_duplicated_flag(char **text)
 	return(result);
 }
 
-
 static void ft_init_check_duplicated_flag(t_check_duplicated_flag  *data)
 {
-
 	data->no = 0;
 	data->so = 0;
 	data->we = 0;
