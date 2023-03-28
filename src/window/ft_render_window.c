@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_render_window.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:36:01 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/15 21:18:06 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/28 06:03:52 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
+
+// de principio joga fora 
 
 
 int ft_render(t_cub *cub)

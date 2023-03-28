@@ -6,12 +6,11 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 05:35:29 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 05:57:55 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 06:00:18 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
-
 
 void ft_drawn(t_cub *cub)
 {
