@@ -6,18 +6,16 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:36:01 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/26 13:51:54 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/27 20:34:46 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
-static void ft_print_gamer(t_cub *cub);
-
-
 int ft_render(t_cub *cub)
 {
-	//ft_background(cub);
+	//printf("%f", cub->play.x);
+	ft_background(cub);
 	ft_print_gamer(cub);
 	return(0);
 }
@@ -38,7 +36,7 @@ void ft_background(t_cub *cub)
 		j = 0;
 		while (j <= WIN_SIZE_X )
 		{
-			if(i <= WIN_SIZE_Y)
+			if(i <= WIN_SIZE_Y / 2)
 				ft_mlx_pixel_put(&cub->img, j, i, cub->data.c_ceiling);
 			else
 				ft_mlx_pixel_put(&cub->img, j, i, cub->data.c_floor);
@@ -50,7 +48,7 @@ void ft_background(t_cub *cub)
 }
 
 
-static void ft_print_gamer(t_cub *cub)
+void ft_print_gamer(t_cub *cub)
 {
 	int yellow;
 	int ix;
@@ -69,5 +67,4 @@ static void ft_print_gamer(t_cub *cub)
 		}
 		iy++;
 	}
-
 }

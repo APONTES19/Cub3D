@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/14 12:19:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/27 20:35:34 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,10 @@ static int ft_key_seta(int key, t_cub *cub)
 {
 	(void) cub;
 	if ( key == K_LEFT)
-		printf("key = LEFT %d\n\n", key);
+	{
+		printf("key = LEFT %d and play x = %f\n\n", key,cub->play.x);
+		cub->play.x = cub->play.x + 24;
+	}
 	else if ( key == K_RIGTH)
 		printf("key = RIGTH %d\n\n", key);
 	else if ( key == K_UP)

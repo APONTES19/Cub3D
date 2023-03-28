@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:21:42 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/26 12:51:08 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/27 20:22:54 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,6 @@ void ft_get_value (char **text, t_cub *cub)
 	cub->data.c_ceiling = ft_to_hex(cub->data.cr, cub->data.cg, cub->data.cb);
 	cub->data.map = ft_get_map(text);
 	ft_get_play(cub);
-	printf("Posição x => %f\n", cub->play.x);
-	printf("Posição y => %f\n", cub->play.y);
-	printf("Posição ang => %f\n", cub->play.ang);
-
 }
 
 static char *ft_get_path(char *line)
@@ -98,7 +94,6 @@ static void ft_get_play(t_cub *cub)
 				ft_get_play_ang(cub->data.map[i][j], cub);
 				cub->data.map[i][j] = '0';
 			}
-			// printf("%c",cub->data.map[i][j]);
 			j++;
 		}
 		i++;
@@ -117,10 +112,7 @@ static void ft_get_play_ang(char c, t_cub *cub)
 			cub->play.ang = PI;
 }
 
-
 int ft_to_hex(int red, int green, int blue)
 {
     return(red << 16 | green << 8 | blue);
 }
-
-

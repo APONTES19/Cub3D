@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/25 16:12:26 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/27 20:56:40 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ int	main(int argc, char **argv)
 		return(ft_error_message(ERROR_READ,argv[1]));
 	}
 	ft_check_cub_file(&cub);
+	cub.play.x = 0;
 	ft_get_value (cub.data.text, &cub);
+	printf("%f", cub.play.x);
 	ft_init_window(&cub);
 	return (0);
 }

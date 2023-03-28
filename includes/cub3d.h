@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/26 12:47:53 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/26 14:11:00 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void    ft_exit_two_point(char **point);
 
 
 int ft_to_hex(int red, int green, int blue);
-
+void ft_print_gamer(t_cub *cub);
 
 
 

@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/26 12:24:52 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/27 20:36:58 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,14 @@ void	ft_init_window(t_cub *cub)
 		WIN_SIZE_Y, "Cub 3D By Lucas and Ricardo");
 	if (cub->w.win == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro creat window");
-	ft_render(cub);
+	//ft_render(cub);
 	ft_hook_window(cub);
 }
 
 void	ft_hook_window(t_cub *cub)
 {
-	mlx_hook(cub->w.win, 17, 0, ft_close_window, cub);
+	mlx_loop_hook(cub->w.mlx, ft_render,cub);
+	mlx_hook(cub->w.win, 17, 0, ft_close_window, &cub);
+	mlx_key_hook(cub->w.win, &ft_key, &cub);
 	mlx_loop(cub->w.mlx);
 }
