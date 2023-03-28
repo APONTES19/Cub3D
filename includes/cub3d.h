@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/25 04:18:51 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/27 21:57:54 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ int		ft_check_duplicated_flag(char **text);
 int		ft_check_line_position(char **text);
 int		ft_check_rgb(char *line);
 int		ft_check_texture(char  *line);
-
-
-
 void ft_check_cub_file(char **text);
 int	ft_check_value_flag(char  **text);
 char  **ft_get_map(char **text);
@@ -43,30 +40,27 @@ int ft_check_map(char **text);
 int	ft_check_wall(char **map);
 void ft_get_value (char **text, t_cub *cub);
 
-
-// em teste
 float	ft_distance(float x1, float y1, float x2, float y2);
 void ft_distance_wall(t_cub *data);
 int ft_size_wall(t_cub *cub);
-void ft_ray_casting(t_cub *cub);
+
 void    ft_mlx_pixel_put(t_img *data, int x, int y, int color);
-float ft_angle_correction(float angle);
+float ft_radian_domain(float angle);
 void	ft_free_all_st(t_cub *cub);
-// simples demais para ter teste
+
 int		ft_error_message(int code, const char *str);
 void	ft_free_one_point(char *point);
 void	ft_free_two_point(char **point);
 void    ft_exit_two_point(char **point);
 
 
-
+// trabalhando em cima
 int ft_key_pressed(int key, t_cub *cub);
 int ft_key_unpressed(int key, t_cub *cub);
-
-
 int ft_iswall(char **map, float i, float j);
-
-
+int ft_move_and_turn(t_cub *cub);
+void ft_raycast(t_cub *cub);
+void	ft_hook_window(t_cub *cub);
 
 
 

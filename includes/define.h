@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/24 20:42:36 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/27 21:09:40 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,10 @@
 # define K_ESC 65307
 # define K_X 120
 
-
+# define KEY_PRESSED 2
+# define KEY_UNPRESSED 3
+# define KEY_PRESSED_MASK 1
+# define KEY_UNPRESSED_MASK  10
 
 
 #define PI 3.14159265358979323846

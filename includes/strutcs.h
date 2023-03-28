@@ -6,12 +6,14 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/20 21:41:09 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/27 21:45:28 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUTCS_H
 # define STRUTCS_H
+
+typedef struct	img t_img;
 
 typedef struct  check_path_img
 {
@@ -43,6 +45,7 @@ typedef struct window
 	int		size_x;
 	int		size_y;
 	char	*title;
+	t_img *image;
 }	t_win;
 
 typedef struct data
@@ -79,11 +82,8 @@ typedef struct player
 	float	dist;
 	int		status;
 	int		move;
-	// int	move_down;
-	// int	move_left;
-	// int	move_right;
+
 	int	turn;
-	// int	turn_right;
  int	ray;
 } t_play;
 

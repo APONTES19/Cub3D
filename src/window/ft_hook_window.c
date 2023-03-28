@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_window.c                                   :+:      :+:    :+:   */
+/*   ft_hook_window.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/27 20:55:30 by ryoshio-         ###   ########.fr       */
+/*   Created: 2023/03/27 20:55:11 by ryoshio-          #+#    #+#             */
+/*   Updated: 2023/03/27 21:11:10 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
-
-
-void	ft_init_window(t_cub *cub)
+void	ft_hook_window(t_cub *cub)
 {
-	cub->w.mlx = mlx_init();
-	if (cub->w.mlx == NULL)
-		ft_error_message(ERROR_WIN, "\t- Erro init mlx failed");
-	cub->w.win = mlx_new_window(cub->w.mlx, WIN_SIZE_X,
-		WIN_SIZE_Y, "Cub 3D");
-	if (cub->w.win == NULL)
-		ft_error_message(ERROR_WIN, "\t- Erro creat window");
+	mlx_loop_hook(cub->w.mlx, ft_move_and_turn, cub);
 	
-}
+	mlx_hook(cub->w.win, KEY_PRESSED, KEY_PRESSED_MASK, ft_key_pressed, cub); //precionando a tecla
+	mlx_hook(cub->w.win, KEY_UNPRESSED, KEY_UNPRESSED_MASK, ft_key_unpressed, cub); // desprecionando a tecla
+	
+	//botão de close
+	mlx_hook(cub->w.win, 17, 0, ft_close_window, cub);
 
+	mlx_loop(cub->w.mlx);
+}
