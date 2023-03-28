@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 04:35:14 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/27 21:51:53 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/27 23:50:57 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void ft_move_utils(t_cub *cub)
 static void ft_turn_utils(t_cub *cub)
 {
 	if (cub->play.turn == LEFT)
-		cub->play.ang = ft_radian_domain(cub->play.ang - PI / 180);
-	if (cub->play.turn == RIGHT)
 		cub->play.ang = ft_radian_domain(cub->play.ang + PI / 180);
+	if (cub->play.turn == RIGHT)
+		cub->play.ang = ft_radian_domain(cub->play.ang - PI / 180);
 }

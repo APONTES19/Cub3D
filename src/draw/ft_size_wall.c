@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 02:53:28 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/14 11:32:37 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/27 23:48:22 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 int ft_size_wall(t_cub *cub)
 {
 float tmp;
-	if(cub->play.dist < 0.0001)
+	if(cub->play.dist < 0.0001 ||  tan(PI/6) < 0.0001)
 		return (0);
 	tmp = TEXTURE_SIZE / cub->play.dist * floor( WIN_SIZE_Y/(2* tan(PI/6)));
 	if(tmp > WIN_SIZE_Y)
