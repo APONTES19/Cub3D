@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 05:26:56 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 07:01:49 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ void ft_distance_wall(t_cub *data)
    dh = ft_horizontal_wall (data);
 
 	dv= ft_vertical_wall (data);
-
-	printf(" \n(H,V)= (%f, %f)=", dh, dv);
 	if( dv < dh)
 	{
 		data->play.status =  VERTICAL;
@@ -45,26 +43,25 @@ void ft_distance_wall(t_cub *data)
  float ft_horizontal_wall (t_cub *data)
 {
 
-	if(sin(data->play.ray_ang) > 0.01 ) // olhando para cima
+	if (sin(data->play.ray_ang) == 0 )
+		return (MAX);
+	if(sin(data->play.ray_ang) > 0 ) // olhando para cima
     {
 		data->play.dy = -1* TEXTURE_SIZE;
 		data->play.yo  = floor( data->play.y /TEXTURE_SIZE) * TEXTURE_SIZE - 1 ;
 		data->play.xo = (data->play.y -data->play.yo)/tan (data->play.ray_ang) +  data->play.x;
-    	data->play. dx =  TEXTURE_SIZE /tan(data->play.ray_ang);
+    	data->play. dx =  TEXTURE_SIZE * cos(data->play.ray_ang) / sin(data->play.ray_ang);
 
-		//printf("\n (xo, yxo) = (%f, %f ) e (dx, dy) = (%f, %f)", data->play.xo, data->play.yo,    data->play.dx, data->play.dy );
+		
     }
-	else if(sin(data->play.ray_ang) < -0.01) // olhando para baixo
+	else 
 	{
 		data->play.dy = TEXTURE_SIZE;
 		data->play.yo = ceil(data->play.y/TEXTURE_SIZE)*TEXTURE_SIZE  + 1;
 		data->play.xo = (data->play.y -data->play.yo)/tan (data->play.ray_ang) +  data->play.x;
-        data->play.dx = TEXTURE_SIZE /tan(data->play.ray_ang);
+        data->play.dx = TEXTURE_SIZE *cos(data->play.ray_ang) / sin(data->play.ray_ang);
 	}
-	else
-		return(MAX); // colocar um numero coerente, seria o tamanho do mapa
-
-   // return (1);
+	
 	return (ft_loop_distance(data));
 }
 
@@ -72,29 +69,25 @@ void ft_distance_wall(t_cub *data)
 
 float ft_vertical_wall (t_cub *data)
 {
+	if(cos(data->play.ray_ang) == 0) 
+		return (MAX);
 
-	if(cos(data->play.ray_ang) > 0.35) // direito
+	if(cos(data->play.ray_ang) > 0) // direito
     {
 		data->play.dx = TEXTURE_SIZE;
-	data->play.dy =  1*tan (data->play.ray_ang) * TEXTURE_SIZE;
+		data->play.dy =  1*tan (data->play.ray_ang) * TEXTURE_SIZE;
 		data->play.xo = floor(data->play.x /TEXTURE_SIZE) *TEXTURE_SIZE + TEXTURE_SIZE;
 		data->play.yo = 1* tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
-
-
     }
-	else if(cos(data->play.ray_ang) < -0.4) // esquerdo
+	else 
 	{
 		data->play.dx = -1 * TEXTURE_SIZE;
 		data->play.dy =  tan (data->play.ray_ang) * TEXTURE_SIZE;
 		data->play.xo = ceil( data->play.x/TEXTURE_SIZE) *TEXTURE_SIZE  + 1 ;
 		data->play.yo =  tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
 	}
-	else
-		return(MAX); // colocar um numero coerente, seria o tamanho do mapa
 	return (ft_loop_distance(data));
 }
-
-
 
 
  float ft_loop_distance(t_cub *cub )

@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/27 22:07:17 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 07:00:15 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	main(int argc, char **argv)
 	ft_check_cub_file(text);
 	ft_get_value (text, &cub);
 	
-	
+	ft_free_two_point (text);
 	ft_init_window(&cub);
 	ft_raycast(&cub);
 	ft_hook_window(&cub);
-	ft_free_two_point (text);
+	
 	return (0);
 }

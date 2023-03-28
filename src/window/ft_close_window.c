@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_close_window.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:07:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/18 11:52:51 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/28 07:12:35 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_close_window(t_cub *cub)
 	exit(3);
 	return (0);
 }
+
+
 
 void ft_free_all_st(t_cub *cub)
 {
