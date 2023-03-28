@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/27 21:09:40 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 04:37:38 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@
 # define K_DOWN 65364
 # define K_ESC 65307
 # define K_X 120
+
+# define MAX 2147483647
+
 
 # define KEY_PRESSED 2
 # define KEY_UNPRESSED 3
