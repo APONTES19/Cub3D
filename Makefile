@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/27 22:09:14 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/28 05:54:19 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,8 +64,8 @@ SRC_FILES = cub3d.c\
 	ft_iswall.c\
 	ft_move_and_turn.c\
 	ft_raycast.c\
-	ft_hook_window.c
-	
+	ft_hook_window.c\
+	ft_drawn.c
 
 
 OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))

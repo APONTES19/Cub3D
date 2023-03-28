@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 04:39:00 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/27 23:37:09 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 05:54:37 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ void ft_raycast(t_cub *cub)
 	cub->play.ray_ang=  cub->play.ang + (PI/3)/2;
  	while(cub->play.ray < WIN_SIZE_X)
     {
+        
     	ft_distance_wall(cub);
-        ft_drawn_wall(cub);
+        ft_drawn(cub);
         cub->play.ray_ang -= (PI / 6)/ WIN_SIZE_X;
         cub->play.ray ++;
     }

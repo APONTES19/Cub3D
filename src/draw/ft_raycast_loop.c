@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 18:56:10 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/27 20:46:44 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 05:24:52 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,6 @@ void ft_ray_casting(t_cub *cub)
 	mlx_destroy_image(cub->w.mlx, cub->w.image.img);
 	mlx_loop(cub->w.mlx);
 }
-
-
-
-
-
-
 
 
 void ft_drawn_wall(t_cub *cub)

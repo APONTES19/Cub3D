@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/27 21:57:54 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 05:53:56 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int ft_iswall(char **map, float i, float j);
 int ft_move_and_turn(t_cub *cub);
 void ft_raycast(t_cub *cub);
 void	ft_hook_window(t_cub *cub);
-
+void ft_drawn(t_cub *cub);
 
 
 
