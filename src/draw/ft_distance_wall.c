@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 23:37:41 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 23:40:40 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void ft_distance_wall(t_cub *data)
 	}
 
 }
-
 
  float ft_horizontal_wall (t_cub *data)
 {
