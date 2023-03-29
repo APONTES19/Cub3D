@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/29 16:02:45 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 16:58:57 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,7 @@ void ft_distance_wall(t_cub *data)
 	dv= ft_vertical_wall (data) *  cos(ft_radian_domain(data->play.ang - data->play.ray_ang ));
 	if( dv < dh)
 	{
-		
 		data->play.status =   VERTICAL;
-	
-
-		
 		data->play.dist = dv;
 	}
 	else
@@ -39,32 +35,29 @@ void ft_distance_wall(t_cub *data)
 		data->play.status =  HORIZONTAL;
 		data->play.dist = dh;
 	}
-
-
-
 }
 
  double ft_horizontal_wall (t_cub *data)
 {
-
+	if(sin(data->play.ray_ang) == 0) 
+		return (ft_vertical_wall (data));
 	
 		
-	if(sin(data->play.ray_ang) > 0.001 ) // olhando para cima
+	if(sin(data->play.ray_ang) > 0 ) // olhando para cima
     {
 		data->play.dy = -1* TEXTURE_SIZE;
 		data->play.yo  = floor( data->play.y /TEXTURE_SIZE) * TEXTURE_SIZE - 0.001  ;
 		data->play.xo = (data->play.y -data->play.yo)*cos(data->play.ray_ang) / sin(data->play.ray_ang) +  data->play.x;
     	data->play. dx =  TEXTURE_SIZE * cos(data->play.ray_ang) / sin(data->play.ray_ang);
     }
-	else if(sin(data->play.ray_ang) < -0.001 ) 
+	else 
 	{
 		data->play.dy = TEXTURE_SIZE;
 		data->play.yo = floor(data->play.y/TEXTURE_SIZE)*TEXTURE_SIZE  + TEXTURE_SIZE;
 		data->play.xo = (data->play.y -data->play.yo)* cos(data->play.ray_ang) / sin(data->play.ray_ang) +  data->play.x;
         data->play.dx = -1*TEXTURE_SIZE *cos(data->play.ray_ang) / sin(data->play.ray_ang);
 	}
-	else 
-		return (MAX);
+
 	
 	return (ft_loop_distance(data));
 }
@@ -73,25 +66,22 @@ void ft_distance_wall(t_cub *data)
 
 double ft_vertical_wall (t_cub *data)
 {
-	//if(cos(data->play.ray_ang) == 0) 
-	//	return (ft_horizontal_wall (data));
-	if(cos(data->play.ray_ang) >  0.001 ) // direito
+	if(cos(data->play.ray_ang) == 0) 
+		return (ft_horizontal_wall (data));
+	if(cos(data->play.ray_ang) > 0 ) // direito
     {
 		data->play.dx = TEXTURE_SIZE;
 		data->play.dy =  -1*tan (data->play.ray_ang) * TEXTURE_SIZE;
 		data->play.xo = floor(data->play.x /TEXTURE_SIZE) *TEXTURE_SIZE + TEXTURE_SIZE;
 		data->play.yo = tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
     }
-	else if(cos(data->play.ray_ang) < -0.001 )
+	else 
 	{
 		data->play.dx = -1 * TEXTURE_SIZE;
 		data->play.dy =  tan (data->play.ray_ang) * TEXTURE_SIZE;
 		data->play.xo = floor( data->play.x/TEXTURE_SIZE) *TEXTURE_SIZE  -  0.001  ;
 		data->play.yo =  tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
 	}
-	else 
-		return (MAX);
-	
 	return (ft_loop_distance(data));
 }
 

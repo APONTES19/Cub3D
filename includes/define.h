@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 01:31:27 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:45:42 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 # define ERROR_LINE_WRONG_POSITION 106
 # define ERROR_RGB 107
 # define ERROR_MALLOC 108
-
+# define ERROR_WIN 12
 
 # define SUCCESS 0
 # define FAILURE 1
@@ -74,16 +74,9 @@
 # define WIN_SIZE_Y 400
 # define  TEXTURE_SIZE 64
 
-/*
-	Calcule speed (PI / 90)
-*/
-# define SPEED_ROTATION 0.035
-# define SPEED_MOVIMENT 4
-/*
-	#wall_dist
-	calcular essa valor depois.
-*/
-# define WALL_DIST
+
+# define SPEED_ROTATION PI / 180
+# define SPEED_MOVIMENT 2
 
 
 
@@ -97,7 +90,8 @@
 
 
 
-# define ERROR_WIN 12
+
+
 
 #endif
 

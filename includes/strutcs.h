@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 13:07:33 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:06:32 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,11 @@ typedef struct window
 	int		size_x;
 	int		size_y;
 	char	*title;
-	t_img *image;
+	t_img	*no;
+	t_img	*so;
+	t_img	*we;
+	t_img	*ea;
+	t_img	*image;
 }	t_win;
 
 typedef struct data

@@ -1,6 +1,6 @@
-SO ./img/north_texture.xpm
-WE ./img/north_texture.xpm
-EA ./img/north_texture.xpm
+SO ./img/south_texture.xpm
+WE ./img/west_texture.xpm
+EA ./img/east_texture.xpm
 NO ./img/north_texture.xpm
 
 
