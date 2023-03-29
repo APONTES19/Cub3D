@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 07:01:49 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 23:14:39 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,16 @@ void ft_distance_wall(t_cub *data)
     {
 		data->play.dy = -1* TEXTURE_SIZE;
 		data->play.yo  = floor( data->play.y /TEXTURE_SIZE) * TEXTURE_SIZE - 1 ;
-		data->play.xo = (data->play.y -data->play.yo)/tan (data->play.ray_ang) +  data->play.x;
+		data->play.xo = (data->play.y -data->play.yo)*cos(data->play.ray_ang) / sin(data->play.ray_ang) +  data->play.x;
     	data->play. dx =  TEXTURE_SIZE * cos(data->play.ray_ang) / sin(data->play.ray_ang);
-
-		
     }
 	else 
 	{
 		data->play.dy = TEXTURE_SIZE;
-		data->play.yo = ceil(data->play.y/TEXTURE_SIZE)*TEXTURE_SIZE  + 1;
-		data->play.xo = (data->play.y -data->play.yo)/tan (data->play.ray_ang) +  data->play.x;
-        data->play.dx = TEXTURE_SIZE *cos(data->play.ray_ang) / sin(data->play.ray_ang);
+		data->play.yo = floor(data->play.y/TEXTURE_SIZE)*TEXTURE_SIZE  + TEXTURE_SIZE;
+		data->play.xo = (data->play.y -data->play.yo)* cos(data->play.ray_ang) / sin(data->play.ray_ang) +  data->play.x;
+        data->play.dx = -1*TEXTURE_SIZE *cos(data->play.ray_ang) / sin(data->play.ray_ang);
 	}
-	
 	return (ft_loop_distance(data));
 }
 
@@ -71,11 +68,10 @@ float ft_vertical_wall (t_cub *data)
 {
 	if(cos(data->play.ray_ang) == 0) 
 		return (MAX);
-
 	if(cos(data->play.ray_ang) > 0) // direito
     {
 		data->play.dx = TEXTURE_SIZE;
-		data->play.dy =  1*tan (data->play.ray_ang) * TEXTURE_SIZE;
+		data->play.dy =  -1*tan (data->play.ray_ang) * TEXTURE_SIZE;
 		data->play.xo = floor(data->play.x /TEXTURE_SIZE) *TEXTURE_SIZE + TEXTURE_SIZE;
 		data->play.yo = 1* tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
     }
@@ -83,7 +79,7 @@ float ft_vertical_wall (t_cub *data)
 	{
 		data->play.dx = -1 * TEXTURE_SIZE;
 		data->play.dy =  tan (data->play.ray_ang) * TEXTURE_SIZE;
-		data->play.xo = ceil( data->play.x/TEXTURE_SIZE) *TEXTURE_SIZE  + 1 ;
+		data->play.xo = floor( data->play.x/TEXTURE_SIZE) *TEXTURE_SIZE  - 1 ;
 		data->play.yo =  tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
 	}
 	return (ft_loop_distance(data));
