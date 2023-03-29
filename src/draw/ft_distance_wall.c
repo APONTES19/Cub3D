@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/29 00:45:41 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 12:17:11 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ double ft_vertical_wall (t_cub *data)
 		data->play.dx = TEXTURE_SIZE;
 		data->play.dy =  -1*tan (data->play.ray_ang) * TEXTURE_SIZE;
 		data->play.xo = floor(data->play.x /TEXTURE_SIZE) *TEXTURE_SIZE + TEXTURE_SIZE;
-		data->play.yo = 1* tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
+		data->play.yo = tan (data->play.ray_ang) *(data->play.x  - data->play.xo) + data->play.y;
     }
 	else 
 	{

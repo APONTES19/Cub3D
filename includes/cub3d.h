@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 00:45:41 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 13:05:10 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,12 @@ int ft_move_and_turn(t_cub *cub);
 void ft_raycast(t_cub *cub);
 void	ft_hook_window(t_cub *cub);
 void ft_drawn(t_cub *cub);
-
+int	ft_mlx_pixel_get(t_img *img, int x, int y);
 
 //lucas alterações
 void	ft_init_window(t_cub *cub);
 int		ft_close_window(t_cub *cub);
 
-int		ft_render(t_cub *cub);
 void	ft_background(t_cub *cub);
 
 void    ft_free_cub(t_cub *data);

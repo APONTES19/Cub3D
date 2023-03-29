@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 00:39:08 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 13:07:33 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,6 @@ typedef struct player
 	double	x;
 	double	y;
 	double	ang;
-	double 	wall_x;
-	double	wall_y;
 	double	dx;
 	double	dy;
 	double	xo;

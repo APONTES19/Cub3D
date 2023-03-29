@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/28 07:03:16 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/29 13:04:03 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,6 @@ SRC_FILES = cub3d.c\
 	ft_init_window.c\
 	ft_close_window.c\
 	ft_event_window.c\
-	ft_render_window.c\
 	ft_error_message.c\
 	ft_free_cub.c\
 	ft_free_one_point.c\
@@ -65,9 +64,10 @@ SRC_FILES = cub3d.c\
 	ft_move_and_turn.c\
 	ft_raycast.c\
 	ft_hook_window.c\
-	ft_drawn.c
+	ft_drawn.c\
+	ft_mlx_pixel_get.c
 
-
+	
 OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 
 
