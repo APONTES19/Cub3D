@@ -6,13 +6,13 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 03:54:22 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 05:18:58 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 00:45:41 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-int ft_iswall(char **map, float i, float j)
+int ft_iswall(char **map, double i, double j)
 {
 	int x;
 	int y;

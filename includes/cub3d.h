@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/28 05:53:56 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 00:45:41 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ int ft_check_map(char **text);
 int	ft_check_wall(char **map);
 void ft_get_value (char **text, t_cub *cub);
 
-float	ft_distance(float x1, float y1, float x2, float y2);
+double	ft_distance(double x1, double y1, double x2, double y2);
 void ft_distance_wall(t_cub *data);
 int ft_size_wall(t_cub *cub);
 
 void    ft_mlx_pixel_put(t_img *data, int x, int y, int color);
-float ft_radian_domain(float angle);
+double ft_radian_domain(double angle);
 void	ft_free_all_st(t_cub *cub);
 
 int		ft_error_message(int code, const char *str);
@@ -57,24 +57,11 @@ void    ft_exit_two_point(char **point);
 // trabalhando em cima
 int ft_key_pressed(int key, t_cub *cub);
 int ft_key_unpressed(int key, t_cub *cub);
-int ft_iswall(char **map, float i, float j);
+int ft_iswall(char **map, double i, double j);
 int ft_move_and_turn(t_cub *cub);
 void ft_raycast(t_cub *cub);
 void	ft_hook_window(t_cub *cub);
 void ft_drawn(t_cub *cub);
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //lucas alterações

@@ -6,22 +6,22 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 23:40:40 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 00:45:41 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../includes/cub3d.h"
 
-float ft_loop_distance(t_cub *cub );
-float ft_horizontal_wall (t_cub *data);
-float ft_vertical_wall (t_cub *data);
+double ft_loop_distance(t_cub *cub );
+double ft_horizontal_wall (t_cub *data);
+double ft_vertical_wall (t_cub *data);
 
 
 void ft_distance_wall(t_cub *data)
 {
-	float dh;
-	float dv;
+	double dh;
+	double dv;
 
    dh = ft_horizontal_wall (data);
 
@@ -39,7 +39,7 @@ void ft_distance_wall(t_cub *data)
 
 }
 
- float ft_horizontal_wall (t_cub *data)
+ double ft_horizontal_wall (t_cub *data)
 {
 
 	if (sin(data->play.ray_ang) == 0 )
@@ -63,7 +63,7 @@ void ft_distance_wall(t_cub *data)
 
 
 
-float ft_vertical_wall (t_cub *data)
+double ft_vertical_wall (t_cub *data)
 {
 	if(cos(data->play.ray_ang) == 0) 
 		return (MAX);
@@ -85,7 +85,7 @@ float ft_vertical_wall (t_cub *data)
 }
 
 
- float ft_loop_distance(t_cub *cub )
+ double ft_loop_distance(t_cub *cub )
 {
  	while (ft_iswall(cub->data.map, cub->play.yo, cub->play.xo) == FAILURE)
 	{

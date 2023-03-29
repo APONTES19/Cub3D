@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/27 21:45:28 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 00:39:08 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,18 +68,18 @@ typedef struct data
 
 typedef struct player
 {
-	float	x;
-	float	y;
-	float	ang;
-	float 	wall_x;
-	float	wall_y;
-	float	dx;
-	float	dy;
-	float	xo;
-	float	yo;
-	float   ray_ang;
+	double	x;
+	double	y;
+	double	ang;
+	double 	wall_x;
+	double	wall_y;
+	double	dx;
+	double	dy;
+	double	xo;
+	double	yo;
+	double   ray_ang;
 
-	float	dist;
+	double	dist;
 	int		status;
 	int		move;
 
