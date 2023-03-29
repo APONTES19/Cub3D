@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 23:14:39 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/28 23:37:41 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ void ft_distance_wall(t_cub *data)
 	if( dv < dh)
 	{
 		data->play.status =  VERTICAL;
-		data->play.dist = dv; //* cos(data->play.ang-ft_angle_correction(data->play.ray_ang));
+		data->play.dist = dv * cos(ft_radian_domain(data->play.ang - data->play.ray_ang ));
 	}
 	else
 	{
 		data->play.status =  HORIZONTAL;
-		data->play.dist = dh; //* cos(data->play.ang- ft_angle_correction( data->play.ray_ang ));
+		data->play.dist = dh *  cos(ft_radian_domain(data->play.ang - data->play.ray_ang ));
 	}
 
 }
