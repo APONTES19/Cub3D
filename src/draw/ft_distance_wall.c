@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:16:02 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/29 16:58:57 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:50:49 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ void ft_distance_wall(t_cub *data)
 {
 	if(sin(data->play.ray_ang) == 0) 
 		return (ft_vertical_wall (data));
-	
-		
 	if(sin(data->play.ray_ang) > 0 ) // olhando para cima
     {
 		data->play.dy = -1* TEXTURE_SIZE;
@@ -57,8 +55,6 @@ void ft_distance_wall(t_cub *data)
 		data->play.xo = (data->play.y -data->play.yo)* cos(data->play.ray_ang) / sin(data->play.ray_ang) +  data->play.x;
         data->play.dx = -1*TEXTURE_SIZE *cos(data->play.ray_ang) / sin(data->play.ray_ang);
 	}
-
-	
 	return (ft_loop_distance(data));
 }
 

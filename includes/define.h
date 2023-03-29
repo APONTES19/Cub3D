@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 11:38:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 17:45:42 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 17:52:17 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,16 +50,14 @@
 # define K_ESC 65307
 # define K_X 120
 
-# define MAX 2147483647
-
-
 # define KEY_PRESSED 2
 # define KEY_UNPRESSED 3
 # define KEY_PRESSED_MASK 1
 # define KEY_UNPRESSED_MASK  10
 
-
+# define MAX 2147483647
 #define PI 3.14159265358979323846
+
 # define VERTICAL 1
 # define HORIZONTAL 2
 
@@ -69,7 +67,6 @@
 # define LEFT 3 
 # define RIGHT 4
 
-
 # define WIN_SIZE_X 640
 # define WIN_SIZE_Y 400
 # define  TEXTURE_SIZE 64
@@ -77,18 +74,6 @@
 
 # define SPEED_ROTATION PI / 180
 # define SPEED_MOVIMENT 2
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
