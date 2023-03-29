@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:21:42 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/12 18:43:16 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 01:28:00 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,6 @@ void ft_get_value (char **text, t_cub *cub)
 	ft_rgb_to_hex(cub);
 	cub->data.map = ft_get_map(text);
 	ft_get_play(cub);
-	printf("Posição x => %f\n", cub->play.x);
-	printf("Posição y => %f\n", cub->play.y);
-	printf("Posição ang => %f\n", cub->play.ang);
 	
 }
 
@@ -91,12 +88,11 @@ static void ft_get_play(t_cub *cub)
 		{
 			if (ft_strchr("NSEW", cub->data.map[i][j]))
 			{
-				cub->play.x = (j + 0.5 )* TEXTURE_SIZE;
-				cub->play.y =  (i + 0.5)* TEXTURE_SIZE;
+				cub->play.x = (j+0.5) * TEXTURE_SIZE;
+				cub->play.y =  ( i+0.5) * TEXTURE_SIZE;
 				ft_get_play_ang(cub->data.map[i][j], cub);
 				cub->data.map[i][j] = '0';
 			}
-			// printf("%c",cub->data.map[i][j]);
 			j++;
 		}
 		i++;
@@ -119,8 +115,6 @@ static void ft_rgb_to_hex(t_cub *cub)
 {
     cub->data.c_floor = (cub->data.fr << 16 | cub->data.fg << 8 | cub->data.fb);
 	cub->data.c_ceiling = (cub->data.cr << 16 | cub->data.cg << 8 | cub->data.cb);
-	printf("color floor => %d\n",  cub->data.c_floor);
-	printf("color ceiling => %d\n",  cub->data.c_ceiling);
 }
 
 

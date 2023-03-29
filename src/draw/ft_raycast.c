@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 04:39:00 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 06:01:17 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 12:00:37 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ void ft_raycast(t_cub *cub)
 	&cub->w.image->endian);
 
  	cub->play.ray = 0;
-	cub->play.ray_ang=  cub->play.ang + (PI/3)/2;
- 	while(cub->play.ray < WIN_SIZE_X)
+	cub->play.ray_ang= ft_radian_domain(cub->play.ang + (M_PI)/6);
+ 	while(cub->play.ray < WIN_SIZE_X ) 
     {
-        
+        cub->play.ray_ang = ft_radian_domain(cub->play.ray_ang -(M_PI/ 3)/ WIN_SIZE_X);
     	ft_distance_wall(cub);
         ft_drawn(cub);
-        cub->play.ray_ang -= (PI / 6)/ WIN_SIZE_X;
+		
+
         cub->play.ray ++;
     }
 	mlx_put_image_to_window(cub->w.mlx, cub->w.win, cub->w.image->img, 0, 0);
