@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 05:35:29 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/28 06:00:18 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 13:19:06 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,13 @@ void ft_drawn(t_cub *cub)
 		if( i < j)
 			ft_mlx_pixel_put(cub->w.image, cub->play.ray, i, cub->data.c_ceiling);
 		else if ( i > j && i < j + size)
-			ft_mlx_pixel_put(cub->w.image, cub->play.ray, i,  0x00FF0000);
+    {
+    	if(cub->play.status ==  HORIZONTAL)
+    		ft_mlx_pixel_put(cub->w.image, cub->play.ray, i,  0x00FF0000);
+		else
+			ft_mlx_pixel_put(cub->w.image, cub->play.ray, i,  0x00fcba03); 
+    }
+			
 		else 
 			ft_mlx_pixel_put(cub->w.image,  cub->play.ray,i, cub->data.c_floor);
     	i++;
