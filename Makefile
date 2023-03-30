@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/30 03:23:33 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/30 04:07:34 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,6 @@ SRC_FILES = cub3d.c\
 	ft_close_window.c\
 	ft_event_window.c\
 	ft_error_message.c\
-	ft_free_cub.c\
 	ft_free_one_point.c\
 	ft_free_two_point.c\
 	ft_read_all_file.c\

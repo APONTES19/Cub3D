@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 16:02:24 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/01/30 21:55:12 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/30 03:56:48 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static	void	read_doc(int fd, char **buffer, char **bytes_read,
-	char **result);
-static	void	line(char **bytes_read, char **result);
 
+static	void	read_doc(int fd, char **buffer, char **bytes_read,
+					char **result);
+static	void	line(char **bytes_read, char **result);
 
 char	*get_next_line(int fd)
 {
