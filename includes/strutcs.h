@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 20:20:17 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 02:30:23 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ typedef struct window
 	void	*mlx;
 	int		size_x;
 	int		size_y;
-	char	*title;
 	t_img	*no;
 	t_img	*so;
 	t_img	*we;
@@ -83,11 +82,8 @@ typedef struct player
 	int		ray;
 	double	dist;
 	int		status;
-	
 	int		move;
-	int	turn;
- 	
-	
+	int		turn;
 } t_play;
 
 typedef struct    img {

@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/28 21:33:07 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 03:02:44 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,11 @@ int ft_key_pressed(int key, t_cub *cub)
 
 int ft_key_unpressed(int key, t_cub *cub)
 {
+	if (key == K_ESC || key == K_X) // x realmente fecha?
+	{
+		printf("key = Esc ou X Mudar a Função aqui %d\n\n", key);
+		ft_close_window(cub);
+	}
 
 	if (key == K_A) // move para esquerda
 		cub->play.move = STOP;

@@ -6,7 +6,7 @@
 #    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/30 00:06:57 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/30 03:23:33 by ryoshio-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 
 # compilation **************************************************************** #
 CC=cc
-FLAG=  -Wall -Werror -Wextra  -fsanitize=address
+FLAG=  -Wall -Werror -Wextra #-g -fsanitize=address
 VALGRIND=valgrind -s --leak-check=full --track-origins=yes --show-leak-kinds=all 
 # clean ********************************************************************** #
 RM=-rm -f
@@ -125,7 +125,7 @@ re:			fclean all
 reall:		fcleanlib re
 
 run: all
-	./cub3D ./maps/map_01.cub
+	./cub3D ./maps/map_02.cub
 #	$(VALGRIND) ./cub3D ./maps/map_01.cub
 
 .PHONY: all clean fclean fcleanlib fcleanll re reall
