@@ -6,26 +6,24 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 02:30:23 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 03:48:33 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUTCS_H
 # define STRUTCS_H
 
-typedef struct	img t_img;
+typedef struct img	t_img;
 
-typedef struct  check_path_img
+typedef struct check_path_img
 {
 	char	*line;
 	char	**list_line;
 	char	*path_file;
 	int		file;
+}t_check_path_img;
 
-} t_check_path_img;
-
-
-typedef struct  check_duplicated_flag
+typedef struct check_duplicated_flag
 {
 	int		status;
 	int		i;
@@ -36,7 +34,7 @@ typedef struct  check_duplicated_flag
 	int		f;
 	int		c;
 
-} t_check_duplicated_flag;
+}t_check_duplicated_flag;
 
 typedef struct window
 {
@@ -60,7 +58,6 @@ typedef struct data
 	char	*ea_path;
 	int		c_floor;
 	int		c_ceiling;
-
 	int		fr;
 	int		fg;
 	int		fb;
@@ -78,24 +75,21 @@ typedef struct player
 	double	dy;
 	double	xo;
 	double	yo;
-	double   ray_ang;
+	double	ray_ang;
 	int		ray;
 	double	dist;
 	int		status;
 	int		move;
 	int		turn;
-} t_play;
+}t_play;
 
-typedef struct    img {
-    void    *img;
-    char    *addr;
-    int        bits_per_pixel;
-    int        line_length;
-    int        endian;
-}                t_img;
-
-
-
+typedef struct img{
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}t_img;
 
 typedef struct cub
 {
