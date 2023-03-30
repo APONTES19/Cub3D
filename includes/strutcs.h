@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 10:02:36 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 17:06:32 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/29 20:20:17 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,14 @@ typedef struct player
 	double	xo;
 	double	yo;
 	double   ray_ang;
-
+	int		ray;
 	double	dist;
 	int		status;
+	
 	int		move;
-
 	int	turn;
- int	ray;
+ 	
+	
 } t_play;
 
 typedef struct    img {
