@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_get_value.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:21:42 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/29 01:28:00 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 19:12:18 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-static char  *ft_get_path(char *line);
+static char *ft_get_path(char *line);
 static void ft_get_rgb(char *line,  int *r, int *g, int *b);
 static void ft_get_play(t_cub *cub);
 static void ft_get_play_ang(char c, t_cub *cub);
@@ -41,12 +41,12 @@ void ft_get_value (char **text, t_cub *cub)
 	ft_rgb_to_hex(cub);
 	cub->data.map = ft_get_map(text);
 	ft_get_play(cub);
-	
+
 }
 
 static char *ft_get_path(char *line)
 {
-	char **split;
+	char	**split;
 	char	*path;
 	char	*tmp;
 
@@ -114,7 +114,6 @@ static void ft_get_play_ang(char c, t_cub *cub)
 static void ft_rgb_to_hex(t_cub *cub)
 {
     cub->data.c_floor = (cub->data.fr << 16 | cub->data.fg << 8 | cub->data.fb);
-	cub->data.c_ceiling = (cub->data.cr << 16 | cub->data.cg << 8 | cub->data.cb);
+	cub->data.c_ceiling =
+		(cub->data.cr << 16 | cub->data.cg << 8 | cub->data.cb);
 }
-
-

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_init_window.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/29 17:24:41 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 12:32:19 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	ft_init_window(t_cub *cub)
 	cub->w.so = ft_mlx_texture_get(cub->w.mlx , cub->data.so_path);
 	cub->w.we = ft_mlx_texture_get(cub->w.mlx , cub->data.we_path);
 	cub->w.ea = ft_mlx_texture_get(cub->w.mlx , cub->data.ea_path);
-	
 }
 
 

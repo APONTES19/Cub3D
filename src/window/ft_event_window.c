@@ -3,29 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_event_window.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 03:02:44 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 12:30:39 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../includes/cub3d.h"
 
-//arquivo criado para guardar coisas referentes a teclas e seus eventos.
-
-
-
-int ft_key_pressed(int key, t_cub *cub) 
+int ft_key_pressed(int key, t_cub *cub)
 {
-	if (key == K_ESC || key == K_X) // x realmente fecha?
-	{
-		printf("key = Esc ou X Mudar a Função aqui %d\n\n", key);
+	if (key == K_ESC || key == K_X)
 		ft_close_window(cub);
-	}
-	else if (key == K_A) // move para esquerda
+	else if (key == K_A)
 		cub->play.move = LEFT;
-	else if (key == K_D)  // move para direita
+	else if (key == K_D)
 		cub->play.move = RIGHT;
 	else if (key == K_W ||  key == K_UP)
 		cub->play.move = UP;
@@ -41,23 +34,15 @@ int ft_key_pressed(int key, t_cub *cub)
 			"                 ▲     \n"
 			"             a ◀ ▼ ▶ d \n"
 			"                 s    \n");
-
-
 	return(0);
 }
 
 
 int ft_key_unpressed(int key, t_cub *cub)
 {
-	if (key == K_ESC || key == K_X) // x realmente fecha?
-	{
-		printf("key = Esc ou X Mudar a Função aqui %d\n\n", key);
-		ft_close_window(cub);
-	}
-
-	if (key == K_A) // move para esquerda
+	if (key == K_A)
 		cub->play.move = STOP;
-	else if (key == K_D)  // move para direita
+	else if (key == K_D)
 		cub->play.move = STOP;
 	else if (key == K_W ||  key == K_UP)
 		cub->play.move = STOP;

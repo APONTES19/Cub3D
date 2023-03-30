@@ -4,8 +4,8 @@ EA ./img/east_texture.xpm
 NO ./img/north_texture.xpm
 
 
-C 205,249,255
-F 157,157,157
+C 000,000,000
+F 205,249,255
 
 
 

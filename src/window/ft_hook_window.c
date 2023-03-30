@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_hook_window.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 20:55:11 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/30 02:51:47 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 12:31:15 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 void	ft_hook_window(t_cub *cub)
 {
 	mlx_loop_hook(cub->w.mlx, ft_move_and_turn, cub);
-	
-	mlx_hook(cub->w.win, KEY_PRESSED, KEY_PRESSED_MASK, ft_key_pressed, cub); //precionando a tecla
-	mlx_hook(cub->w.win, KEY_UNPRESSED, KEY_UNPRESSED_MASK, ft_key_unpressed, cub); // desprecionando a tecla
+	mlx_hook(cub->w.win, KEY_PRESSED, KEY_PRESSED_MASK, ft_key_pressed, cub);
+	mlx_hook
+		(cub->w.win, KEY_UNPRESSED, KEY_UNPRESSED_MASK, ft_key_unpressed, cub);
 	mlx_hook(cub->w.win, 17, 0, ft_close_window, cub);
-
 	mlx_loop(cub->w.mlx);
 }

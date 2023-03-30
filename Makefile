@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/30 04:07:34 by ryoshio-         ###   ########.fr        #
+#    Updated: 2023/03/30 19:25:42 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ SRC_FILES = cub3d.c\
 	ft_drawn.c\
 	ft_mlx_pixel_get.c
 
-	
+
 OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 
 
@@ -74,7 +74,7 @@ OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 # compilation **************************************************************** #
 CC=cc
 FLAG=  -Wall -Werror -Wextra #-g -fsanitize=address
-VALGRIND=valgrind -s --leak-check=full --track-origins=yes --show-leak-kinds=all 
+VALGRIND=valgrind -s --leak-check=full --track-origins=yes --show-leak-kinds=all
 # clean ********************************************************************** #
 RM=-rm -f
 RM_DIR=rm -rf
@@ -82,7 +82,7 @@ RM_DIR=rm -rf
 all:	$(NAME)
 
 $(OBJ_PATH)/%.o: %.c
-	@mkdir -p $(OBJ_PATH) 
+	@mkdir -p $(OBJ_PATH)
 	@$(CC) $(FLAG) -I $(HEADERS_PATH) -c $< -o $@
 
 $(NAME): $(LIBFT) $(OBJ) $(MLX_MAKE)
@@ -125,6 +125,6 @@ reall:		fcleanlib re
 
 run: all
 	./cub3D ./maps/map_02.cub
-#	$(VALGRIND) ./cub3D ./maps/map_01.cub
+#	$(VALGRIND) ./cub3D ./maps/map_02.cub
 
 .PHONY: all clean fclean fcleanlib fcleanll re reall
