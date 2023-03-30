@@ -6,13 +6,11 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 05:35:29 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/30 01:29:47 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 05:26:01 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
-
-
 
 void ft_choice_wall(t_cub *cub, int i);
 void ft_drawn_wall(t_cub *cub, t_img  *image,  int i);
