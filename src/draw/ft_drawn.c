@@ -6,7 +6,7 @@
 /*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 05:35:29 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/30 01:24:51 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 01:29:47 by ryoshio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ void ft_drawn(t_cub *cub)
 void ft_choice_wall(t_cub *cub, int i)
 {
 	if (cub->play.status == VERTICAL && (ft_radian_domain(cub->play.ray_ang) <= PI / 2 || ft_radian_domain(cub->play.ray_ang) >= 3 * PI / 2))
-		ft_mlx_pixel_put(cub->w.image, cub->play.ray, i,  0x00FFFF00); //E (leste) amarelo ( direito caso estiver olhando para norte)
+		ft_drawn_wall(cub,cub->w.ea, i); //E (leste) amarelo ( direito caso estiver olhando para norte)
 	else if (cub->play.status == VERTICAL) 
-		ft_mlx_pixel_put(cub->w.image, cub->play.ray, i,  0x00008000); // W (oeste) verde ( esquerdo caso estiver olhando para norte
+		ft_drawn_wall(cub,cub->w.we, i); // W (oeste) verde ( esquerdo caso estiver olhando para norte
 	else if (cub->play.status == HORIZONTAL && ft_radian_domain(cub->play.ray_ang)  <= PI)
-		ft_mlx_pixel_put(cub->w.image, cub->play.ray, i,  0x00FF0000); //N -> vermelho
+		ft_drawn_wall(cub,cub->w.no, i); //N -> vermelho
 	else 
 		ft_drawn_wall(cub,cub->w.so, i);
 }

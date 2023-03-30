@@ -1,5 +1,5 @@
-SO ./img/south_texture.xpm
-WE ./img/west_texture.xpm
+SO ./img/bricks.xpm
+WE ./img/book.xpm
 EA ./img/east_texture.xpm
 NO ./img/north_texture.xpm
 
