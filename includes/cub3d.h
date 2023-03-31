@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryoshio- <ryoshio-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 14:36:27 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 03:28:43 by ryoshio-         ###   ########.fr       */
+/*   Updated: 2023/03/30 22:39:41 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ void	ft_raycast(t_cub *cub);
 void	ft_hook_window(t_cub *cub);
 void	ft_drawn(t_cub *cub);
 int		ft_mlx_pixel_get(t_img *img, int x, int y);
-void	ft_init_window(t_cub *cub);
+int		ft_init_window(t_cub *cub);
 int		ft_close_window(t_cub *cub);
 void	ft_background(t_cub *cub);
 void	ft_free_cub(t_cub *data);
-
+void	ft_rgb_to_hex(t_cub *cub);
 #endif

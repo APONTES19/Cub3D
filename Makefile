@@ -6,7 +6,7 @@
 #    By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/23 13:45:23 by lucasmar          #+#    #+#              #
-#    Updated: 2023/03/30 19:25:42 by lucasmar         ###   ########.fr        #
+#    Updated: 2023/03/31 01:14:33 by lucasmar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRC_FILES = cub3d.c\
 	ft_line_code.c\
 	ft_get_map.c\
 	ft_get_value.c\
+	ft_get_rgb.c\
 	ft_distance.c\
 	ft_distance_wall.c\
 	ft_size_wall.c\
@@ -64,7 +65,7 @@ SRC_FILES = cub3d.c\
 	ft_raycast.c\
 	ft_hook_window.c\
 	ft_drawn.c\
-	ft_mlx_pixel_get.c
+	ft_mlx_pixel_get.c\
 
 
 OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
@@ -73,7 +74,7 @@ OBJ= $(addprefix $(OBJ_PATH)/,$(SRC_FILES:.c=.o))
 
 # compilation **************************************************************** #
 CC=cc
-FLAG=  -Wall -Werror -Wextra #-g -fsanitize=address
+FLAG=  -Wall -Werror -Wextra
 VALGRIND=valgrind -s --leak-check=full --track-origins=yes --show-leak-kinds=all
 # clean ********************************************************************** #
 RM=-rm -f
@@ -124,7 +125,6 @@ re:			fclean all
 reall:		fcleanlib re
 
 run: all
-	./cub3D ./maps/map_02.cub
-#	$(VALGRIND) ./cub3D ./maps/map_02.cub
-
+#	@./cub3D ./maps/map_04.cub
+	$(VALGRIND) ./cub3D ./maps/map_01.cub
 .PHONY: all clean fclean fcleanlib fcleanll re reall

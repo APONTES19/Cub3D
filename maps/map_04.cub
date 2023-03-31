@@ -3,9 +3,8 @@ WE ./img/west_texture.xpm
 EA ./img/east_texture.xpm
 NO ./img/north_texture.xpm
 
-
-C 000,000,000
-F 169,163,161
+F 220,100,0
+C 225,30,0
 
 
 

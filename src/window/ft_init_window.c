@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 22:57:57 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/31 01:17:55 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ static int	ft_set_texture(t_cub *cub)
 	cub->w.ea = ft_mlx_texture_get (cub->w.mlx, cub->data.ea_path);
 	if (!cub->w.no)
 		return (1);
+	return (0);
 }
 
 static t_img	*ft_mlx_texture_get(void *mlx, char *file)
@@ -56,3 +57,4 @@ static t_img	*ft_mlx_texture_get(void *mlx, char *file)
 			&image->line_length, &image->endian);
 	return (image);
 }
+

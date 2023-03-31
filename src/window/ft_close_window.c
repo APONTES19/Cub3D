@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:07:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 22:23:59 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/30 23:21:14 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ int	ft_close_window(t_cub *cub)
 		mlx_loop_end (cub->w.mlx);
 		mlx_destroy_window (cub->w.mlx, cub->w.win);
 		mlx_destroy_display (cub->w.mlx);
+		ft_free_one_point(cub->w.mlx);
 	}
 	ft_free_all_st (cub);
-	exit (3);
+	exit (0);
 	return (0);
 }
 
