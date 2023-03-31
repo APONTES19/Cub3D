@@ -6,13 +6,13 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 12:29:06 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 12:30:39 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/30 22:20:08 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/cub3d.h"
+#include "../includes/cub3d.h"
 
-int ft_key_pressed(int key, t_cub *cub)
+int	ft_key_pressed(int key, t_cub *cub)
 {
 	if (key == K_ESC || key == K_X)
 		ft_close_window(cub);
@@ -20,37 +20,30 @@ int ft_key_pressed(int key, t_cub *cub)
 		cub->play.move = LEFT;
 	else if (key == K_D)
 		cub->play.move = RIGHT;
-	else if (key == K_W ||  key == K_UP)
+	else if (key == K_W || key == K_UP)
 		cub->play.move = UP;
 	else if (key == K_S || key == K_DOWN)
 		cub->play.move = DOWN;
-	if ( key == K_LEFT)
+	if (key == K_LEFT)
 		cub->play.turn = LEFT;
-	else if ( key == K_RIGTH)
+	else if (key == K_RIGTH)
 		cub->play.turn = RIGHT;
-	else
-		printf("\n	Use the keys to move\n\n"
-			"                 w     \n"
-			"                 ▲     \n"
-			"             a ◀ ▼ ▶ d \n"
-			"                 s    \n");
-	return(0);
+	return (0);
 }
 
-
-int ft_key_unpressed(int key, t_cub *cub)
+int	ft_key_unpressed(int key, t_cub *cub)
 {
 	if (key == K_A)
 		cub->play.move = STOP;
 	else if (key == K_D)
 		cub->play.move = STOP;
-	else if (key == K_W ||  key == K_UP)
+	else if (key == K_W || key == K_UP)
 		cub->play.move = STOP;
 	else if (key == K_S || key == K_DOWN)
 		cub->play.move = STOP;
-	if ( key == K_LEFT)
+	if (key == K_LEFT)
 		cub->play.turn = STOP;
-	else if ( key == K_RIGTH)
+	else if (key == K_RIGTH)
 		cub->play.turn = STOP;
-	return(0);
+	return (0);
 }

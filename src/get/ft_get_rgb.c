@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_radian_domain.c                                 :+:      :+:    :+:   */
+/*   ft_get_rgb.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 10:39:43 by ryoshio-          #+#    #+#             */
-/*   Updated: 2023/03/30 21:46:20 by lucasmar         ###   ########.fr       */
+/*   Created: 2023/03/30 22:13:09 by lucasmar          #+#    #+#             */
+/*   Updated: 2023/03/30 22:16:33 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-double	ft_radian_domain(double angle)
+void	ft_rgb_to_hex(t_cub *cub)
 {
-	if (angle > 2 * PI)
-		angle -= 2 * PI;
-	if (angle < 0)
-		angle += 2 * PI;
-	return (angle);
+	cub->data.c_floor = (cub->data.fr << 16 | cub->data.fg << 8 | cub->data.fb);
+	cub->data.c_ceiling = (cub->data.cr << 16
+			| cub->data.cg << 8 | cub->data.cb);
 }

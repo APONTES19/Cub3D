@@ -6,11 +6,11 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 12:32:19 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/30 22:25:53 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../includes/cub3d.h"
+#include "../includes/cub3d.h"
 
 t_img	*ft_mlx_texture_get(void *mlx, char *file);
 
@@ -20,15 +20,14 @@ void	ft_init_window(t_cub *cub)
 	if (cub->w.mlx == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro init mlx failed");
 	cub->w.win = mlx_new_window(cub->w.mlx, WIN_SIZE_X,
-		WIN_SIZE_Y, "Cub 3D");
+			WIN_SIZE_Y, "Cub 3D");
 	if (cub->w.win == NULL)
 		ft_error_message(ERROR_WIN, "\t- Erro creat window");
-	cub->w.no = ft_mlx_texture_get(cub->w.mlx , cub->data.no_path);
-	cub->w.so = ft_mlx_texture_get(cub->w.mlx , cub->data.so_path);
-	cub->w.we = ft_mlx_texture_get(cub->w.mlx , cub->data.we_path);
-	cub->w.ea = ft_mlx_texture_get(cub->w.mlx , cub->data.ea_path);
+	cub->w.no = ft_mlx_texture_get (cub->w.mlx, cub->data.no_path);
+	cub->w.so = ft_mlx_texture_get (cub->w.mlx, cub->data.so_path);
+	cub->w.we = ft_mlx_texture_get (cub->w.mlx, cub->data.we_path);
+	cub->w.ea = ft_mlx_texture_get (cub->w.mlx, cub->data.ea_path);
 }
-
 
 t_img	*ft_mlx_texture_get(void *mlx, char *file)
 {
