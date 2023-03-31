@@ -6,30 +6,46 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:43:13 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 22:25:53 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/30 22:57:57 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
 
-t_img	*ft_mlx_texture_get(void *mlx, char *file);
+static t_img	*ft_mlx_texture_get(void *mlx, char *file);
+static int		ft_set_texture(t_cub *cub);
 
-void	ft_init_window(t_cub *cub)
+int	ft_init_window(t_cub *cub)
 {
 	cub->w.mlx = mlx_init();
 	if (cub->w.mlx == NULL)
-		ft_error_message(ERROR_WIN, "\t- Erro init mlx failed");
+		return (ft_error_message(ERROR_WIN, "\t- Erro init mlx failed"));
 	cub->w.win = mlx_new_window(cub->w.mlx, WIN_SIZE_X,
 			WIN_SIZE_Y, "Cub 3D");
 	if (cub->w.win == NULL)
-		ft_error_message(ERROR_WIN, "\t- Erro creat window");
-	cub->w.no = ft_mlx_texture_get (cub->w.mlx, cub->data.no_path);
-	cub->w.so = ft_mlx_texture_get (cub->w.mlx, cub->data.so_path);
-	cub->w.we = ft_mlx_texture_get (cub->w.mlx, cub->data.we_path);
-	cub->w.ea = ft_mlx_texture_get (cub->w.mlx, cub->data.ea_path);
+		return (ft_error_message(ERROR_WIN, "\t- Erro creat window"));
+	if (ft_set_texture(cub) == 1)
+		return (ft_error_message(ERROR_MALLOC, "\t- Erro creat texture"));
+	return (0);
 }
 
-t_img	*ft_mlx_texture_get(void *mlx, char *file)
+static int	ft_set_texture(t_cub *cub)
+{
+	cub->w.no = ft_mlx_texture_get (cub->w.mlx, cub->data.no_path);
+	if (!cub->w.no)
+		return (1);
+	cub->w.so = ft_mlx_texture_get (cub->w.mlx, cub->data.so_path);
+	if (!cub->w.no)
+		return (1);
+	cub->w.we = ft_mlx_texture_get (cub->w.mlx, cub->data.we_path);
+	if (!cub->w.no)
+		return (1);
+	cub->w.ea = ft_mlx_texture_get (cub->w.mlx, cub->data.ea_path);
+	if (!cub->w.no)
+		return (1);
+}
+
+static t_img	*ft_mlx_texture_get(void *mlx, char *file)
 {
 	int		tmp;
 	t_img	*image;

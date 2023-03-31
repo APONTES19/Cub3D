@@ -6,7 +6,7 @@
 /*   By: lucasmar < lucasmar@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:20 by lucasmar          #+#    #+#             */
-/*   Updated: 2023/03/30 22:29:27 by lucasmar         ###   ########.fr       */
+/*   Updated: 2023/03/30 22:56:04 by lucasmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	main(int argc, char **argv)
 	ft_check_cub_file (text);
 	ft_get_value (text, &cub);
 	ft_free_two_point (text);
-	ft_init_window (&cub);
+	if (ft_init_window (&cub) == FAILURE)
+		return (FAILURE);
 	ft_raycast (&cub);
 	ft_hook_window (&cub);
 	return (0);
